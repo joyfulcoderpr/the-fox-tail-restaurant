@@ -81,3 +81,10 @@ footer {
   clear: both;
   height: 150px;
   border: 1px solid black; }
+
+section {
+  visibility: hidden;
+  font-size: 2em; }
+
+.show {
+  visibility: visible; }
