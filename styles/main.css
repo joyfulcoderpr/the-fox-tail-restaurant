@@ -18,10 +18,11 @@ body {
   background-color: #F2EAE4;
   width: 1438px;
   font-size: 62.5%; }
-  body::after {
-    clear: both;
-    content: "";
-    display: table; }
+
+body::after {
+  clear: both;
+  content: "";
+  display: table; }
 
 a {
   text-decoration: none; }
@@ -62,8 +63,9 @@ nav ul li {
   width: 31.76157%;
   border: 1px solid black;
   height: 325px; }
-  .bottom div:last-child {
-    margin-right: 0; }
+
+.bottom div:last-child {
+  margin-right: 0; }
 
 .bottom .left {
   background-image: url("http://lorempixel.com/425/325"); }
