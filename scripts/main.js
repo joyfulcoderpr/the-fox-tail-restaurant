@@ -1,17 +1,19 @@
-$('nav li').on('click', function() {
+$('#home').on('click', function() {
   $('section').removeClass('show');
-  $('this').addClass('show');
+  $('.home').addClass('show');
 });
 
+$('#menu').on('click', function() {
+  $('section').removeClass('show');
+  $('.menu').addClass('show');
+});
 
+$('#reservation').on('click', function() {
+  $('section').removeClass('show');
+  $('.reservations').addClass('show');
+});
 
-// Additional way to do this below:
-
-// $('section').addClass('show');
-// $('section:first').removeClass('hidden');
-
-// $('nav li').on('click', function() {
-//   $(section).first().addClass('show');
-//   $(this).removeClass('show');
-
-// });
+$('#gallery').on('click', function() {
+  $('section').removeClass('show');
+  $('.gallery').addClass('show');
+});
