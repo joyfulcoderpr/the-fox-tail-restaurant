@@ -28,17 +28,53 @@ $('#gallery').on('click', function() {
 
 var getMenu = $.getJSON('http://private-anon-a6cb7aa40-restaurantapi.apiary-mock.com/menu-1');
 
-var menuTemplate = $('#menuTemplate').html();
-var templateFunction = _.template(menuTemplate);
+var appTemplate = $('#appTemplate').text();
+var appFunction = _.template(appTemplate);
 
 getMenu.done(function (data) {
+  var appArray = data.appetizers;
+  console.log(appArray);
 
-  _.each(data, function(d) {
-    console.log(d);
+  appArray.forEach( function(d) {
 
-    $('.entrees').append(templateFunction(d));
+    $('.appetizers').append(appFunction(d));
 
   });
 
 });
 
+var entreeTemplate = $('#entreeTemplate').text();
+var entreeFunction = _.template(entreeTemplate);
+
+getMenu.done(function (data) {
+  var entreeArray = data.entrees;
+  console.log(entreeArray);
+
+  entreeArray.forEach( function(d) {
+
+    $('.entrees').append(entreeFunction(d));
+
+  });
+
+});
+
+var sidesTemplate = $('#sidesTemplate').text();
+var sidesFunction = _.template(sidesTemplate);
+
+getMenu.done(function (data) {
+  var sidesArray = data.sides;
+  console.log(sidesArray);
+
+  sidesArray.forEach( function(d) {
+
+    $('.sides').append(sidesFunction(d));
+
+  });
+
+});
+
+
+// getMenu.done(function (apps) {
+//   var appArray = apps.appetizers;
+//   console.log(appArray.description);
+// });

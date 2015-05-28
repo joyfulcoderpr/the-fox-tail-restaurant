@@ -92,12 +92,31 @@
 
 <!-- Underscore Templates -->
 
-  <script type="text/template" id="menuTemplate">
+  <script type="text/template" id="appTemplate">
     <li>
-      <h3>Test item name: <%= item %></h2>
-      <h4>Test description: </h3>
+      <h3><%= item %></h2>
+      <h4><%= description %></h3>
     </li>
   </script>
+
+  <script type="text/template" id="entreeTemplate">
+    <li>
+      <h3><%= item %></h2>
+      <h4><%= description %></h3>
+    </li>
+  </script>
+
+
+  <script type="text/template" id="sidesTemplate">
+    <li>
+      <h3><%= item %></h2>
+      <h4><%= description %></h3>
+    </li>
+  </script>
+
+
+
+<!-- Scripts -->
 
     <script src="scripts/vendor/underscore.min.js"></script>
     <script src="scripts/vendor/jquery.min.js"></script>
