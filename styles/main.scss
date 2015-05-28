@@ -221,6 +221,27 @@ footer {
   }
 }
 
+/* Footer styles
+============= */
+
+
+/* Gallery styles
+============= */
+
+.gallery {
+  @include outer-container;
+  overflow:hidden;
+
+  li {
+    @include span-columns(4);
+    @include omega(3n);
+    width:150px;
+    height:150px;
+    background-color:red;
+    margin-bottom:20px;
+  }
+}
+
 /* General
 ============= */
 
