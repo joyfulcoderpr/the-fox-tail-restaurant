@@ -69,25 +69,45 @@ nav ul li {
 
 /* Bottom
 ============= */
-.bottom div {
+.bottom ul {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 31.76157%;
+  width: 23.23176%;
   border: 1px solid black;
-  height: 325px; }
+  height: 325px;
+  width: 425px;
+  overflow: auto;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px; }
 
-.bottom div:last-child {
+.bottom ul:last-child {
   margin-right: 0; }
 
 .bottom .left {
-  background-image: url("http://lorempixel.com/425/325"); }
+  width: 425px;
+  font-family: Apple Chancery;
+  font-size: 16px;
+  text-align: center; }
+
+.bottom .left .button {
+  padding: 2px 0 0 0; }
 
 .bottom .center {
-  background-image: url("http://lorempixel.com/425/325"); }
+  width: 425px;
+  overflow: hidden;
+  font-family: Apple Chancery;
+  font-size: 14px;
+  border: 1px black solid;
+  text-align: center; }
 
 .bottom .right {
-  background-image: url("http://lorempixel.com/425/325"); }
+  width: 425px;
+  overflow: hidden;
+  font-family: Apple Chancery;
+  font-size: 14px;
+  text-align: center; }
 
 /* Footer
 ============= */
@@ -102,7 +122,3 @@ footer {
 ============= */
 section {
   visibility: hidden; }
-
-.show {
-  visibility: visible;
-  transition: 1s all ease; }
