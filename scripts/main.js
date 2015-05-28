@@ -56,6 +56,17 @@ getMenu.done(function (data) {
 
 });
 
+// Get Photos
+//---------------------------------------------------
+
+//Jumbotron:
+
+
+
+
+
+// var getPhotos = $getJSON('https://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&' + key + '&user_id=' + id + '&format=json');
+
 
 // Get today's news JSON data
 // --------------------------------------------------
