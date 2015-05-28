@@ -95,7 +95,6 @@ nav {
 
 
 
-
 }
 
 footer {
@@ -104,4 +103,12 @@ footer {
   height: 150px;
   border: 1px solid black;
 
+}
+
+section {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
 }
