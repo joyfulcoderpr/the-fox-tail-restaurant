@@ -86,14 +86,13 @@ section {
   height: 0;
   margin-left: auto;
   margin-right: auto;
-  visibility: hidden;
-  font-family: "Droid Serif", serif;
-  font-weight: normal; }
+  font-weight: normal;
+  display: none; }
 
 /* Content Styles
 ================= */
 .show {
-  visibility: visible;
+  display: block;
   transition: 1s all ease;
   width: 80%;
   height: 100%; }
@@ -146,7 +145,6 @@ footer {
   background-color: #CAE9F1;
   clear: both;
   height: 190px;
-  border: 1px solid black;
   margin-top: 25%; }
 
 footer div {
