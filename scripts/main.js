@@ -1,3 +1,5 @@
+// Tabs working to change visibility of content divs
+
 $('#home').on('click', function() {
   $('section').removeClass('show');
   $('.home').addClass('show');
@@ -21,3 +23,22 @@ $('#gallery').on('click', function() {
   $('.gallery').addClass('show');
   $('.jumbotron').html('<img src="http://placehold.it/1438x500">');
 });
+
+// Get restaurant API information
+
+var getMenu = $.getJSON('http://private-anon-a6cb7aa40-restaurantapi.apiary-mock.com/menu-1');
+
+var menuTemplate = $('#menuTemplate').html();
+var templateFunction = _.template(menuTemplate);
+
+getMenu.done(function (data) {
+
+  _.each(data, function(d) {
+    console.log(d);
+
+    $('.entrees').append(templateFunction(d));
+
+  });
+
+});
+

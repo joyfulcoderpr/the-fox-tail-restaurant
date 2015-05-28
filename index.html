@@ -38,6 +38,21 @@
       <!-- Menu content below -->
       <section class="menu">
 
+      <h2>Appetizers</h2>
+        <ul class="appetizers">
+
+        </ul>
+
+      <h2>Entrees</h2>
+        <ul class="entrees">
+
+        </ul>
+
+      <h2>Sides a la carte</h2>
+        <ul class="sides">
+
+        </ul>
+
       </section>
       <!-- Reservation content below -->
       <section class="reservations">
@@ -74,8 +89,18 @@
     <p>Fox Tail by Lucid Formation from the Noun Project</p> <!-- fox tail -->
     </footer>
   </div>
-    <script src="scripts/vendor/jquery.min.js"></script>
+
+<!-- Underscore Templates -->
+
+  <script type="text/template" id="menuTemplate">
+    <li>
+      <h3>Test item name: <%= item %></h2>
+      <h4>Test description: </h3>
+    </li>
+  </script>
+
     <script src="scripts/vendor/underscore.min.js"></script>
+    <script src="scripts/vendor/jquery.min.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 </html>

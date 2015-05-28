@@ -61,6 +61,11 @@ nav {
   ul {
     li {
       display: inline-block;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    li:hover {
+      cursor: pointer;
     }
   }
 }
@@ -70,10 +75,18 @@ nav {
   background-image: url('http://lorempixel.com/1438/500');
 }
 
-.home {
-  width: 80%;
+section {
+  width: 0%;
+  height: 0;
   margin-left: auto;
   margin-right: auto;
+  visibility: hidden;
+}
+
+.show {
+  height: 100%;
+  visibility: visible;
+  width: 80%;
 }
 
 .bottom {
@@ -109,10 +122,4 @@ footer {
 
 }
 
-section {
-  visibility: hidden;
-}
 
-.show {
-  visibility: visible;
-}
