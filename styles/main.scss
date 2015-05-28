@@ -134,25 +134,52 @@ section {
 
 .bottom {
 
- div {
-  @include span-columns(4);
-  border: 1px solid black;
-  height: 325px;
+ ul {
+    @include span-columns(3);
+    border: 1px solid black;
+    height: 325px;
+    width: 425px;
+    overflow: auto;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
   }
 
   .left {
+    width:425px;
+    font-family: Apple Chancery;
+    font-size: 16px;
+    text-align: center;
 
+    .button {
+    padding: 2px 0 0 0;
+  }
   }
 
   .center {
+   width:425px;
+    overflow:hidden;
+    font-family: Apple Chancery;
+    font-size: 14px;
+    border:1px black solid;
+    text-align: center;
 
   }
 
+
+
+
   .right {
+    width:425px;
+    overflow:hidden;
+    font-family: Apple Chancery;
+    font-size: 14px;
+    text-align: center;
 
   }
 
 }
+
 
 /* Footer
 ============= */
@@ -214,7 +241,5 @@ footer {
 
 /* General
 ============= */
-
-
 
 
