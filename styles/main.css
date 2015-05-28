@@ -15,7 +15,6 @@ body {
   max-width: 1438px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #F2EAE4;
   width: 1438px;
   font-size: 62.5%; }
 
@@ -37,9 +36,9 @@ a:hover {
 /* Header styles will start here
 ================================ */
 header {
-  background-color: #D9C5A0;
   height: 300px;
-  width: 100%; }
+  width: 100%;
+  background-image: url("../images/header-back.png"); }
 
 header .logo {
   height: 200px;
@@ -51,8 +50,21 @@ header img {
 
 /* Nav styles
 ============= */
+nav {
+  width: 100%; }
+
+nav ul {
+  font-family: "Droid Sans", sans-serif, sans-serif;
+  font-size: 1.8em;
+  font-color: black;
+  font-weight: 400;
+  margin: 10px 0;
+  text-align: center;
+  padding-left: 0; }
+
 nav ul li {
-  display: inline-block; }
+  display: inline-block;
+  margin-right: 20px; }
 
 /* Tabs and Jumbotron
 ============= */
@@ -66,6 +78,14 @@ nav ul li {
   width: 80%;
   margin-left: auto;
   margin-right: auto; }
+
+/* Content Styles
+================= */
+section p {
+  font-family: "Droid Serif", serif, serif;
+  font-size: 1.8em;
+  font-color: black;
+  font-weight: 400; }
 
 /* Bottom
 ============= */
@@ -92,7 +112,6 @@ nav ul li {
 /* Footer
 ============= */
 footer {
-  background-color: #D9C5A0;
   clear: both;
   height: 150px;
   border: 1px solid black;
