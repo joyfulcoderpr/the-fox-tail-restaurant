@@ -55,9 +55,14 @@ nav {
   }
 }
 
+/* Tabs and Jumbotron
+============= */
+
 .jumbotron {
   height: 500px;
-  background-image: url('http://lorempixel.com/1438/500');
+  width:100%;
+  overflow:hidden;
+  background-image: url('http://placehold.it/1438x500');
 }
 
 .home {
@@ -66,38 +71,44 @@ nav {
   margin-right: auto;
 }
 
+/* Bottom
+============= */
+
 .bottom {
 
  div {
   @include span-columns(4);
   border: 1px solid black;
   height: 325px;
+  }
+
+  .left {
+    background-image: url('http://lorempixel.com/425/325');
+  }
+
+  .center {
+    background-image: url('http://lorempixel.com/425/325');
+  }
+
+  .right {
+    background-image: url('http://lorempixel.com/425/325');
+  }
 }
 
-
-.left {
-  background-image: url('http://lorempixel.com/425/325');
-}
-
-.center {
-  background-image: url('http://lorempixel.com/425/325');
-}
-
-.right {
-  background-image: url('http://lorempixel.com/425/325');
-}
-
-
-
-}
+/* Footer
+============= */
 
 footer {
   background-color: $latte;
   clear: both;
   height: 150px;
   border: 1px solid black;
+  margin-top:20px;
 
 }
+
+/* General
+============= */
 
 section {
   visibility: hidden;
@@ -105,4 +116,5 @@ section {
 
 .show {
   visibility: visible;
+  transition: 1s all ease;
 }

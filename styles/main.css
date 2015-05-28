@@ -47,15 +47,21 @@ header {
 nav ul li {
   display: inline-block; }
 
+/* Tabs and Jumbotron
+============= */
 .jumbotron {
   height: 500px;
-  background-image: url("http://lorempixel.com/1438/500"); }
+  width: 100%;
+  overflow: hidden;
+  background-image: url("http://placehold.it/1438x500"); }
 
 .home {
   width: 80%;
   margin-left: auto;
   margin-right: auto; }
 
+/* Bottom
+============= */
 .bottom div {
   float: left;
   display: block;
@@ -76,14 +82,20 @@ nav ul li {
 .bottom .right {
   background-image: url("http://lorempixel.com/425/325"); }
 
+/* Footer
+============= */
 footer {
   background-color: #D9C5A0;
   clear: both;
   height: 150px;
-  border: 1px solid black; }
+  border: 1px solid black;
+  margin-top: 20px; }
 
+/* General
+============= */
 section {
   visibility: hidden; }
 
 .show {
-  visibility: visible; }
+  visibility: visible;
+  transition: 1s all ease; }
