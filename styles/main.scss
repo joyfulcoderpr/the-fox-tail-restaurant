@@ -151,6 +151,7 @@ section {
 
  ul {
     @include span-columns(4);
+    @include omega(3n);
     height: 325px;
     overflow: auto;
     -moz-border-radius: 10px;
@@ -189,6 +190,7 @@ section {
     overflow:hidden;
     font-size: 14px;
     // text-align: center;
+
   }
 
 }
