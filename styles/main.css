@@ -16,7 +16,6 @@ body {
   max-width: 1438px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #F2EAE4;
   width: 1438px;
   font-size: 62.5%; }
 
@@ -38,9 +37,9 @@ a:hover {
 /* Header styles will start here
 ================================ */
 header {
-  background-color: #D9C5A0;
   height: 300px;
-  width: 100%; }
+  width: 100%;
+  background-image: url("../images/header-back.png"); }
 
 header .logo {
   height: 200px;
@@ -52,8 +51,24 @@ header img {
 
 /* Nav styles
 ============= */
+nav {
+  width: 100%; }
+
+nav ul {
+  font-family: "Droid Sans", sans-serif, sans-serif;
+  font-size: 1.8em;
+  font-color: black;
+  font-weight: 400;
+  margin: 10px 0;
+  text-align: center;
+  padding-left: 0; }
+
 nav ul li {
-  display: inline-block; }
+  display: inline-block;
+  margin-right: 20px; }
+
+nav ul li:hover {
+  cursor: pointer; }
 
 /* Tabs and Jumbotron
 ============= */
@@ -63,12 +78,38 @@ nav ul li {
   overflow: hidden;
   background-image: url("http://placehold.it/1438x500"); }
 
-.home {
-  width: 80%;
+/* Content section styles
+============= */
+section {
+  width: 0%;
+  height: 0;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  visibility: hidden; }
+
+/* Content Styles
+================= */
+.show {
+  visibility: visible;
+  transition: 1s all ease;
+  width: 80%;
+  height: 100%; }
+
+section p {
+  font-family: "Droid Serif", serif, serif;
+  font-size: 1.8em;
+  font-color: black;
+  font-weight: 400; }
 
 /* Bottom
+=======
+.show {
+  height: 100%;
+  visibility: visible;
+  width: 80%;
+}
+
+/* Bottom of page styles
 ============= */
 .bottom div {
   float: left;
@@ -81,16 +122,9 @@ nav ul li {
 .bottom div:last-child {
   margin-right: 0; }
 
-.bottom .left {
-  background-image: url("http://lorempixel.com/425/325"); }
-
-.bottom .center {
-  background-image: url("http://lorempixel.com/425/325"); }
-
-.bottom .right {
-  background-image: url("http://lorempixel.com/425/325"); }
-
 /* Footer
+============= */
+/* Footer styles
 ============= */
 footer {
   background-color: #CAE9F1;
@@ -142,9 +176,3 @@ footer ul {
 
 /* General
 ============= */
-section {
-  visibility: hidden; }
-
-.show {
-  visibility: visible;
-  transition: 1s all ease; }
