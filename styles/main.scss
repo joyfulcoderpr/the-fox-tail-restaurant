@@ -7,6 +7,7 @@ $latte: #D9C5A0;
 $java: #BFAD8A;
 $cream: #F2EAE4;
 $mocha: #F2EAE4;
+$baby: #CAE9F1;
 
 $contentFont:'Droid Serif', serif;
 $navFont: 'Droid Sans', sans-serif;
@@ -22,9 +23,10 @@ $navFont: 'Droid Sans', sans-serif;
 }
 
 body {
-  @include outer-container(1438px);
-  width: 1438px;
+  @include outer-container(100%);
+  max-width: 1438px;
   font-size: 62.5%;
+  font-family: $contentFont;
 }
 
 a {
@@ -100,6 +102,8 @@ section {
   margin-left: auto;
   margin-right: auto;
   visibility: hidden;
+  font-family: $contentFont;
+  font-weight: normal;
 }
 
 /* Content Styles
@@ -114,30 +118,30 @@ section {
 
 section {
 
+  h2 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1.8em;
+  }
+
   p {
       @include fontStyle($contentFont, serif, 1.8em, black, 400);
   }
 
 }
 
-/* Bottom
-=======
-.show {
-  height: 100%;
-  visibility: visible;
-  width: 80%;
-}
 
 /* Bottom of page styles
 ============= */
 
 .bottom {
 
+
  ul {
-    @include span-columns(3);
-    border: 1px solid black;
+    @include span-columns(4);
     height: 325px;
-    width: 425px;
     overflow: auto;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -145,45 +149,25 @@ section {
   }
 
   .left {
-    width:425px;
-    font-family: Apple Chancery;
     font-size: 16px;
     text-align: center;
-
-    .button {
-    padding: 2px 0 0 0;
-  }
   }
 
   .center {
-   width:425px;
     overflow:hidden;
-    font-family: Apple Chancery;
     font-size: 14px;
-    border:1px black solid;
     text-align: center;
 
   }
 
-
-
-
   .right {
-    width:425px;
     overflow:hidden;
-    font-family: Apple Chancery;
     font-size: 14px;
     text-align: center;
 
   }
 
 }
-
-
-/* Footer
-============= */
-
-
 
 
 /* Footer styles
@@ -207,7 +191,7 @@ footer {
     margin-left:20px;
     padding:0;
     line-height:20px;
-  } 
+  }
 }
 
 
@@ -217,8 +201,8 @@ footer {
     ul {
       margin:0;
        padding:0;
-    } 
-      
+    }
+
     img {
       width: 150px;
       margin-left:20px;
