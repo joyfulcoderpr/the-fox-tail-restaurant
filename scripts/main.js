@@ -25,10 +25,12 @@ $('#gallery').on('click', function() {
   $('.jumbotron').html('<img src="http://placehold.it/1438x500">');
 });
 
-// Get menu API information
+// Get menu API information & Today's Special Information
 // ----------------------------------------------------
 
 var getMenu = $.getJSON('http://private-anon-a6cb7aa40-restaurantapi.apiary-mock.com/menu-1');
+
+var getSpecial = $.getJSON('http://private-anon-a6cb7aa40-restaurantapi.apiary-mock.com/menu/special');
 
 var appTemplate = $('#appTemplate').html();
 var appFunction = _.template(appTemplate);
@@ -36,6 +38,7 @@ var entreeTemplate = $('#entreeTemplate').html();
 var entreeFunction = _.template(entreeTemplate);
 var sidesTemplate = $('#sidesTemplate').html();
 var sidesFunction = _.template(sidesTemplate);
+
 
 getMenu.done(function (data) {
 
@@ -52,6 +55,14 @@ getMenu.done(function (data) {
   var sidesArray = data.sides;
   sidesArray.forEach( function(d) {
     $('.sides').append(sidesFunction(d));
+  });
+
+  getSpecial.done(function (data) {
+    entreeArray.forEach (function(n) {
+      if (n.id === data.menu_item_id) {
+        $('.center').html('<h3>Today\'s Special</h3>' + '<h4>' + n.item + '</h4>' + '<span>' + '$' + n.price + '</span>' + '<p>' + n.description + '</p>');
+      }
+    });
   });
 
 });
@@ -72,19 +83,4 @@ getNews.done(function (data) {
   $('.left').append(newsFunction(data));
 });
 
-
-// Get daily special JSON data
-// --------------------------------------------------
-
-
-var getSpecial = $.getJSON('http://private-anon-a6cb7aa40-restaurantapi.apiary-mock.com/menu/special');
-
-// Drop daily special into DOM
-
-// var specialTemplate = $('#todaySpecial').html();
-// var specialFunction = _.template(specialTemplate);
-
-// getSpecial.done(function (data) {
-//   $('.center').append(specialFunction(data));
-// });
 

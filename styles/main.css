@@ -1,3 +1,4 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo|iconicfill);
 html {
   box-sizing: border-box; }
 
@@ -86,29 +87,37 @@ section {
   height: 0;
   margin-left: auto;
   margin-right: auto;
-  visibility: hidden;
-  font-family: "Droid Serif", serif;
-  font-weight: normal; }
+  font-weight: normal;
+  display: none; }
 
-/* Content Styles
-================= */
 .show {
-  visibility: visible;
+  display: block;
   transition: 1s all ease;
-  width: 80%;
+  width: 70%;
   height: 100%; }
 
 section h2 {
-  font-size: 2em; }
+  font-size: 2em;
+  text-align: center; }
 
 section h3 {
-  font-size: 1.8em; }
+  font-size: 1.8em;
+  display: inline-block; }
+
+section span {
+  float: right;
+  font-size: 1.4em;
+  margin-top: 1.5em; }
 
 section p {
   font-family: "Droid Serif", serif, serif;
   font-size: 1.8em;
   font-color: black;
   font-weight: 400; }
+
+section .menuList {
+  margin-bottom: 20px;
+  margin-top: 50px; }
 
 /* Bottom of page styles
 ============= */
@@ -121,24 +130,33 @@ section p {
   overflow: auto;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
-  border-radius: 10px; }
+  border-radius: 10px;
+  padding: 0px; }
 
 .bottom ul:last-child {
   margin-right: 0; }
 
 .bottom .left {
-  font-size: 16px;
-  text-align: center; }
+  font-size: 1.6em; }
 
 .bottom .center {
   overflow: hidden;
-  font-size: 14px;
-  text-align: center; }
+  font-size: 14px; }
+
+.bottom .center h4 {
+  display: inline-block;
+  float: left; }
+
+.bottom .center span {
+  float: right;
+  margin-top: 1.3em; }
+
+.bottom .center p {
+  clear: both; }
 
 .bottom .right {
   overflow: hidden;
-  font-size: 14px;
-  text-align: center; }
+  font-size: 14px; }
 
 /* Footer styles
 ============= */
