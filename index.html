@@ -39,20 +39,26 @@
       <!-- Menu content below -->
       <section class="menu">
 
-      <h2>Appetizers</h2>
+      <div class="menuList">
+        <h2>Appetizers</h2>
         <ul class="appetizers">
-
+        <!-- content from scripts -->
         </ul>
+      </div>
 
-      <h2>Entrees</h2>
+      <div class="menuList">
+        <h2>Entrees</h2>
         <ul class="entrees">
-
+        <!-- content from scripts -->
         </ul>
+      </div>
 
-      <h2>Sides a la carte</h2>
+      <div class="menuList">
+        <h2>Sides a la carte</h2>
         <ul class="sides">
-
+        <!-- content from scripts -->
         </ul>
+      </div>
 
       </section>
       <!-- Reservation content below -->
@@ -118,7 +124,7 @@
 
       <span><a href="#"><img src="images/twitter.png"></a></span>
 
-      <span> <a href="#"><img src="images/instagram.png"></a></span>
+      <span><a href="#"><img src="images/instagram.png"></a></span>
 
       </p>
     </div>
@@ -131,14 +137,14 @@
 
   <script type="text/template" id="appTemplate">
     <li>
-      <h3><%= item %></h3>
+      <h3><%= item %></h3><span>$<%= price %></span>
       <p><%= description %></p>
     </li>
   </script>
 
   <script type="text/template" id="entreeTemplate">
     <li>
-      <h3><%= item %></h3>
+      <h3><%= item %></h3><span>$<%= price %></span>
       <p><%= description %></p>
     </li>
   </script>
@@ -146,8 +152,7 @@
 
   <script type="text/template" id="sidesTemplate">
     <li>
-      <h3><%= item %></h3>
-      <p><%= description %></p>
+      <h3><%= item %></h3><span>$<%= price %></span>
     </li>
   </script>
 
@@ -165,6 +170,7 @@
 
   <script type="text/template" id="todaySpecial">
     <h3>Todays Special</h3>
+
   </script>
 
 
