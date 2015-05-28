@@ -127,6 +127,7 @@ section p {
 /* Footer styles
 ============= */
 footer {
+  background-color: #CAE9F1;
   clear: both;
   height: 190px;
   border: 1px solid black;
