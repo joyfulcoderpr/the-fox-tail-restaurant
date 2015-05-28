@@ -42,6 +42,10 @@ header {
   border: 1px solid black;
   height: 300px; }
 
+header .logo {
+  height: 150px;
+  margin-top: 45px; }
+
 /* Nav styles
 ============= */
 nav ul li {
