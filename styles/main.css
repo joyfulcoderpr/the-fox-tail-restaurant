@@ -63,6 +63,8 @@ nav ul li:hover {
   height: 500px;
   background-image: url("http://lorempixel.com/1438/500"); }
 
+/* Content section styles
+============= */
 section {
   width: 0%;
   height: 0;
@@ -75,6 +77,8 @@ section {
   visibility: visible;
   width: 80%; }
 
+/* Bottom of page styles
+============= */
 .bottom div {
   float: left;
   display: block;
@@ -86,15 +90,8 @@ section {
 .bottom div:last-child {
   margin-right: 0; }
 
-.bottom .left {
-  background-image: url("http://lorempixel.com/425/325"); }
-
-.bottom .center {
-  background-image: url("http://lorempixel.com/425/325"); }
-
-.bottom .right {
-  background-image: url("http://lorempixel.com/425/325"); }
-
+/* Footer styles
+============= */
 footer {
   background-color: #D9C5A0;
   clear: both;

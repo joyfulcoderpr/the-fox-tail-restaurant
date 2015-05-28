@@ -1,4 +1,5 @@
 // Tabs working to change visibility of content divs
+// --------------------------------------------------
 
 $('#home').on('click', function() {
   $('section').removeClass('show');
@@ -24,57 +25,66 @@ $('#gallery').on('click', function() {
   $('.jumbotron').html('<img src="http://placehold.it/1438x500">');
 });
 
-// Get restaurant API information
+// Get menu API information
+// ----------------------------------------------------
 
 var getMenu = $.getJSON('http://private-anon-a6cb7aa40-restaurantapi.apiary-mock.com/menu-1');
 
-var appTemplate = $('#appTemplate').text();
+var appTemplate = $('#appTemplate').html();
 var appFunction = _.template(appTemplate);
-
-getMenu.done(function (data) {
-  var appArray = data.appetizers;
-  console.log(appArray);
-
-  appArray.forEach( function(d) {
-
-    $('.appetizers').append(appFunction(d));
-
-  });
-
-});
-
-var entreeTemplate = $('#entreeTemplate').text();
+var entreeTemplate = $('#entreeTemplate').html();
 var entreeFunction = _.template(entreeTemplate);
-
-getMenu.done(function (data) {
-  var entreeArray = data.entrees;
-  console.log(entreeArray);
-
-  entreeArray.forEach( function(d) {
-
-    $('.entrees').append(entreeFunction(d));
-
-  });
-
-});
-
-var sidesTemplate = $('#sidesTemplate').text();
+var sidesTemplate = $('#sidesTemplate').html();
 var sidesFunction = _.template(sidesTemplate);
 
 getMenu.done(function (data) {
+
+  var appArray = data.appetizers;
+  appArray.forEach( function(d) {
+    $('.appetizers').append(appFunction(d));
+  });
+
+  var entreeArray = data.entrees;
+  entreeArray.forEach( function(d) {
+    $('.entrees').append(entreeFunction(d));
+  });
+
   var sidesArray = data.sides;
-  console.log(sidesArray);
-
   sidesArray.forEach( function(d) {
-
     $('.sides').append(sidesFunction(d));
-
   });
 
 });
 
 
-// getMenu.done(function (apps) {
-//   var appArray = apps.appetizers;
-//   console.log(appArray.description);
+// Get today's news JSON data
+// --------------------------------------------------
+
+
+var getNews = $.getJSON('http://private-anon-a6cb7aa40-restaurantapi.apiary-mock.com/news/latest');
+
+// Drop today's news into DOM
+
+var newsTemplate = $('#latestNews').html();
+var newsFunction = _.template(newsTemplate);
+
+getNews.done(function (data) {
+  $('.left').append(newsFunction(data));
+});
+
+
+// Get daily special JSON data
+// --------------------------------------------------
+
+
+var getSpecial = $.getJSON('http://private-anon-a6cb7aa40-restaurantapi.apiary-mock.com/menu/special');
+
+// Drop daily special into DOM
+
+// var specialTemplate = $('#todaySpecial').html();
+// var specialFunction = _.template(specialTemplate);
+
+// getSpecial.done(function (data) {
+//   $('.center').append(specialFunction(data));
 // });
+
