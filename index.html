@@ -39,6 +39,21 @@
       <!-- Menu content below -->
       <section class="menu">
 
+      <h2>Appetizers</h2>
+        <ul class="appetizers">
+
+        </ul>
+
+      <h2>Entrees</h2>
+        <ul class="entrees">
+
+        </ul>
+
+      <h2>Sides a la carte</h2>
+        <ul class="sides">
+
+        </ul>
+
       </section>
       <!-- Reservation content below -->
       <section class="reservations">
@@ -70,8 +85,54 @@
     <p>Fox by Anna Wojtowicz from the Noun Project</p> <!-- Line art fox -->
     </footer>
   </div>
-    <script src="scripts/vendor/jquery.min.js"></script>
+
+<!-- Underscore Templates -->
+
+<!-- menu templates -->
+
+  <script type="text/template" id="appTemplate">
+    <li>
+      <h3><%= item %></h2>
+      <h4><%= description %></h3>
+    </li>
+  </script>
+
+  <script type="text/template" id="entreeTemplate">
+    <li>
+      <h3><%= item %></h2>
+      <h4><%= description %></h3>
+    </li>
+  </script>
+
+
+  <script type="text/template" id="sidesTemplate">
+    <li>
+      <h3><%= item %></h2>
+      <h4><%= description %></h3>
+    </li>
+  </script>
+
+<!-- latest news template -->
+
+  <script type="text/template" id="latestNews">
+    <h3>Latest News</h3>
+    <h4><%= title %></h4>
+    <article>
+      <p><%= post %></p>
+    </article>
+  </script>
+
+<!-- today's special template -->
+
+  <script type="text/template" id="todaySpecial">
+    <h3>Todays Special</h3>
+  </script>
+
+
+<!-- Scripts -->
+
     <script src="scripts/vendor/underscore.min.js"></script>
+    <script src="scripts/vendor/jquery.min.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 </html>

@@ -71,7 +71,15 @@ nav {
 
     li {
       display: inline-block;
+<<<<<<< HEAD
       margin-right: 20px;
+=======
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    li:hover {
+      cursor: pointer;
+>>>>>>> krdev
     }
   }
 }
@@ -86,12 +94,18 @@ nav {
   background-image: url('http://placehold.it/1438x500');
 }
 
-.home {
-  width: 80%;
+/* Content section styles
+============= */
+
+section {
+  width: 0%;
+  height: 0;
   margin-left: auto;
   margin-right: auto;
+  visibility: hidden;
 }
 
+<<<<<<< HEAD
 /* Content Styles
 ================= */
 
@@ -102,6 +116,15 @@ section {
 }
 
 /* Bottom
+=======
+.show {
+  height: 100%;
+  visibility: visible;
+  width: 80%;
+}
+
+/* Bottom of page styles
+>>>>>>> krdev
 ============= */
 
 .bottom {
@@ -112,6 +135,7 @@ section {
   height: 325px;
   }
 
+<<<<<<< HEAD
   .left {
     background-image: url('http://lorempixel.com/425/325');
   }
@@ -127,6 +151,24 @@ section {
 
 /* Footer
 ============= */
+=======
+.left {
+
+}
+
+.center {
+
+}
+
+.right {
+
+}
+
+}
+>>>>>>> krdev
+
+/* Footer styles
+============= */
 
 footer {
   // background-color: $latte;
@@ -137,6 +179,7 @@ footer {
 
 }
 
+<<<<<<< HEAD
 /* General
 ============= */
 
@@ -148,3 +191,6 @@ section {
   visibility: visible;
   transition: 1s all ease;
 }
+=======
+
+>>>>>>> krdev

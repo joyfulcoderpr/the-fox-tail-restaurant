@@ -66,6 +66,10 @@ nav ul li {
   display: inline-block;
   margin-right: 20px; }
 
+
+nav ul li:hover {
+  cursor: pointer; }
+
 /* Tabs and Jumbotron
 ============= */
 .jumbotron {
@@ -74,10 +78,15 @@ nav ul li {
   overflow: hidden;
   background-image: url("http://placehold.it/1438x500"); }
 
-.home {
-  width: 80%;
+/* Content section styles
+============= */
+section {
+  width: 0%;
+  height: 0;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  visibility: hidden; }
+
 
 /* Content Styles
 ================= */
@@ -88,6 +97,14 @@ section p {
   font-weight: 400; }
 
 /* Bottom
+=======
+.show {
+  height: 100%;
+  visibility: visible;
+  width: 80%; }
+
+/* Bottom of page styles
+>>>>>>> krdev
 ============= */
 .bottom div {
   float: left;
@@ -100,6 +117,7 @@ section p {
 .bottom div:last-child {
   margin-right: 0; }
 
+
 .bottom .left {
   background-image: url("http://lorempixel.com/425/325"); }
 
@@ -110,6 +128,9 @@ section p {
   background-image: url("http://lorempixel.com/425/325"); }
 
 /* Footer
+=======
+/* Footer styles
+>>>>>>> krdev
 ============= */
 footer {
   clear: both;
@@ -125,3 +146,4 @@ section {
 .show {
   visibility: visible;
   transition: 1s all ease; }
+
