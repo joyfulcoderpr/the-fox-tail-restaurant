@@ -75,6 +75,9 @@ nav {
   background-image: url('http://lorempixel.com/1438/500');
 }
 
+/* Content section styles
+============= */
+
 section {
   width: 0%;
   height: 0;
@@ -88,6 +91,9 @@ section {
   visibility: visible;
   width: 80%;
 }
+
+/* Bottom of page styles
+============= */
 
 .bottom {
 
@@ -110,9 +116,10 @@ section {
   background-image: url('http://lorempixel.com/425/325');
 }
 
-
-
 }
+
+/* Footer styles
+============= */
 
 footer {
   background-color: $latte;
