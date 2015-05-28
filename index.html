@@ -1,11 +1,12 @@
  <!DOCTYPE html>
 <html>
 <head>
-  <title>Restaurant</title>
+  <title>the fox tail.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="styles/vendor/normalize.css">
   <link rel="stylesheet" href="styles/main.css">
+
 </head>
 <body>
   <div class="container">
@@ -36,6 +37,7 @@
           <p>Tenderloin venison chicken, pork loin shank meatball sirloin tail kevin ground round pig tongue beef pork belly. T-bone capicola doner, fatback chicken alcatra ribeye. Spare ribs drumstick picanha cupim, turkey brisket ball tip pork loin short loin pig swine meatball bresaola andouille. Pork chop jowl short ribs hamburger. Prosciutto andouille shank sirloin corned beef t-bone pig bacon ball tip.</p>
         </article>
       </section>
+
       <!-- Menu content below -->
       <section class="menu">
 
@@ -61,10 +63,25 @@
       </div>
 
       </section>
+
       <!-- Reservation content below -->
       <section class="reservations">
-
+        <h2>Request a reservation.</h2>
+        <form>
+          <input type="text" placeholder="Full Name" class="reservationform" size="50">
+          <input type="text" placeholder="Number of Guests" class="reservationform">
+          <input type="text" placeholder="Date (mm/dd/yy)" class="reservationform">
+          <input type="text" placeholder="Time" class="reservationform">
+          <select>
+            <option value="" disabled selected>Seating Preference</option>
+            <option value="I">Inside</option>
+            <option value="O">Outside</option>
+          </select>
+          <input type="email" placeholder="Email Address for Reservation Confirmation" size="50" class="reservationform">
+          <input type="button" value="Request Reservation" id="reserveBtn">
+        </form>
       </section>
+
       <!-- Gallery content here -->
 
       <section class="gallery">
@@ -88,7 +105,7 @@
         </ul>
 
         <div class="reviews">
-      
+
         </div>
 
       </section>
@@ -188,7 +205,7 @@
       <p><%= post %></p>
     </article>
   </script>
-            
+
 <!-- today's special template -->
 
   <script type="text/template" id="todaySpecial">

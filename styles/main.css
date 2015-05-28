@@ -36,6 +36,15 @@ a:hover {
   width: 100%;
   margin: auto; }
 
+button:focus {
+  outline: 0; }
+
+input:focus {
+  outline: 0; }
+
+select:focus {
+  outline: 0; }
+
 /* Header styles will start here
 ================================ */
 header {
@@ -94,7 +103,8 @@ section {
   display: block;
   transition: 1s all ease;
   width: 70%;
-  height: 100%; }
+  height: 100%;
+  margin-top: 50px; }
 
 section h2 {
   font-size: 2em;
@@ -118,6 +128,61 @@ section p {
 section .menuList {
   margin-bottom: 20px;
   margin-top: 50px; }
+
+/* Reservations styles
+============= */
+section form {
+  font-size: 1.8em;
+  display: block;
+  padding: 50px;
+  padding-top: 20px; }
+
+section form input {
+  display: block;
+  margin: 15px;
+  padding: 10px;
+  border: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%; }
+
+section form #reserveBtn {
+  background-color: #CAE9F1;
+  border: none; }
+
+section form select {
+  border: 0;
+  display: block;
+  margin: 15px;
+  padding: 10px;
+  height: 40px;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  color: #A9A9A9; }
+
+.reservations {
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0px 0.1px 2px #ccc;
+  margin-bottom: 50px; }
+
+.reservations .thankyou {
+  padding: 20px;
+  text-align: center; }
+
+.reservations h2 {
+  font-size: 3em;
+  padding-top: 50px; }
+
+.reservations h4 {
+  font-size: 3em; }
+
+.reservations p {
+  font-size: 2em; }
+
+.reservations img {
+  height: 12em;
+  margin-top: 1.5em; }
 
 /* Bottom of page styles
 ============= */

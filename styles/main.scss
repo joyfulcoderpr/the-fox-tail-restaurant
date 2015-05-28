@@ -43,6 +43,18 @@ a:hover {
   margin: auto;
 }
 
+button:focus {
+  outline: 0;
+}
+
+input:focus {
+  outline: 0;
+}
+
+select:focus {
+  outline: 0;
+}
+
 /* Header styles will start here
 ================================ */
 header {
@@ -111,6 +123,7 @@ section {
   transition: 1s all ease;
   width: 70%;
   height: 100%;
+  margin-top: 50px;
 }
 
 section {
@@ -142,6 +155,77 @@ section {
 
 }
 
+/* Reservations styles
+============= */
+
+section {
+
+  form {
+    font-size: 1.8em;
+    display: block;
+    padding: 50px;
+    padding-top: 20px;
+
+    input {
+      display: block;
+      margin: 15px;
+      padding: 10px;
+      border: 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    #reserveBtn {
+      background-color: $baby;
+      border: none;
+    }
+
+    select {
+      border: 0;
+      display: block;
+      margin: 15px;
+      padding: 10px;
+      height: 40px;
+      width: 100%;
+      background-color: white;
+      border: 1px solid #ccc;
+      color: #A9A9A9;
+    }
+
+  }
+
+}
+
+.reservations {
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0px .1px 2px #ccc;
+  margin-bottom: 50px;
+
+  .thankyou {
+    padding: 20px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 3em;
+    padding-top: 50px;
+  }
+
+  h4 {
+    font-size: 3em;
+  }
+
+  p {
+    font-size: 2em;
+  }
+
+  img {
+    height: 12em;
+    margin-top: 1.5em;
+  }
+
+}
 
 /* Bottom of page styles
 ============= */
