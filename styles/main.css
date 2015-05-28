@@ -81,11 +81,14 @@ nav ul li {
 
 /* Content Styles
 ================= */
-section p {
-  font-family: "Droid Serif", serif, serif;
-  font-size: 1.8em;
-  font-color: black;
-  font-weight: 400; }
+section {
+  background-color: white;
+  border-radius: p;
+  border-radius-font-family: "Droid Serif", serif, serif;
+  border-radius-font-size: 1.8em;
+  border-radius-font-color: black;
+  border-radius-font-weight: 400;
+  border-radius-padding: 20px; }
 
 /* Bottom
 ============= */

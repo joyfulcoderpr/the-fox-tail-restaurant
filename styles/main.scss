@@ -96,8 +96,13 @@ nav {
 ================= */
 
 section {
+  background-color: white;
+  border-radius:
+
   p {
       @include fontStyle($contentFont, serif, 1.8em, black, 400);
+      padding: 20px;
+
   }
 }
 
