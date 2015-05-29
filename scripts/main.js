@@ -71,14 +71,22 @@ getMenu.done(function (data) {
 //---------------------------------------------------
 
 //Jumbotron:
-var getPhotos = $.getJSON('https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=00ee318c5d4b7c3d39e1c0869ef45e79&gallery_id=133510446-72157653610526022&format=json&nojsoncallback=1&auth_token=72157653207807639-bc2ab7b92655e20d&api_sig=eb61668358d525c55d5485ae949bd5d1');
+var getPhotos = $.getJSON('https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=8b88369d280b658b4cbd11b44771955f&gallery_id=5704-72157653610526022&format=rest&auth_token=72157653246566890-199f9780461f614b&api_sig=77ee34b2cb5c6d8873646c5c33324a17');
 
 var jumboTemplate = _.template($('#loadImage').text());
 
+// var photoUrl = 'https://farm6.staticflickr.com/5578/14469979996_09b59a0bf8_b.jpg';
+
+
+
 getPhotos.done(function (data){
   var homeArray = data.photos.photo;
+
   homeArray.forEach(function (x){
-    $('.slide').append(jumboTemplate(x));
+    var photoUrl = 'https://farm' + x.farm + '.staticflickr.com/' + x.server + '/' + x.id + '_' + x.secret + '_b.jpg';
+
+    // console.log(photoUrl);
+    // $('#slide').append(jumboTemplate(x));
   });
 
 })

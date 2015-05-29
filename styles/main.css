@@ -20,11 +20,10 @@ body {
   max-width: 1438px;
   font-size: 62.5%;
   font-family: "Droid Serif", serif; }
-
-body::after {
-  clear: both;
-  content: "";
-  display: table; }
+  body::after {
+    clear: both;
+    content: "";
+    display: table; }
 
 a {
   text-decoration: none; }
@@ -42,43 +41,37 @@ header {
   height: 300px;
   width: 100%;
   background-image: url("../images/header-back.png"); }
-
-header .logo {
-  height: 200px;
-  padding-top: 60px;
-  text-align: center; }
-
-header img {
-  height: 100%; }
+  header .logo {
+    height: 200px;
+    padding-top: 60px;
+    text-align: center; }
+  header img {
+    height: 100%; }
 
 /* Nav styles
 ============= */
 nav {
   width: 100%; }
-
-nav ul {
-  font-family: "Droid Sans", sans-serif, sans-serif;
-  font-size: 1.8em;
-  font-color: black;
-  font-weight: 400;
-  margin: 10px 0;
-  text-align: center;
-  padding-left: 0; }
-
-nav ul li {
-  display: inline-block;
-  margin-right: 20px; }
-
-nav ul li:hover {
-  cursor: pointer; }
+  nav ul {
+    font-family: "Droid Sans", sans-serif, sans-serif;
+    font-size: 1.8em;
+    font-color: black;
+    font-weight: 400;
+    margin: 10px 0;
+    text-align: center;
+    padding-left: 0; }
+    nav ul li {
+      display: inline-block;
+      margin-right: 20px; }
+    nav ul li:hover {
+      cursor: pointer; }
 
 /* Tabs and Jumbotron
 ============= */
 .jumbotron {
   height: 500px;
   width: 100%;
-  overflow: hidden;
-  background-image: url("http://placehold.it/1438x500"); }
+  overflow: hidden; }
 
 /* Content section styles
 ============= */
@@ -90,58 +83,33 @@ section {
   font-weight: normal;
   display: none; }
 
-
-/* Content Styles
-================= */
-
-section {
-  background-color: white;
-  border-radius: p;
-  border-radius-font-family: "Droid Serif", serif, serif;
-  border-radius-font-size: 1.8em;
-  border-radius-font-color: black;
-  border-radius-font-weight: 400;
-  border-radius-padding: 20px; }
-
-
 .show {
   display: block;
   transition: 1s all ease;
   width: 70%;
   height: 100%; }
 
-section h2 {
-  font-size: 2em;
-  text-align: center; }
-
-section h3 {
-  font-size: 1.8em;
-  display: inline-block; }
-
-section span {
-  float: right;
-  font-size: 1.4em;
-  margin-top: 1.5em; }
-
-section p {
-  font-family: "Droid Serif", serif, serif;
-  font-size: 1.8em;
-  font-color: black;
-  font-weight: 400; }
-
-
-/* Bottom
-=======
-.show {
-  height: 100%;
-  visibility: visible;
-  width: 80%;
-}
-=======
-section .menuList {
-  margin-bottom: 20px;
-  margin-top: 50px; }
->>>>>>> dev
+section {
+  background-color: white;
+  border-radius: h2;
+    border-radius-font-size: 2em;
+    border-radius-text-align: center; }
+  section h3 {
+    font-size: 1.8em;
+    display: inline-block; }
+  section span {
+    float: right;
+    font-size: 1.4em;
+    margin-top: 1.5em; }
+  section p {
+    font-family: "Droid Serif", serif, serif;
+    font-size: 1.8em;
+    font-color: black;
+    font-weight: 400;
+    padding: 20px; }
+  section .menuList {
+    margin-bottom: 20px;
+    margin-top: 50px; }
 
 /* Bottom of page styles
 ============= */
@@ -156,15 +124,12 @@ section .menuList {
   -webkit-border-radius: 10px;
   border-radius: 10px;
   padding: 0px; }
-
-.bottom ul:last-child {
-  margin-right: 0; }
-
-.bottom ul:nth-child(3n) {
-  margin-right: 0; }
-
-.bottom ul:nth-child(3n+1) {
-  clear: left; }
+  .bottom ul:last-child {
+    margin-right: 0; }
+  .bottom ul:nth-child(3n) {
+    margin-right: 0; }
+  .bottom ul:nth-child(3n+1) {
+    clear: left; }
 
 .bottom .left {
   font-size: 1.6em; }
@@ -172,17 +137,14 @@ section .menuList {
 .bottom .center {
   overflow: hidden;
   font-size: 14px; }
-
-.bottom .center h4 {
-  display: inline-block;
-  float: left; }
-
-.bottom .center span {
-  float: right;
-  margin-top: 1.3em; }
-
-.bottom .center p {
-  clear: both; }
+  .bottom .center h4 {
+    display: inline-block;
+    float: left; }
+  .bottom .center span {
+    float: right;
+    margin-top: 1.3em; }
+  .bottom .center p {
+    clear: both; }
 
 .bottom .right {
   overflow: hidden;
@@ -195,47 +157,38 @@ footer {
   clear: both;
   height: 190px;
   margin-top: 25%; }
-
-footer div {
-  margin-top: 30px;
-  padding: 0;
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%; }
-
-footer div:last-child {
-  margin-right: 0; }
-
-footer div:nth-child(4n) {
-  margin-right: 0; }
-
-footer div:nth-child(4n+1) {
-  clear: left; }
-
-footer ul {
-  margin-left: 20px;
-  padding: 0;
-  line-height: 20px; }
+  footer div {
+    margin-top: 30px;
+    padding: 0;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%; }
+    footer div:last-child {
+      margin-right: 0; }
+    footer div:nth-child(4n) {
+      margin-right: 0; }
+    footer div:nth-child(4n+1) {
+      clear: left; }
+  footer ul {
+    margin-left: 20px;
+    padding: 0;
+    line-height: 20px; }
 
 .footleft {
   text-align: center; }
-
-.footleft ul {
-  margin: 0;
-  padding: 0; }
-
-.footleft img {
-  width: 150px;
-  margin-left: 20px; }
-
-.footleft .footright li img {
-  height: 5px;
-  width: auto; }
-
-.footleft .footright span {
-  padding: 0;
-  margin: 0; }
+  .footleft ul {
+    margin: 0;
+    padding: 0; }
+  .footleft img {
+    width: 150px;
+    margin-left: 20px; }
+  .footleft .footright li img {
+    height: 5px;
+    width: auto; }
+  .footleft .footright span {
+    padding: 0;
+    margin: 0; }
 
 /* General
 ============= */
