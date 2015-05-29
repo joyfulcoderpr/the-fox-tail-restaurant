@@ -1,3 +1,4 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo|iconicfill);
 html {
   box-sizing: border-box; }
 
@@ -130,10 +131,20 @@ section .menuList {
   margin-bottom: 20px;
   margin-top: 50px; }
 
-.icon {
-  display: inline-block; }
+.allergy {
+  display: none; }
 
-.icon img {
+.spicy {
+  display: none; }
+
+.vegan {
+  display: none; }
+
+.showicon {
+  display: inline-block;
+  vertical-align: middle; }
+
+.showicon img {
   height: 25px;
   width: 25px; }
 
