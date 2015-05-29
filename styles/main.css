@@ -1,4 +1,3 @@
-@import url(http://weloveiconfonts.com/api/?family=entypo|iconicfill);
 html {
   box-sizing: border-box; }
 
@@ -20,10 +19,11 @@ body {
   max-width: 1438px;
   font-size: 62.5%;
   font-family: "Droid Serif", serif; }
-  body::after {
-    clear: both;
-    content: "";
-    display: table; }
+
+body::after {
+  clear: both;
+  content: "";
+  display: table; }
 
 a {
   text-decoration: none; }
@@ -50,30 +50,35 @@ header {
   height: 300px;
   width: 100%;
   background-image: url("../images/header-back.png"); }
-  header .logo {
-    height: 200px;
-    padding-top: 60px;
-    text-align: center; }
-  header img {
-    height: 100%; }
+
+header .logo {
+  height: 200px;
+  padding-top: 60px;
+  text-align: center; }
+
+header img {
+  height: 100%; }
 
 /* Nav styles
 ============= */
 nav {
   width: 100%; }
-  nav ul {
-    font-family: "Droid Sans", sans-serif, sans-serif;
-    font-size: 1.8em;
-    font-color: black;
-    font-weight: 400;
-    margin: 10px 0;
-    text-align: center;
-    padding-left: 0; }
-    nav ul li {
-      display: inline-block;
-      margin-right: 20px; }
-    nav ul li:hover {
-      cursor: pointer; }
+
+nav ul {
+  font-family: "Droid Sans", sans-serif, sans-serif;
+  font-size: 1.8em;
+  font-color: black;
+  font-weight: 400;
+  margin: 10px 0;
+  text-align: center;
+  padding-left: 0; }
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px; }
+
+nav ul li:hover {
+  cursor: pointer; }
 
 /* Tabs and Jumbotron
 ============= */
@@ -125,21 +130,12 @@ section .menuList {
   margin-bottom: 20px;
   margin-top: 50px; }
 
-.allergy {
-  display: none; }
+.icon {
+  display: inline-block; }
 
-.spicy {
-  display: none; }
-
-.vegan {
-  display: none; }
-
-.showicon {
-  display: inline-block;
-  vertical-align: middle; }
-  .showicon img {
-    height: 25px;
-    width: 25px; }
+.icon img {
+  height: 25px;
+  width: 25px; }
 
 /* Reservations styles
 ============= */
@@ -148,48 +144,57 @@ section form {
   display: block;
   padding: 50px;
   padding-top: 0px; }
-  section form input {
-    display: block;
-    margin: 15px;
-    padding: 10px;
-    border: 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%; }
-  section form #reserveBtn {
-    background-color: #CAE9F1;
-    border: none;
-    height: 60px; }
-  section form select {
-    border: 0;
-    display: block;
-    margin: 15px;
-    padding: 10px;
-    height: 40px;
-    width: 100%;
-    background-color: white;
-    border: 1px solid #ccc;
-    color: #A9A9A9; }
-  section form h2 {
-    font-size: 1.8em; }
+
+section form input {
+  display: block;
+  margin: 15px;
+  padding: 10px;
+  border: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%; }
+
+section form #reserveBtn {
+  background-color: #CAE9F1;
+  border: none;
+  height: 60px; }
+
+section form select {
+  border: 0;
+  display: block;
+  margin: 15px;
+  padding: 10px;
+  height: 40px;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  color: #A9A9A9; }
+
+section form h2 {
+  font-size: 1.8em; }
 
 .reservations {
   border-bottom: 1px solid #ccc;
   box-shadow: 0px 1px 2px #ccc;
   margin-bottom: 50px; }
-  .reservations .thankyou {
-    padding: 20px;
-    text-align: center; }
-  .reservations h2 {
-    font-size: 3em;
-    padding-top: 50px; }
-  .reservations h4 {
-    font-size: 3em; }
-  .reservations p {
-    font-size: 2em; }
-  .reservations img {
-    height: 12em;
-    margin-top: 1.5em; }
+
+.reservations .thankyou {
+  padding: 20px;
+  text-align: center; }
+
+.reservations h2 {
+  font-size: 3em;
+  padding-top: 50px; }
+
+.reservations h4 {
+  font-size: 3em; }
+
+.reservations p {
+  font-size: 2em; }
+
+.reservations img {
+  height: 12em;
+  margin-top: 1.5em; }
 
 /* Bottom of page styles
 ============= */
@@ -204,26 +209,31 @@ section form {
   -webkit-border-radius: 10px;
   border-radius: 10px;
   padding: 0px; }
-  .bottom ul:last-child {
-    margin-right: 0; }
+
+.bottom ul:last-child {
+  margin-right: 0; }
 
 .bottom .left {
   font-size: 1.6em; }
-  .bottom .left p {
-    overflow: hidden;
-    word-wrap: break-word; }
+
+.bottom .left p {
+  overflow: hidden;
+  word-wrap: break-word; }
 
 .bottom .center {
   overflow: hidden;
   font-size: 14px; }
-  .bottom .center h4 {
-    display: inline-block;
-    float: left; }
-  .bottom .center span {
-    float: right;
-    margin-top: 1.3em; }
-  .bottom .center p {
-    clear: both; }
+
+.bottom .center h4 {
+  display: inline-block;
+  float: left; }
+
+.bottom .center span {
+  float: right;
+  margin-top: 1.3em; }
+
+.bottom .center p {
+  clear: both; }
 
 .bottom .right {
   overflow: hidden;
@@ -236,38 +246,46 @@ footer {
   clear: both;
   height: 190px;
   margin-top: 25%; }
-  footer div {
-    margin-top: 30px;
-    padding: 0;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 23.23176%; }
-    footer div:last-child {
-      margin-right: 0; }
-    footer div:nth-child(4n) {
-      margin-right: 0; }
-    footer div:nth-child(4n+1) {
-      clear: left; }
-  footer ul {
-    margin-left: 20px;
-    padding: 0;
-    line-height: 20px; }
+
+footer div {
+  margin-top: 30px;
+  padding: 0;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+
+footer div:last-child {
+  margin-right: 0; }
+
+footer div:nth-child(4n) {
+  margin-right: 0; }
+
+footer div:nth-child(4n+1) {
+  clear: left; }
+
+footer ul {
+  margin-left: 20px;
+  padding: 0;
+  line-height: 20px; }
 
 .footleft {
   text-align: center; }
-  .footleft ul {
-    margin: 0;
-    padding: 0; }
-  .footleft img {
-    width: 150px;
-    margin-left: 20px; }
+
+.footleft ul {
+  margin: 0;
+  padding: 0; }
+
+.footleft img {
+  width: 150px;
+  margin-left: 20px; }
 
 .footright {
   float: right; }
-  .footright span {
-    padding: 0;
-    margin: 0; }
+
+.footright span {
+  padding: 0;
+  margin: 0; }
 
 /* Gallery styles
 ============= */
@@ -275,26 +293,31 @@ footer {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
-  .gallery::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .gallery li {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
-    height: 150px;
-    background-color: blue;
-    padding-bottom: 20px;
-    margin: 0;
-    padding: 0; }
-    .gallery li:last-child {
-      margin-right: 0; }
-    .gallery li:nth-child(2n) {
-      margin-right: 0; }
-    .gallery li:nth-child(2n+1) {
-      clear: left; }
+
+.gallery::after {
+  clear: both;
+  content: "";
+  display: table; }
+
+.gallery li {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  height: 150px;
+  background-color: blue;
+  padding-bottom: 20px;
+  margin: 0;
+  padding: 0; }
+
+.gallery li:last-child {
+  margin-right: 0; }
+
+.gallery li:nth-child(2n) {
+  margin-right: 0; }
+
+.gallery li:nth-child(2n+1) {
+  clear: left; }
 
 /* General
 ============= */

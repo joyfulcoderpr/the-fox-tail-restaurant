@@ -178,18 +178,30 @@
 
 <!-- menu templates -->
 
+
+
   <script type="text/template" id="appTemplate">
-    <li>
-      <div class = "allergy"><img src="images/allergy.png"></div>
+    <li class="appitem">
 
-      <div class = "spicy"><img src="images/spicy.png"></div>
+      <% if (allergies) { %>
+      <div class="icon"><img src="images/allergy.png"></div>
+      <% } %>
 
-      <div class = "vegan"><img src="images/vegan.png"></div>
+      <% if (spicy) { %>
+      <div class='icon'><img src="images/spicy.png"></div>
+      <% } %>
 
-      <div class = "fav"><img src="images/fav.png"></div>
+      <% if (vegan) { %>
+      <div class='icon'><img src="images/vegan.png"></div>
+      <% } %>
+
+      <% if (favorite) { %>
+      <div class='icon'><img src='images/fav.png'></div>
+      <% } %>
 
       <h3><%= item %></h3><span>$<%= price %></span>
       <p><%= description %></p>
+
     </li>
   </script>
 
@@ -229,6 +241,7 @@
 
     <script src="scripts/vendor/underscore.min.js"></script>
     <script src="scripts/vendor/jquery.min.js"></script>
+    <script src="scripts/vendor/jquery.ui.min.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 </html>
