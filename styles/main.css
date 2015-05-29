@@ -206,13 +206,12 @@ section form {
   padding: 0px; }
   .bottom ul:last-child {
     margin-right: 0; }
-  .bottom ul:nth-child(3n) {
-    margin-right: 0; }
-  .bottom ul:nth-child(3n+1) {
-    clear: left; }
 
 .bottom .left {
   font-size: 1.6em; }
+  .bottom .left p {
+    overflow: hidden;
+    word-wrap: break-word; }
 
 .bottom .center {
   overflow: hidden;
@@ -270,8 +269,6 @@ footer {
     padding: 0;
     margin: 0; }
 
-/* Footer styles
-============= */
 /* Gallery styles
 ============= */
 .gallery {
@@ -299,8 +296,6 @@ footer {
     .gallery li:nth-child(2n+1) {
       clear: left; }
 
-/* General
-============= */
 /* General
 ============= */
 /* Allergy credit text, will be moved to html

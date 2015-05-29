@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="styles/vendor/normalize.css">
+  <link rel="stylesheet" href="styles/vendor/jquery.ui.min.css">
+  <link rel="stylesheet" href="styles/vendor/jquery-ui.structure.min.css">
+  <link rel="stylesheet" href="styles/vendor/jquery-ui.theme.min.css">
   <link rel="stylesheet" href="styles/main.css">
 
 </head>
@@ -70,7 +73,7 @@
         <h2>Request a reservation.</h2>
           <input type="text" placeholder="Full Name" class="reservationform" size="50">
           <input type="text" placeholder="Number of Guests" class="reservationform">
-          <input type="text" placeholder="Date (mm/dd/yy)" class="reservationform">
+          <input type="text" placeholder="Date" class="reservationform" id="datepicker">
           <input type="text" placeholder="Time" class="reservationform">
           <select>
             <option value="" disabled selected>Seating Preference</option>
