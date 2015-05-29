@@ -131,7 +131,8 @@ section .menuList {
   margin-top: 50px; }
 
 .icon {
-  display: inline-block; }
+  display: inline-block;
+  vertical-align: middle; }
 
 .icon img {
   height: 25px;

@@ -158,12 +158,15 @@ section {
 }
 
 .icon {
-  display: inline-block;
-  img {
-    height:25px;
-    width:25px;
-  }
+  display:inline-block;
+  vertical-align: middle;
+    img {
+      height:25px;
+      width:25px;
+    }
 }
+
+
 
 
 /* Reservations styles
