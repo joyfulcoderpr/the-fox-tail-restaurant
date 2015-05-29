@@ -135,7 +135,7 @@ section form {
   font-size: 1.8em;
   display: block;
   padding: 50px;
-  padding-top: 20px; }
+  padding-top: 0px; }
 
 section form input {
   display: block;
@@ -148,7 +148,8 @@ section form input {
 
 section form #reserveBtn {
   background-color: #CAE9F1;
-  border: none; }
+  border: none;
+  height: 60px; }
 
 section form select {
   border: 0;
@@ -161,9 +162,12 @@ section form select {
   border: 1px solid #ccc;
   color: #A9A9A9; }
 
+section form h2 {
+  font-size: 1.8em; }
+
 .reservations {
   border-bottom: 1px solid #ccc;
-  box-shadow: 0px 0.1px 2px #ccc;
+  box-shadow: 0px 1px 2px #ccc;
   margin-bottom: 50px; }
 
 .reservations .thankyou {

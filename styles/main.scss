@@ -164,7 +164,7 @@ section {
     font-size: 1.8em;
     display: block;
     padding: 50px;
-    padding-top: 20px;
+    padding-top: 0px;
 
     input {
       display: block;
@@ -179,6 +179,7 @@ section {
     #reserveBtn {
       background-color: $baby;
       border: none;
+      height: 60px;
     }
 
     select {
@@ -193,13 +194,17 @@ section {
       color: #A9A9A9;
     }
 
+    h2 {
+      font-size: 1.8em;
+    }
+
   }
 
 }
 
 .reservations {
   border-bottom: 1px solid #ccc;
-  box-shadow: 0px .1px 2px #ccc;
+  box-shadow: 0px 1px 2px #ccc;
   margin-bottom: 50px;
 
   .thankyou {
