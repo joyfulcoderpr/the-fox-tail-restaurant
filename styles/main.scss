@@ -154,8 +154,30 @@ section {
   .menuList {
     margin-bottom: 20px;
     margin-top: 50px;
+
   }
 
+}
+
+.allergy {
+  display:none;
+}
+
+.spicy {
+  display: none;
+}
+
+.vegan {
+  display: none;
+}
+
+.showicon {
+  display:inline-block;
+  vertical-align: middle;
+    img {
+      height:25px;
+      width:25px;
+    }
 }
 
 /* Reservations styles
@@ -360,4 +382,14 @@ footer {
 /* General
 ============= */
 
+/* General
+============= */
+
+/* Allergy credit text, will be moved to html
+============= */
+
+// allergies by Ben Markoch from the Noun Project
+// Love by Martha Ormiston from the Noun Project 
+// Vegetarian by Matthew Hawdon from the Noun Project
+// Flame by Alex Tai from the Noun Project
 

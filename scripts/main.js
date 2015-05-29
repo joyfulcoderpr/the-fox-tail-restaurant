@@ -48,6 +48,27 @@ getMenu.done(function (data) {
   var appArray = data.appetizers;
   appArray.forEach( function(d) {
     $('.appetizers').append(appFunction(d));
+
+    if(d.allergies === 1 ) {
+
+    $(".allergy").addClass("showicon");
+    } 
+
+    if (d.spicy === 1 ) {
+
+    $(".spicy").addClass("showicon");
+    }
+
+    if (d.vegan === 1 ) {
+
+    $(".vegan").addClass("showicon");
+    }
+
+    if (d.favorite === 1 ) {
+
+    $(".fav").addClass("showicon");
+    }
+
   });
 
   var entreeArray = data.entrees;
@@ -67,9 +88,7 @@ getMenu.done(function (data) {
       }
     });
   });
-
 });
-
 
 // Get today's news JSON data
 // --------------------------------------------------

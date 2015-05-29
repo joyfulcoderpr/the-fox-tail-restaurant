@@ -131,6 +131,23 @@ section .menuList {
   margin-bottom: 20px;
   margin-top: 50px; }
 
+.allergy {
+  display: none; }
+
+.spicy {
+  display: none; }
+
+.vegan {
+  display: none; }
+
+.showicon {
+  display: inline-block;
+  vertical-align: middle; }
+
+.showicon img {
+  height: 25px;
+  width: 25px; }
+
 /* Reservations styles
 ============= */
 section form {
@@ -318,4 +335,8 @@ footer ul {
   clear: left; }
 
 /* General
+============= */
+/* General
+============= */
+/* Allergy credit text, will be moved to html
 ============= */
