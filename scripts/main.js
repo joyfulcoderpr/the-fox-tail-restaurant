@@ -83,17 +83,6 @@ getPhotos.done(function (data){
 
 })
 
-
-
-
-// getPhotos.done(function (photo){
-//   $('.jumbophoto').innerHTML();
-
-// })
-
-// var getPhotos = $getJSON('https://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&' + key + '&user_id=' + id + '&format=json');
-
-
 // Get today's news JSON data
 // --------------------------------------------------
 
