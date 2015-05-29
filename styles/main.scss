@@ -157,26 +157,14 @@ section {
 
 }
 
-.allergy {
-  display:none;
+.icon {
+  display:inline-block;
+  vertical-align: middle;
+    img {
+      height:25px;
+      width:25px;
+    }
 }
-
-.spicy {
-  display: none;
-}
-
-.vegan {
-  display: none;
-}
-
-  .showicon {
-    display:inline-block;
-    vertical-align: middle;
-      img {
-        height:25px;
-        width:25px;
-      }
-  }
 
 
 
