@@ -89,10 +89,12 @@ nav ul li:hover {
   overflow: hidden;
   background-image: url("http://placehold.it/1438x500"); }
 
+.jumbotronhide {
+  height: 0; }
+
 /* Content section styles
 ============= */
 section {
-  width: 0%;
   height: 0;
   margin-left: auto;
   margin-right: auto;
