@@ -154,7 +154,6 @@ section {
   .menuList {
     margin-bottom: 20px;
     margin-top: 50px;
-
   }
 
 }
@@ -171,14 +170,17 @@ section {
   display: none;
 }
 
-.showicon {
-  display:inline-block;
-  vertical-align: middle;
-    img {
-      height:25px;
-      width:25px;
-    }
-}
+  .showicon {
+    display:inline-block;
+    vertical-align: middle;
+      img {
+        height:25px;
+        width:25px;
+      }
+  }
+
+
+
 
 /* Reservations styles
 ============= */
@@ -265,7 +267,6 @@ section {
 
  ul {
     @include span-columns(4);
-    @include omega(3n);
     height: 325px;
     overflow: auto;
     -moz-border-radius: 10px;
@@ -277,6 +278,10 @@ section {
   .left {
     font-size: 1.6em;
     // text-align: center;
+    p {
+      overflow: hidden;
+      word-wrap: break-word;
+    }
   }
 
   .center {
@@ -349,17 +354,13 @@ footer {
 }
 
 .footright {
-  float:right;
+  float: right;
 
     span {
       padding:0;
       margin:0;
     }
   }
-
-/* Footer styles
-============= */
-
 
 /* Gallery styles
 ============= */
@@ -372,15 +373,13 @@ footer {
     @include omega(2n);
     // width:45%;
     height:150px;
-    background-color:blue;
-    padding-bottom:20px;
-    margin:0;
-    padding:0;
+    background-color: blue;
+    padding-bottom: 20px;
+    margin: 0;
+    padding: 0;
   }
 }
 
-/* General
-============= */
 
 /* General
 ============= */
@@ -389,7 +388,7 @@ footer {
 ============= */
 
 // allergies by Ben Markoch from the Noun Project
-// Love by Martha Ormiston from the Noun Project 
+// Love by Martha Ormiston from the Noun Project
 // Vegetarian by Matthew Hawdon from the Noun Project
 // Flame by Alex Tai from the Noun Project
 
