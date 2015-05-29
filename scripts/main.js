@@ -75,15 +75,26 @@ var getPhotos = $.getJSON('https://api.flickr.com/services/rest/?method=flickr.g
 
 var jumboTemplate = _.template($('#loadImage').text());
 
-// var photoUrl = 'https://farm6.staticflickr.com/5578/14469979996_09b59a0bf8_b.jpg';
-var photoUrl;
-
 getPhotos.done(function (data){
   var photoArray = data.photos.photo;
   console.log(photoArray);
-  photoArray.forEach (function (x){
-    console.log('https://farm' + x.farm + '.staticflickr.com/' + x.server + '/' + x.id + '_' + x.secret + '_b.jpg');
-  })
+
+_.each(photoArray, function(x){
+})
+
+  // photoArray.forEach (function (x){
+  //   photoList1 = [];
+  //   photoUrl = 'https://farm' + x.farm + '.staticflickr.com/' + x.server + '/' + x.id + '_' + x.secret + '_b.jpg';
+
+
+
+  });
+
+
+  // photoList1.forEach (function(photoUrl){
+  //   photoUrl.push[photoList1];
+  // })
+
 
   // photoArray.forEach (function(photoUrl){
   //   return 'https://farm' + photoArray.farm + '.staticflickr.com/' + photoArray.server + '/' + photoArray.id + '_' + photoArrayget.secret + '_b.jpg'
