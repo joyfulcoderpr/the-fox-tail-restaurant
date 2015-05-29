@@ -71,10 +71,25 @@ getMenu.done(function (data) {
 //---------------------------------------------------
 
 //Jumbotron:
+var getPhotos = $.getJSON('https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=00ee318c5d4b7c3d39e1c0869ef45e79&gallery_id=133510446-72157653610526022&format=json&nojsoncallback=1&auth_token=72157653207807639-bc2ab7b92655e20d&api_sig=eb61668358d525c55d5485ae949bd5d1');
+
+var jumboTemplate = _.template($('#loadImage').text());
+
+getPhotos.done(function (data){
+  var homeArray = data.photos.photo;
+  homeArray.forEach(function (x){
+    $('.slide').append(jumboTemplate(x));
+  });
+
+})
 
 
 
 
+// getPhotos.done(function (photo){
+//   $('.jumbophoto').innerHTML();
+
+// })
 
 // var getPhotos = $getJSON('https://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&' + key + '&user_id=' + id + '&format=json');
 
