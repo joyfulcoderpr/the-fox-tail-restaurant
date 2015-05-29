@@ -92,3 +92,9 @@ getNews.done(function (data) {
 $('#reserveBtn').on('click', function () {
   $('form').replaceWith('<div class="thankyou">' + '<h4>Thank you for your reservation request!</h4>' + '<p>You will receive an email once your reservation is confirmed.</p>' + '<div class=thankyouimg><img src="images/foxtail_sm_notag.png"></div>' + '</div>');
 });
+
+// Datepicker
+
+$(function() {
+    $( "#datepicker" ).datepicker();
+  });
