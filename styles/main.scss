@@ -55,6 +55,13 @@ select:focus {
   outline: 0;
 }
 
+.content {
+  
+  article {
+    margin-bottom:75px;
+  }
+}
+
 /* Header styles will start here
 ================================ */
 header {
@@ -263,24 +270,39 @@ section {
 ============= */
 
 .bottom {
-
-
+background-color: $baby;
  ul {
     @include span-columns(4);
-    height: 325px;
+    height: 225px;
     overflow: auto;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
     padding: 0px;
+    margin-left:0;
+    background-color:$baby;
+
+    li {
+    }
+  }
+
+  .iframe {
+    padding:0;
+    margin:0;
   }
 
   .left {
     font-size: 1.6em;
-    // text-align: center;
+
     p {
-      overflow: hidden;
-      word-wrap: break-word;
+       display: block;
+       display: -webkit-box;
+       max-width: 100%;
+       height: 43px;
+       margin: 0 auto;
+       font-size: 14px;
+       line-height: 1;
+       -webkit-line-clamp: 3;
+       -webkit-box-orient: vertical;
+       overflow: hidden;
+       text-overflow: ellipsis;
     }
   }
 
@@ -322,7 +344,8 @@ footer {
   background-color: $baby;
   clear: both;
   height: 190px;
-  margin-top:25%;
+  margin-top:15%;
+  padding:0;
 
     div {
       margin-top:30px;
@@ -362,7 +385,7 @@ footer {
     }
   }
 
-/* Gallery styles
+/* Gallery styles 
 ============= */
 
 .gallery {

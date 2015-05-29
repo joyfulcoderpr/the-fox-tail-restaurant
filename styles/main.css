@@ -45,6 +45,9 @@ input:focus {
 select:focus {
   outline: 0; }
 
+.content article {
+  margin-bottom: 75px; }
+
 /* Header styles will start here
 ================================ */
 header {
@@ -209,27 +212,42 @@ section form h2 {
 
 /* Bottom of page styles
 ============= */
+.bottom {
+  background-color: #CAE9F1; }
+
 .bottom ul {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 31.76157%;
-  height: 325px;
+  height: 225px;
   overflow: auto;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  padding: 0px; }
+  padding: 0px;
+  margin-left: 0;
+  background-color: #CAE9F1; }
 
 .bottom ul:last-child {
   margin-right: 0; }
+
+.bottom .iframe {
+  padding: 0;
+  margin: 0; }
 
 .bottom .left {
   font-size: 1.6em; }
 
 .bottom .left p {
+  display: block;
+  display: -webkit-box;
+  max-width: 100%;
+  height: 43px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 1;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
   overflow: hidden;
-  word-wrap: break-word; }
+  text-overflow: ellipsis; }
 
 .bottom .center {
   overflow: hidden;
@@ -256,7 +274,8 @@ footer {
   background-color: #CAE9F1;
   clear: both;
   height: 190px;
-  margin-top: 25%; }
+  margin-top: 15%;
+  padding: 0; }
 
 footer div {
   margin-top: 30px;
@@ -298,7 +317,7 @@ footer ul {
   padding: 0;
   margin: 0; }
 
-/* Gallery styles
+/* Gallery styles 
 ============= */
 .gallery {
   max-width: 68em;
