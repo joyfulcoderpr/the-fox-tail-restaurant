@@ -133,18 +133,13 @@ section .menuList {
   margin-bottom: 20px;
   margin-top: 50px; }
 
+section .menuList h2 {
+  padding-left: 15px; }
+
 .icon {
   display: inline-block; }
 
-<<<<<<< HEAD
-.showicon {
-  display: inline-block;
-  vertical-align: middle; }
-
-.showicon img {
-=======
 .icon img {
->>>>>>> krdev
   height: 25px;
   width: 25px; }
 

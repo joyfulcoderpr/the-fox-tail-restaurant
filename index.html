@@ -184,7 +184,35 @@
   <script type="text/template" id="appTemplate">
     <li class="appitem">
 
+      <h3><%= item %></h3>
+
+      <span>$<%= price %></span>
+
       <% if (allergies) { %>
+      <div class="icon"><img src="images/allergy.png"></div>
+      <% } %>
+
+      <% if (spicy) { %>
+      <div class='icon'><img src="images/spicy.png"></div>
+      <% } %>
+
+      <% if (vegan) { %>
+      <div class='icon'><img src="images/vegan.png"></div>
+      <% } %>
+
+      <% if (favorite) { %>
+      <div class='icon'><img src='images/fav.png'></div>
+      <% } %>
+
+      <p><%= description %></p>
+
+    </li>
+  </script>
+
+  <script type="text/template" id="entreeTemplate">
+    <li>
+
+       <% if (allergies) { %>
       <div class="icon"><img src="images/allergy.png"></div>
       <% } %>
 
@@ -202,20 +230,29 @@
 
       <h3><%= item %></h3><span>$<%= price %></span>
       <p><%= description %></p>
-
-    </li>
-  </script>
-
-  <script type="text/template" id="entreeTemplate">
-    <li>
-      <h3><%= item %></h3><span>$<%= price %></span>
-      <p><%= description %></p>
     </li>
   </script>
 
 
   <script type="text/template" id="sidesTemplate">
     <li>
+
+      <% if (allergies) { %>
+      <div class="icon"><img src="images/allergy.png"></div>
+      <% } %>
+
+      <% if (spicy) { %>
+      <div class='icon'><img src="images/spicy.png"></div>
+      <% } %>
+
+      <% if (vegan) { %>
+      <div class='icon'><img src="images/vegan.png"></div>
+      <% } %>
+
+      <% if (favorite) { %>
+      <div class='icon'><img src='images/fav.png'></div>
+      <% } %>
+
       <h3><%= item %></h3><span>$<%= price %></span>
     </li>
   </script>
