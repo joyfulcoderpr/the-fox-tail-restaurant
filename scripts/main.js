@@ -71,25 +71,37 @@ getMenu.done(function (data) {
 //---------------------------------------------------
 
 //Jumbotron:
-var getPhotos = $.getJSON('https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=8b88369d280b658b4cbd11b44771955f&gallery_id=5704-72157653610526022&format=rest&auth_token=72157653246566890-199f9780461f614b&api_sig=77ee34b2cb5c6d8873646c5c33324a17');
+var getPhotos = $.getJSON('https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=8b88369d280b658b4cbd11b44771955f&gallery_id=5704-72157653610526022&format=json&nojsoncallback=1&auth_token=72157653246566890-199f9780461f614b&api_sig=9f129a6ccf7ea490198ae6b104aa7fff');
 
 var jumboTemplate = _.template($('#loadImage').text());
 
 // var photoUrl = 'https://farm6.staticflickr.com/5578/14469979996_09b59a0bf8_b.jpg';
-
-
+var photoUrl;
 
 getPhotos.done(function (data){
-  var homeArray = data.photos.photo;
+  var photoArray = data.photos.photo;
+  console.log(photoArray);
+  photoArray.forEach (function (x){
+    console.log('https://farm' + x.farm + '.staticflickr.com/' + x.server + '/' + x.id + '_' + x.secret + '_b.jpg');
+  })
 
-  homeArray.forEach(function (x){
-    var photoUrl = 'https://farm' + x.farm + '.staticflickr.com/' + x.server + '/' + x.id + '_' + x.secret + '_b.jpg';
-
-    // console.log(photoUrl);
-    // $('#slide').append(jumboTemplate(x));
-  });
+  // photoArray.forEach (function(photoUrl){
+  //   return 'https://farm' + photoArray.farm + '.staticflickr.com/' + photoArray.server + '/' + photoArray.id + '_' + photoArrayget.secret + '_b.jpg'
+  // })
 
 })
+
+// getPhotos.done(function (data){
+//   var homeArray = data.photos.photo;
+
+//   homeArray.forEach(function (x){
+//     var photoUrl = 'https://farm' + x.farm + '.staticflickr.com/' + x.server + '/' + x.id + '_' + x.secret + '_b.jpg';
+
+//     console.log(photoUrl);
+//     $('#slide').append(jumboTemplate(x));
+//   });
+
+// })
 
 // Get today's news JSON data
 // --------------------------------------------------
