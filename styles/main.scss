@@ -1,6 +1,5 @@
 @import "vendor/bourbon/bourbon";
 @import "vendor/neat/neat";
-@import url(http://weloveiconfonts.com/api/?family=entypo|iconicfill);
 
 // Color Variables
 $slate: #566573;
@@ -165,28 +164,13 @@ section {
 
 }
 
-.allergy {
-  display:none;
-}
-
-.spicy {
-  display: none;
-}
-
-.vegan {
-  display: none;
-}
-
-  .showicon {
-    display:inline-block;
-    vertical-align: middle;
-      img {
-        height:25px;
-        width:25px;
-      }
+.icon {
+  display: inline-block;
+  img {
+    height:25px;
+    width:25px;
   }
-
-
+}
 
 
 /* Reservations styles

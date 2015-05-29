@@ -35,12 +35,10 @@ var getMenu = $.getJSON('http://private-anon-a6cb7aa40-restaurantapi.apiary-mock
 
 var getSpecial = $.getJSON('http://private-anon-a6cb7aa40-restaurantapi.apiary-mock.com/menu/special');
 
-var appTemplate = $('#appTemplate').html();
-var appFunction = _.template(appTemplate);
-var entreeTemplate = $('#entreeTemplate').html();
-var entreeFunction = _.template(entreeTemplate);
-var sidesTemplate = $('#sidesTemplate').html();
-var sidesFunction = _.template(sidesTemplate);
+
+var appFunction = _.template($('#appTemplate').html());
+var entreeFunction = _.template($('#entreeTemplate').html());
+var sidesFunction = _.template($('#sidesTemplate').html());
 
 
 getMenu.done(function (data) {
@@ -48,27 +46,6 @@ getMenu.done(function (data) {
   var appArray = data.appetizers;
   appArray.forEach( function(d) {
     $('.appetizers').append(appFunction(d));
-
-    if(d.allergies === 1 ) {
-
-    $(".allergy").addClass("showicon");
-    } 
-
-    if (d.spicy === 1 ) {
-
-    $(".spicy").addClass("showicon");
-    }
-
-    if (d.vegan === 1 ) {
-
-    $(".vegan").addClass("showicon");
-    }
-
-    if (d.favorite === 1 ) {
-
-    $(".fav").addClass("showicon");
-    }
-
   });
 
   var entreeArray = data.entrees;
@@ -97,6 +74,8 @@ getMenu.done(function (data) {
 var getNews = $.getJSON('http://private-anon-a6cb7aa40-restaurantapi.apiary-mock.com/news/latest');
 
 // Drop today's news into DOM
+// ----------------------------------------------------
+
 
 var newsTemplate = $('#latestNews').html();
 var newsFunction = _.template(newsTemplate);
@@ -107,12 +86,16 @@ getNews.done(function (data) {
 
 
 // Send off reservation request and return thank you
+// ----------------------------------------------------
+
 
 $('#reserveBtn').on('click', function () {
   $('form').replaceWith('<div class="thankyou">' + '<h4>Thank you for your reservation request!</h4>' + '<p>You will receive an email once your reservation is confirmed.</p>' + '<div class=thankyouimg><img src="images/foxtail_sm_notag.png"></div>' + '</div>');
 });
 
 // Datepicker
+// ----------------------------------------------------
+
 
 $(function() {
     $( "#datepicker" ).datepicker();
