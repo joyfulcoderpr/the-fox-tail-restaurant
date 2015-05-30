@@ -14,9 +14,13 @@ $navFont: 'Droid Sans', sans-serif;
 
 @mixin fontStyle($family, $serif, $size, $color, $weight) {font-family: $family, $serif; font-size: $size; font-color: $color; font-weight: $weight;};
 
+@mixin lineHeight() {
+  line-height: 1.5em;
+}
 
 /* Global Styles
 ================ */
+
 * {
   border-sizing: border-box;
   list-style: none;
@@ -87,8 +91,8 @@ nav {
     li {
       display: inline-block;
       margin-right: 20px;
-
     }
+
     li:hover {
       cursor: pointer;
     }
@@ -109,7 +113,7 @@ nav {
   height: 0;
 }
 
-/* Content section styles
+/* Content section show and hide styles
 ============= */
 
 section {
@@ -127,6 +131,9 @@ section {
   height: 100%;
   margin-top: 50px;
 }
+
+/* Content section styles
+============= */
 
 section {
 
@@ -148,13 +155,18 @@ section {
 
   p {
       @include fontStyle($contentFont, serif, 1.8em, black, 400);
+      @include lineHeight;
   }
 
   .menuList {
     margin-bottom: 20px;
     margin-top: 50px;
+    li {
+      p {
+        @include lineHeight;
+      }
+    }
   }
-
 }
 
 .icon {
@@ -165,8 +177,6 @@ section {
       width:25px;
     }
 }
-
-
 
 
 /* Reservations styles
@@ -264,7 +274,6 @@ section {
 
   .left {
     font-size: 1.6em;
-    // text-align: center;
     p {
       overflow: hidden;
       word-wrap: break-word;
@@ -274,7 +283,6 @@ section {
   .center {
     overflow:hidden;
     font-size: 14px;
-    // text-align: center;
 
     h4 {
       display: inline-block;
@@ -289,7 +297,6 @@ section {
     p {
       clear: both;
     }
-
   }
 
   .right {
