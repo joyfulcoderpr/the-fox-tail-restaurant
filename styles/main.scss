@@ -112,7 +112,7 @@ nav {
   height: 500px;
   width:100%;
   overflow:hidden;
-  background-image: url('http://placehold.it/1438x500');
+  // background-image: url('http://placehold.it/1438x500');
 }
 
 .jumbotronhide {
@@ -142,6 +142,9 @@ section {
 ============= */
 
 section {
+  background-color: white;
+  border-radius:
+
 
   h2 {
     font-size: 2em;
@@ -161,7 +164,12 @@ section {
 
   p {
       @include fontStyle($contentFont, serif, 1.8em, black, 400);
+
+      padding: 20px;
+
+
       @include lineHeight;
+
   }
 
   .menuList {
