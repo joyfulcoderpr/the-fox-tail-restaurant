@@ -209,7 +209,10 @@ section form h2 {
 /* Bottom of page styles
 ============= */
 .bottom {
-  background-color: #CAE9F1; }
+  background-color: #CAE9F1;
+  margin-top: 1px;
+  font-size: 1.6em;
+  overflow: hidden; }
 
 .bottom ul {
   float: left;
@@ -224,8 +227,8 @@ section form h2 {
 .bottom ul:last-child {
   margin-right: 0; }
 
-.bottom .left {
-  font-size: 1.6em; }
+.bottom h3, .bottom h4 {
+  margin-left: 25px; }
 
 .bottom .left p {
   display: block;
@@ -237,22 +240,21 @@ section form h2 {
   line-height: 1;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  overflow: hidden; }
+  overflow: hidden;
+  margin: 25px;
+  width: 90%; }
 
 .bottom .center {
   overflow: hidden;
   font-size: 14px; }
 
-.bottom .center h4 {
-  display: inline-block;
-  float: left; }
-
 .bottom .center span {
-  float: right;
-  margin-top: 1.3em; }
+  float: right; }
 
 .bottom .center p {
-  clear: both; }
+  clear: both;
+  margin: 25px;
+  width: 90%; }
 
 .bottom .right {
   overflow: hidden;
@@ -262,6 +264,7 @@ section form h2 {
 ============= */
 footer {
   background-color: #CAE9F1;
+  border-top: 3px solid white;
   clear: both;
   height: 190px;
   margin-top: 0; }

@@ -275,6 +275,9 @@ section {
 
 .bottom {
   background-color: $baby;
+  margin-top:1px;
+  font-size: 1.6em;
+  overflow:hidden;
 
  ul {
     @include span-columns(4);
@@ -284,9 +287,13 @@ section {
     margin-bottom:0;
   }
 
+  h3, h4 {
+    margin-left:25px;
+  }
+
   .left {
-    font-size: 1.6em;
-    p {
+
+      p {
       display: block;
       display: -webkit-box;
       max-width: 100%;
@@ -297,6 +304,9 @@ section {
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden;
+      margin:25px;
+      width:90%;
+
     }
   }
 
@@ -304,18 +314,15 @@ section {
     overflow:hidden;
     font-size: 14px;
 
-    h4 {
-      display: inline-block;
-      float: left;
-    }
-
     span {
       float: right;
-      margin-top: 1.3em;
+      // margin-top: 1.3em;
     }
 
     p {
       clear: both;
+      margin:25px;
+      width:90%;
     }
   }
 
@@ -331,6 +338,7 @@ section {
 
 footer {
   background-color: $baby;
+  border-top:3px solid white;
   clear: both;
   height: 190px;
   margin-top:0;
@@ -394,7 +402,6 @@ footer {
     padding: 0;
   }
 }
-
 
 /* General
 ============= */
