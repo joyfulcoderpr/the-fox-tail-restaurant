@@ -12,11 +12,13 @@
 
 </head>
 <body>
+
   <div class="container">
+
     <header>
       <div class="logo">
         <img src="images/foxtail_sm.png">
-      </div>
+      </div> <!-- end logo div -->
     </header>
       <nav>
         <ul>
@@ -26,10 +28,13 @@
           <li id="gallery">Gallery</li>
         </ul>
     </nav>
+
     <div class="content">
+
     <div class="jumbotron">
 
-    </div>
+    </div> <!-- end jumbotron div -->
+
       <!-- Home content below -->
       <section class="home show">
         <article>
@@ -77,8 +82,8 @@
           <input type="text" placeholder="Time" class="reservationform">
           <select>
             <option value="" disabled selected>Seating Preference</option>
-            <option value="I">Inside</option>
-            <option value="O">Outside</option>
+            <option value="I">Inside</span></option>
+            <option value="O">Outside</span></option>
           </select>
           <input type="email" placeholder="Email Address for Reservation Confirmation" size="50" class="reservationform">
           <input type="button" value="Request Reservation" id="reserveBtn">
@@ -90,7 +95,6 @@
       <section class="gallery">
 
         <ul class="gallerypics">
-
           <li><img src="http://placehold.it/380x150"></li>
           <li><img src="http://placehold.it/380x150"></li>
           <li><img src="http://placehold.it/380x150"></li>
@@ -112,26 +116,27 @@
         </div>
 
       </section>
-    </div>
+
+    </div> <!-- end content div -->
 
     <!-- Blog, Map and Daily special below -->
 
     <div class="bottom">
+
       <ul class="left">
       </ul>
 
       <ul class="center">
       </ul>
-      
+
       <ul class="right">
 
           <li><iframe width="100%" height="225px" frameborder="0" text-align="center"
           src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBHA3AqSpTiP77yE2RIz-yo6zh35rl8J3w&q=Foxtail Restaraunt Group,Atlanta+GA"></iframe></li>
 
-        </ul>
+      </ul>
 
-      </div>
-     </div>
+    </div>
 
      <!-- Footer begins here -->
 
@@ -164,7 +169,7 @@
 
       <p>
 
-      <span><a href="#"><img src="images/facebook.png"></a></span>
+      <span class="fb"><a href="#"><img src="images/facebook.png"></a></span>
 
       <span><a href="#"><img src="images/twitter.png"></a></span>
 
@@ -173,12 +178,14 @@
       </p>
     </div>
     </footer>
-  </div>
 
-<!-- Underscore Templates -->
+  </div> <!-- end container div -->
+
+
+<!-- Underscore Script Templates -->
+
 
 <!-- menu templates -->
-
 
 
   <script type="text/template" id="appTemplate">
@@ -212,6 +219,8 @@
   <script type="text/template" id="entreeTemplate">
     <li>
 
+      <h3><%= item %></h3><span>$<%= price %></span>
+
        <% if (allergies) { %>
       <div class="icon"><img src="images/allergy.png"></div>
       <% } %>
@@ -228,7 +237,6 @@
       <div class='icon'><img src='images/fav.png'></div>
       <% } %>
 
-      <h3><%= item %></h3><span>$<%= price %></span>
       <p><%= description %></p>
     </li>
   </script>
@@ -236,6 +244,8 @@
 
   <script type="text/template" id="sidesTemplate">
     <li>
+
+      <h3><%= item %></h3><span>$<%= price %></span>
 
       <% if (allergies) { %>
       <div class="icon"><img src="images/allergy.png"></div>
@@ -253,7 +263,6 @@
       <div class='icon'><img src='images/fav.png'></div>
       <% } %>
 
-      <h3><%= item %></h3><span>$<%= price %></span>
     </li>
   </script>
 
@@ -271,9 +280,7 @@
 
   <script type="text/template" id="todaySpecial">
     <h3>Todays Special</h3>
-
   </script>
-
 
 <!-- Scripts -->
 
@@ -281,5 +288,6 @@
     <script src="scripts/vendor/jquery.min.js"></script>
     <script src="scripts/vendor/jquery.ui.min.js"></script>
     <script src="scripts/main.js"></script>
+
 </body>
 </html>

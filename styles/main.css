@@ -91,7 +91,7 @@ nav ul li:hover {
 .jumbotronhide {
   height: 0; }
 
-/* Content section styles
+/* Content section show and hide styles
 ============= */
 section {
   height: 0;
@@ -107,6 +107,8 @@ section {
   height: 100%;
   margin-top: 50px; }
 
+/* Content section styles
+============= */
 section h2 {
   font-size: 2em;
   text-align: center; }
@@ -124,11 +126,15 @@ section p {
   font-family: "Droid Serif", serif, serif;
   font-size: 1.8em;
   font-color: black;
-  font-weight: 400; }
+  font-weight: 400;
+  line-height: 1.5em; }
 
 section .menuList {
   margin-bottom: 20px;
   margin-top: 50px; }
+
+section .menuList li p {
+  line-height: 1.5em; }
 
 .icon {
   display: inline-block;
@@ -168,8 +174,7 @@ section form select {
   height: 40px;
   width: 100%;
   background-color: white;
-  border: 1px solid #ccc;
-  color: #A9A9A9; }
+  border: 1px solid #ccc; }
 
 section form h2 {
   font-size: 1.8em; }
