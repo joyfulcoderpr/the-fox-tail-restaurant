@@ -372,13 +372,18 @@ footer {
 ============= */
 
 .gallery {
-  @include outer-container;
+  // @include outer-container;
 
+  ul {
+    margin-left: 0;
   li {
-    @include span-columns(6);
-    @include omega(2n);
+    @include span-columns(4);
+    @include omega(3n);
     margin: 15px 0;
   }
+
+  }
+
 }
 
 

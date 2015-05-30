@@ -99,7 +99,7 @@ galleryPhotos.done(function (data){
     galleryArr.push(flickrUrl);
   });
 
-galleryArr.forEach(function(i){
+galleryArr.forEach(function(item){
   item = '<li><img src="' + galleryArr[0] + '"></li>'
 
   $('.gallerypics').append(item)});
