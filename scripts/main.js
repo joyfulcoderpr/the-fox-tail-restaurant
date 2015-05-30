@@ -74,8 +74,6 @@ getMenu.done(function (data) {
 
 //Jumbotron:
 var getPhotos = $.getJSON('https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=f79a18a2e0ac49a0f6a51f3e70979e93&gallery_id=5704-72157653610526022&format=json&nojsoncallback=1&auth_token=72157653702578331-fefccb385a023355&api_sig=2b8e0732d1beaedd881251f8bee94a41');
-
-var jumboTemplate = _.template($('#loadImage').text());
 var jumboPhoto = [];
 
 getPhotos.done(function (data){
@@ -87,6 +85,27 @@ getPhotos.done(function (data){
     jumboPhoto.push(photoUrl);
   });
 });
+
+//Gallery:
+var galleryPhotos = $.getJSON('https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=7aac400281b1bc0bff4bc7a81a09b057&gallery_id=5704-72157653252100120&format=json&nojsoncallback=1&auth_token=72157653650521746-4e55ac60f0f23e94&api_sig=300f81251a0e71d06e0ad80c22a4f849');
+var galleryArr = [];
+
+galleryPhotos.done(function (data){
+  var picArray = data.photos.photo;
+  console.log(picArray);
+
+  _.each(picArray, function(x){
+    flickrUrl = 'https://farm' + x.farm + '.staticflickr.com/' + x.server + '/' + x.id + '_' + x.secret + '_m.jpg';
+    galleryArr.push(flickrUrl);
+  });
+
+galleryArr.forEach(function(i){
+  item = '<li><img src="' + galleryArr[0] + '"></li>'
+
+  $('.gallerypics').append(item)});
+});
+
+
 
 // Get today's news JSON data
 // --------------------------------------------------

@@ -103,10 +103,14 @@ nav {
 ============= */
 
 .jumbotron {
-  height: 500px;
+  // height: 500px;
   width:100%;
   overflow:hidden;
   // background-image: url('http://placehold.it/1438x500');
+
+  img {
+    width: 100%;
+  }
 }
 
 .jumbotronhide {
@@ -373,12 +377,7 @@ footer {
   li {
     @include span-columns(6);
     @include omega(2n);
-    // width:45%;
-    height:150px;
-    background-color: blue;
-    padding-bottom: 20px;
-    margin: 0;
-    padding: 0;
+    margin: 15px 0;
   }
 }
 
