@@ -18,6 +18,12 @@ $navFont: 'Droid Sans', sans-serif;
   line-height: 1.5em;
 }
 
+@mixin border-radius($borderadius) {
+  -moz-border-radius: $borderadius;
+  -webkit-border-radius: $borderadius;
+  border-radius: $borderadius;
+} 
+
 /* Global Styles
 ================ */
 
@@ -106,7 +112,7 @@ nav {
   height: 500px;
   width:100%;
   overflow:hidden;
-  background-image: url('http://placehold.it/1438x500');
+  // background-image: url('http://placehold.it/1438x500');
 }
 
 .jumbotronhide {
@@ -136,6 +142,9 @@ section {
 ============= */
 
 section {
+  background-color: white;
+  border-radius:
+
 
   h2 {
     font-size: 2em;
@@ -155,7 +164,12 @@ section {
 
   p {
       @include fontStyle($contentFont, serif, 1.8em, black, 400);
+
+      padding: 20px;
+
+
       @include lineHeight;
+
   }
 
   .menuList {
@@ -196,7 +210,7 @@ section {
       padding: 10px;
       border: 0;
       border: 1px solid #ccc;
-      border-radius: 5px;
+      @include border-radius(5px);
       width: 100%;
     }
 
@@ -260,23 +274,29 @@ section {
 ============= */
 
 .bottom {
-
+  background-color: $baby;
 
  ul {
     @include span-columns(4);
-    height: 325px;
-    overflow: auto;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
+    height: 225px;
+    background-color: $baby;
     padding: 0px;
+    margin-bottom:0;
   }
 
   .left {
     font-size: 1.6em;
     p {
+      display: block;
+      display: -webkit-box;
+      max-width: 100%;
+      height: 43px;
+      margin: 0 auto;
+      font-size: 14px;
+      line-height: 1;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
       overflow: hidden;
-      word-wrap: break-word;
     }
   }
 
@@ -302,10 +322,7 @@ section {
   .right {
     overflow:hidden;
     font-size: 14px;
-    // text-align: center;
-
   }
-
 }
 
 
@@ -316,25 +333,26 @@ footer {
   background-color: $baby;
   clear: both;
   height: 190px;
-  margin-top:25%;
+  margin-top:0;
 
     div {
       margin-top:30px;
       padding:0;
-      @include span-columns(3);
-      @include omega(4n);
+      @include span-columns(4);
+      @include omega(3n);  
     }
 
   ul {
     margin-left:20px;
     padding:0;
     line-height:20px;
+    margin-right:10px;
   }
 }
 
-
 .footleft {
   text-align:center;
+  overflow:hidden;
 
     ul {
       margin:0;
@@ -342,19 +360,22 @@ footer {
     }
 
     img {
-      width: 150px;
-      margin-left:20px;
+      width: 80px;
+      height:auto;
+      margin-botom:0;
     }
-}
-
-.footright {
-  float: right;
 
     span {
       padding:0;
       margin:0;
+        img {
+          height:25px;
+          width:auto;
+          padding:0;
+          margin:0;
+      }
     }
-  }
+}
 
 /* Gallery styles
 ============= */

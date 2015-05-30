@@ -4,22 +4,23 @@
 $('#home').on('click', function() {
   $('section').removeClass('show');
   $('.home').addClass('show');
+  $('.jumboPhoto').html('<img src="' + jumboPhoto[0] + '" alt="interior">');
   $('.jumbotron').removeClass('jumbotronhide');
-  $('.jumbotron').html('<img src="http://placekitten.com/1438/500">');
+
 });
 
 $('#menu').on('click', function() {
   $('section').removeClass('show');
   $('.menu').addClass('show');
+  $('.jumbotron').html('<img src="' + jumboPhoto[2] + '" alt="interior">');
   $('.jumbotron').removeClass('jumbotronhide');
-  $('.jumbotron').html('<img src="https://placeimg.com/1438/500/any">');
 });
 
 $('#reservation').on('click', function() {
   $('section').removeClass('show');
   $('.reservations').addClass('show');
+  $('.jumbotron').html('<img src="' + jumboPhoto[1] + '" alt="interior">');
   $('.jumbotron').removeClass('jumbotronhide');
-  $('.jumbotron').html('<img src="http://dummyimage.com/1438x500">');
 });
 
 $('#gallery').on('click', function() {
@@ -64,6 +65,26 @@ getMenu.done(function (data) {
         $('.center').html('<h3>Today\'s Special</h3>' + '<h4>' + n.item + '</h4>' + '<span>' + '$' + n.price + '</span>' + '<p>' + n.description + '</p>');
       }
     });
+  });
+});
+
+
+// Get Photos
+//---------------------------------------------------
+
+//Jumbotron:
+var getPhotos = $.getJSON('https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=f79a18a2e0ac49a0f6a51f3e70979e93&gallery_id=5704-72157653610526022&format=json&nojsoncallback=1&auth_token=72157653702578331-fefccb385a023355&api_sig=2b8e0732d1beaedd881251f8bee94a41');
+
+var jumboTemplate = _.template($('#loadImage').text());
+var jumboPhoto = [];
+
+getPhotos.done(function (data){
+  var photoArray = data.photos.photo;
+  console.log(photoArray);
+
+  _.each(photoArray, function(x){
+    photoUrl = 'https://farm' + x.farm + '.staticflickr.com/' + x.server + '/' + x.id + '_' + x.secret + '_b.jpg';
+    jumboPhoto.push(photoUrl);
   });
 });
 
