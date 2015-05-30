@@ -4,19 +4,19 @@
 $('#home').on('click', function() {
   $('section').removeClass('show');
   $('.home').addClass('show');
-  $('.jumbotron').html('<img src="http://placekitten.com/1438/500">');
+  $('.jumboPhoto').html('<img src="' + jumboPhoto[0] + '" alt="interior">');
 });
 
 $('#menu').on('click', function() {
   $('section').removeClass('show');
   $('.menu').addClass('show');
-  $('.jumbotron').html('<img src="https://placeimg.com/1438/500/any">');
+  $('.jumbotron').html('<img src="' + jumboPhoto[2] + '" alt="interior">');
 });
 
 $('#reservation').on('click', function() {
   $('section').removeClass('show');
   $('.reservations').addClass('show');
-  $('.jumbotron').html('<img src="http://dummyimage.com/1438x500">');
+  $('.jumbotron').html('<img src="' + jumboPhoto[1] + '" alt="interior">');
 });
 
 $('#gallery').on('click', function() {
@@ -85,15 +85,10 @@ _.each(photoArray, function(x){
   jumboPhoto.push(photoUrl);
 });
 
-
-
-
-
-
-
-// $('#slide').append(jumboTemplate(photoUrl));
+// $('.jumboPhoto').append('<img src="' + jumboPhoto[0] + '" alt="interior fox tail">');
 
   });
+
 
 
 
