@@ -82,14 +82,11 @@ getPhotos.done(function (data){
   var photoArray = data.photos.photo;
   console.log(photoArray);
 
-_.each(photoArray, function(x){
-  photoUrl = 'https://farm' + x.farm + '.staticflickr.com/' + x.server + '/' + x.id + '_' + x.secret + '_b.jpg';
-  jumboPhoto.push(photoUrl);
-});
-
-// $('.jumboPhoto').append('<img src="' + jumboPhoto[0] + '" alt="interior fox tail">');
-
+  _.each(photoArray, function(x){
+    photoUrl = 'https://farm' + x.farm + '.staticflickr.com/' + x.server + '/' + x.id + '_' + x.secret + '_b.jpg';
+    jumboPhoto.push(photoUrl);
   });
+});
 
 // Get today's news JSON data
 // --------------------------------------------------
