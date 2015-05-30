@@ -1,4 +1,3 @@
-@import url(http://weloveiconfonts.com/api/?family=entypo|iconicfill);
 html {
   box-sizing: border-box; }
 
@@ -34,6 +33,15 @@ a:hover {
 .container {
   width: 100%;
   margin: auto; }
+
+button:focus {
+  outline: 0; }
+
+input:focus {
+  outline: 0; }
+
+select:focus {
+  outline: 0; }
 
 /* Header styles will start here
 ================================ */
@@ -73,10 +81,12 @@ nav {
   width: 100%;
   overflow: hidden; }
 
-/* Content section styles
+.jumbotronhide {
+  height: 0; }
+
+/* Content section show and hide styles
 ============= */
 section {
-  width: 0%;
   height: 0;
   margin-left: auto;
   margin-right: auto;
@@ -87,7 +97,9 @@ section {
   display: block;
   transition: 1s all ease;
   width: 70%;
-  height: 100%; }
+  height: 100%;
+  margin-top: 50px; }
+
 
 section {
   background-color: white;
@@ -111,6 +123,102 @@ section {
     margin-bottom: 20px;
     margin-top: 50px; }
 
+/* Content section styles
+============= */
+section h2 {
+  font-size: 2em;
+  text-align: center; }
+
+section h3 {
+  font-size: 1.8em;
+  display: inline-block; }
+
+section span {
+  float: right;
+  font-size: 1.4em;
+  margin-top: 1.5em; }
+
+section p {
+  font-family: "Droid Serif", serif, serif;
+  font-size: 1.8em;
+  font-color: black;
+  font-weight: 400;
+  line-height: 1.5em; }
+
+section .menuList {
+  margin-bottom: 20px;
+  margin-top: 50px; }
+
+
+section .menuList li p {
+  line-height: 1.5em; }
+
+.icon {
+  display: inline-block;
+  vertical-align: middle; }
+
+.icon img {
+  height: 25px;
+  width: 25px; }
+
+/* Reservations styles
+============= */
+section form {
+  font-size: 1.8em;
+  display: block;
+  padding: 50px;
+  padding-top: 0px; }
+
+section form input {
+  display: block;
+  margin: 15px;
+  padding: 10px;
+  border: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%; }
+
+section form #reserveBtn {
+  background-color: #CAE9F1;
+  border: none;
+  height: 60px; }
+
+section form select {
+  border: 0;
+  display: block;
+  margin: 15px;
+  padding: 10px;
+  height: 40px;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ccc; }
+
+section form h2 {
+  font-size: 1.8em; }
+
+.reservations {
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0px 1px 2px #ccc;
+  margin-bottom: 50px; }
+
+.reservations .thankyou {
+  padding: 20px;
+  text-align: center; }
+
+.reservations h2 {
+  font-size: 3em;
+  padding-top: 50px; }
+
+.reservations h4 {
+  font-size: 3em; }
+
+.reservations p {
+  font-size: 2em; }
+
+.reservations img {
+  height: 12em;
+  margin-top: 1.5em; }
+
 /* Bottom of page styles
 ============= */
 .bottom ul {
@@ -124,6 +232,7 @@ section {
   -webkit-border-radius: 10px;
   border-radius: 10px;
   padding: 0px; }
+
   .bottom ul:last-child {
     margin-right: 0; }
   .bottom ul:nth-child(3n) {
@@ -131,8 +240,17 @@ section {
   .bottom ul:nth-child(3n+1) {
     clear: left; }
 
+
+.bottom ul:last-child {
+  margin-right: 0; }
+
+
 .bottom .left {
   font-size: 1.6em; }
+
+.bottom .left p {
+  overflow: hidden;
+  word-wrap: break-word; }
 
 .bottom .center {
   overflow: hidden;
@@ -177,6 +295,7 @@ footer {
 
 .footleft {
   text-align: center; }
+<<<<<<< HEAD
   .footleft ul {
     margin: 0;
     padding: 0; }
@@ -190,5 +309,56 @@ footer {
     padding: 0;
     margin: 0; }
 
+
+.footleft ul {
+  margin: 0;
+  padding: 0; }
+
+.footleft img {
+  width: 150px;
+  margin-left: 20px; }
+
+.footright {
+  float: right; }
+
+.footright span {
+  padding: 0;
+  margin: 0; }
+
+
+/* Gallery styles
+============= */
+.gallery {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+
+.gallery::after {
+  clear: both;
+  content: "";
+  display: table; }
+
+.gallery li {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  height: 150px;
+  background-color: blue;
+  padding-bottom: 20px;
+  margin: 0;
+  padding: 0; }
+
+.gallery li:last-child {
+  margin-right: 0; }
+
+.gallery li:nth-child(2n) {
+  margin-right: 0; }
+
+.gallery li:nth-child(2n+1) {
+  clear: left; }
+
 /* General
+============= */
+/* Allergy credit text, will be moved to html
 ============= */

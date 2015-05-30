@@ -1,18 +1,24 @@
  <!DOCTYPE html>
 <html>
 <head>
-  <title>Restaurant</title>
+  <title>the fox tail.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="styles/vendor/normalize.css">
+  <link rel="stylesheet" href="styles/vendor/jquery.ui.min.css">
+  <link rel="stylesheet" href="styles/vendor/jquery-ui.structure.min.css">
+  <link rel="stylesheet" href="styles/vendor/jquery-ui.theme.min.css">
   <link rel="stylesheet" href="styles/main.css">
+
 </head>
 <body>
+
   <div class="container">
+
     <header>
       <div class="logo">
         <img src="images/foxtail_sm.png">
-      </div>
+      </div> <!-- end logo div -->
     </header>
       <nav>
         <ul>
@@ -22,12 +28,19 @@
           <li id="gallery">Gallery</li>
         </ul>
     </nav>
+
     <div class="content">
+
     <div class="jumbotron">
       <div class="jumboPhoto">
 
+
       </div>
     </div>
+
+    </div> <!-- end jumbotron div -->
+
+
       <!-- Home content below -->
       <section class="home show">
         <article>
@@ -38,6 +51,7 @@
           <p>Tenderloin venison chicken, pork loin shank meatball sirloin tail kevin ground round pig tongue beef pork belly. T-bone capicola doner, fatback chicken alcatra ribeye. Spare ribs drumstick picanha cupim, turkey brisket ball tip pork loin short loin pig swine meatball bresaola andouille. Pork chop jowl short ribs hamburger. Prosciutto andouille shank sirloin corned beef t-bone pig bacon ball tip.</p>
         </article>
       </section>
+
       <!-- Menu content below -->
       <section class="menu">
 
@@ -63,33 +77,72 @@
       </div>
 
       </section>
+
       <!-- Reservation content below -->
       <section class="reservations">
-
+        <form>
+        <h2>Request a reservation.</h2>
+          <input type="text" placeholder="Full Name" class="reservationform" size="50">
+          <input type="text" placeholder="Number of Guests" class="reservationform">
+          <input type="text" placeholder="Date" class="reservationform" id="datepicker">
+          <input type="text" placeholder="Time" class="reservationform">
+          <select>
+            <option value="" disabled selected>Seating Preference</option>
+            <option value="I">Inside</span></option>
+            <option value="O">Outside</span></option>
+          </select>
+          <input type="email" placeholder="Email Address for Reservation Confirmation" size="50" class="reservationform">
+          <input type="button" value="Request Reservation" id="reserveBtn">
+        </form>
       </section>
+
       <!-- Gallery content here -->
+
       <section class="gallery">
 
+        <ul class="gallerypics">
+          <li><img src="http://placehold.it/380x150"></li>
+          <li><img src="http://placehold.it/380x150"></li>
+          <li><img src="http://placehold.it/380x150"></li>
+          <li><img src="http://placehold.it/380x150"></li>
+          <li><img src="http://placehold.it/380x150"></li>
+          <li><img src="http://placehold.it/380x150"></li>
+          <li><img src="http://placehold.it/380x150"></li>
+          <li><img src="http://placehold.it/380x150"></li>
+          <li><img src="http://placehold.it/380x150"></li>
+          <li><img src="http://placehold.it/380x150"></li>
+          <li><img src="http://placehold.it/380x150"></li>
+          <li><img src="http://placehold.it/380x150"></li>
+          <li><img src="http://placehold.it/380x150"></li>
+          <li><img src="http://placehold.it/380x150"></li>
+        </ul>
+
+        <div class="reviews">
+
+        </div>
+
       </section>
-    </div>
+
+    </div> <!-- end content div -->
 
     <!-- Blog, Map and Daily special below -->
 
     <div class="bottom">
-      <ul class="left">
 
+      <ul class="left">
       </ul>
+
       <ul class="center">
       </ul>
+
       <ul class="right">
 
-          <li><iframe width="100%" height="425px" frameborder="0" text-align="center"
+          <li><iframe width="100%" height="225px" frameborder="0" text-align="center"
           src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBHA3AqSpTiP77yE2RIz-yo6zh35rl8J3w&q=Foxtail Restaraunt Group,Atlanta+GA"></iframe></li>
 
-        </ul>
+      </ul>
 
-      </div>
-     </div>
+    </div>
 
      <!-- Footer begins here -->
 
@@ -122,7 +175,7 @@
 
       <p>
 
-      <span><a href="#"><img src="images/facebook.png"></a></span>
+      <span class="fb"><a href="#"><img src="images/facebook.png"></a></span>
 
       <span><a href="#"><img src="images/twitter.png"></a></span>
 
@@ -131,22 +184,65 @@
       </p>
     </div>
     </footer>
-  </div>
 
-<!-- Underscore Templates -->
+  </div> <!-- end container div -->
+
+
+<!-- Underscore Script Templates -->
+
 
 <!-- menu templates -->
 
+
   <script type="text/template" id="appTemplate">
-    <li>
-      <h3><%= item %></h3><span>$<%= price %></span>
+    <li class="appitem">
+
+      <h3><%= item %></h3>
+
+      <span>$<%= price %></span>
+
+      <% if (allergies) { %>
+      <div class="icon"><img src="images/allergy.png"></div>
+      <% } %>
+
+      <% if (spicy) { %>
+      <div class='icon'><img src="images/spicy.png"></div>
+      <% } %>
+
+      <% if (vegan) { %>
+      <div class='icon'><img src="images/vegan.png"></div>
+      <% } %>
+
+      <% if (favorite) { %>
+      <div class='icon'><img src='images/fav.png'></div>
+      <% } %>
+
       <p><%= description %></p>
+
     </li>
   </script>
 
   <script type="text/template" id="entreeTemplate">
     <li>
+
       <h3><%= item %></h3><span>$<%= price %></span>
+
+       <% if (allergies) { %>
+      <div class="icon"><img src="images/allergy.png"></div>
+      <% } %>
+
+      <% if (spicy) { %>
+      <div class='icon'><img src="images/spicy.png"></div>
+      <% } %>
+
+      <% if (vegan) { %>
+      <div class='icon'><img src="images/vegan.png"></div>
+      <% } %>
+
+      <% if (favorite) { %>
+      <div class='icon'><img src='images/fav.png'></div>
+      <% } %>
+
       <p><%= description %></p>
     </li>
   </script>
@@ -154,7 +250,25 @@
 
   <script type="text/template" id="sidesTemplate">
     <li>
+
       <h3><%= item %></h3><span>$<%= price %></span>
+
+      <% if (allergies) { %>
+      <div class="icon"><img src="images/allergy.png"></div>
+      <% } %>
+
+      <% if (spicy) { %>
+      <div class='icon'><img src="images/spicy.png"></div>
+      <% } %>
+
+      <% if (vegan) { %>
+      <div class='icon'><img src="images/vegan.png"></div>
+      <% } %>
+
+      <% if (favorite) { %>
+      <div class='icon'><img src='images/fav.png'></div>
+      <% } %>
+
     </li>
   </script>
 
@@ -172,15 +286,15 @@
 
   <script type="text/template" id="todaySpecial">
     <h3>Todays Special</h3>
-
   </script>
-
 
 <!-- Scripts -->
 
     <script src="scripts/vendor/underscore.min.js"></script>
     <!-- <script src="scripts/vendor/flickr.js"></script> -->
     <script src="scripts/vendor/jquery.min.js"></script>
+    <script src="scripts/vendor/jquery.ui.min.js"></script>
     <script src="scripts/main.js"></script>
+
 </body>
 </html>

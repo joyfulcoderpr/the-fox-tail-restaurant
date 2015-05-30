@@ -5,24 +5,28 @@ $('#home').on('click', function() {
   $('section').removeClass('show');
   $('.home').addClass('show');
   $('.jumboPhoto').html('<img src="' + jumboPhoto[0] + '" alt="interior">');
+  $('.jumbotron').removeClass('jumbotronhide');
+
 });
 
 $('#menu').on('click', function() {
   $('section').removeClass('show');
   $('.menu').addClass('show');
   $('.jumbotron').html('<img src="' + jumboPhoto[2] + '" alt="interior">');
+  $('.jumbotron').removeClass('jumbotronhide');
 });
 
 $('#reservation').on('click', function() {
   $('section').removeClass('show');
   $('.reservations').addClass('show');
   $('.jumbotron').html('<img src="' + jumboPhoto[1] + '" alt="interior">');
+  $('.jumbotron').removeClass('jumbotronhide');
 });
 
 $('#gallery').on('click', function() {
   $('section').removeClass('show');
   $('.gallery').addClass('show');
-  $('.jumbotron').html('<img src="http://placehold.it/1438x500">');
+  $('.jumbotron').addClass('jumbotronhide');
 });
 
 // Get menu API information & Today's Special Information
@@ -32,12 +36,10 @@ var getMenu = $.getJSON('http://private-anon-a6cb7aa40-restaurantapi.apiary-mock
 
 var getSpecial = $.getJSON('http://private-anon-a6cb7aa40-restaurantapi.apiary-mock.com/menu/special');
 
-var appTemplate = $('#appTemplate').html();
-var appFunction = _.template(appTemplate);
-var entreeTemplate = $('#entreeTemplate').html();
-var entreeFunction = _.template(entreeTemplate);
-var sidesTemplate = $('#sidesTemplate').html();
-var sidesFunction = _.template(sidesTemplate);
+
+var appFunction = _.template($('#appTemplate').html());
+var entreeFunction = _.template($('#entreeTemplate').html());
+var sidesFunction = _.template($('#sidesTemplate').html());
 
 
 getMenu.done(function (data) {
@@ -64,8 +66,8 @@ getMenu.done(function (data) {
       }
     });
   });
-
 });
+
 
 // Get Photos
 //---------------------------------------------------
@@ -89,9 +91,6 @@ _.each(photoArray, function(x){
 
   });
 
-
-
-
 // Get today's news JSON data
 // --------------------------------------------------
 
@@ -99,6 +98,8 @@ _.each(photoArray, function(x){
 var getNews = $.getJSON('http://private-anon-a6cb7aa40-restaurantapi.apiary-mock.com/news/latest');
 
 // Drop today's news into DOM
+// ----------------------------------------------------
+
 
 var newsTemplate = $('#latestNews').html();
 var newsFunction = _.template(newsTemplate);
@@ -108,3 +109,18 @@ getNews.done(function (data) {
 });
 
 
+// Send off reservation request and return thank you
+// ----------------------------------------------------
+
+
+$('#reserveBtn').on('click', function () {
+  $('form').replaceWith('<div class="thankyou">' + '<h4>Thank you for your reservation request!</h4>' + '<p>You will receive an email once your reservation is confirmed.</p>' + '<div class=thankyouimg><img src="images/foxtail_sm_notag.png"></div>' + '</div>');
+});
+
+// Datepicker
+// ----------------------------------------------------
+
+
+$(function() {
+    $( "#datepicker" ).datepicker();
+  });
