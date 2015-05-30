@@ -281,7 +281,6 @@ section {
 
  ul {
     @include span-columns(4);
-    height: 225px;
     background-color: $baby;
     padding: 0px;
     margin-bottom:0;
@@ -328,7 +327,9 @@ section {
 
   .right {
     overflow:hidden;
-    font-size: 14px;
+    margin:0;
+    margin-bottom:0;
+    font-size:0;
   }
 }
 

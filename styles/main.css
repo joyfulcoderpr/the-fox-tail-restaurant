@@ -219,7 +219,6 @@ section form h2 {
   display: block;
   margin-right: 2.35765%;
   width: 31.76157%;
-  height: 225px;
   background-color: #CAE9F1;
   padding: 0px;
   margin-bottom: 0; }
@@ -258,7 +257,9 @@ section form h2 {
 
 .bottom .right {
   overflow: hidden;
-  font-size: 14px; }
+  margin: 0;
+  margin-bottom: 0;
+  font-size: 0; }
 
 /* Footer styles
 ============= */
