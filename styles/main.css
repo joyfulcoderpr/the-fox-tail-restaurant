@@ -43,18 +43,50 @@ input:focus {
 select:focus {
   outline: 0; }
 
+/* Parallax styles here
+======================= */
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+.parallax_layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+.parallax_layer-base {
+  transform: translateZ(0); }
+
+.parallax_layer-back {
+  transform: translateZ(-2px) scale(3); }
+
 /* Header styles will start here
 ================================ */
 header {
-  height: 300px;
+  height: 200px;
   width: 100%;
   background-image: url("../images/header-back.png"); }
+
   header .logo {
     height: 200px;
     padding-top: 60px;
     text-align: center; }
   header img {
     height: 100%; }
+
+
+header .logo {
+  height: 175px;
+  padding-top: 40px;
+  text-align: center; }
+
+header img {
+  height: 100%; }
+
 
 /* Nav styles
 ============= */
@@ -73,6 +105,25 @@ nav {
       margin-right: 20px; }
     nav ul li:hover {
       cursor: pointer; }
+
+
+
+nav ul {
+  font-family: "Droid Sans", sans-serif, sans-serif;
+  font-size: 1.8em;
+  font-color: black;
+  font-weight: 400;
+  margin: 10px 0;
+  text-align: center;
+  padding-left: 0; }
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px; }
+
+nav ul li:hover {
+  cursor: pointer; }
+>>>>>>> mike-dev
 
 /* Tabs and Jumbotron
 ============= */

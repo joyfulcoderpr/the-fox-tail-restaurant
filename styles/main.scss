@@ -58,16 +58,40 @@ select:focus {
   outline: 0;
 }
 
+/* Parallax styles here
+======================= */
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.parallax_layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.parallax_layer-base {
+  transform: translateZ(0);
+}
+
+.parallax_layer-back {
+  transform: translateZ(-2px) scale(3);
+}
+
+
 /* Header styles will start here
 ================================ */
 header {
-  height: 300px;
+  height: 200px;
   width: 100%;
   background-image: url('../images/header-back.png');
 
   .logo {
-    height: 200px;
-    padding-top: 60px;
+    height: 175px;
+    padding-top: 40px;
     text-align: center;
   }
 
@@ -81,6 +105,7 @@ header {
 ============= */
 nav {
   width: 100%;
+
 
   ul {
     @include fontStyle($navFont, sans-serif, 1.8em, black, 400);
@@ -103,10 +128,8 @@ nav {
 ============= */
 
 .jumbotron {
-  // height: 500px;
   width:100%;
-  overflow:hidden;
-  // background-image: url('http://placehold.it/1438x500');
+  overflow: hidden;
 
   img {
     width: 100%;
