@@ -497,7 +497,9 @@ footer {
   }
 
   ul {
-    margin-left: 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   li {
     @include span-columns(4);
     @include omega(3n);
