@@ -8,6 +8,7 @@ $java: #BFAD8A;
 $cream: #F2EAE4;
 $mocha: #F2EAE4;
 $baby: #CAE9F1;
+$darkgrey: #333333;
 
 $contentFont:'Droid Serif', serif;
 $navFont: 'Droid Sans', sans-serif;
@@ -37,6 +38,7 @@ body {
   max-width: 1438px;
   font-size: 62.5%;
   font-family: $contentFont;
+  color: $darkgrey;
 }
 
 a {
@@ -240,8 +242,8 @@ section {
 }
 
 .iconhover {
-  width: 200px;
-  height: 115px;
+  width: 300px;
+  height: 100px;
   background-color: $baby;
   padding: 10px;
   padding-left: 15px;
@@ -249,6 +251,7 @@ section {
   top: 40px;
   left: -20px;
   visibility: hidden;
+
 
   h6 {
     margin-top: 10px;
@@ -262,6 +265,7 @@ section {
     font-size: 1em;
     margin-top: 0;
     margin-bottom: 10px;
+    padding-left: 0px;
   }
 }
 
@@ -269,6 +273,19 @@ section {
 
   .iconhover {
     visibility: visible;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      left: 23px;
+      top: -8px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0px 10px 10px 10px;
+      border-color: transparent transparent $baby transparent;
+    }
+
   }
 
 }

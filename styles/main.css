@@ -18,11 +18,20 @@ body {
   margin-right: auto;
   max-width: 1438px;
   font-size: 62.5%;
-  font-family: "Droid Serif", serif; }
+  font-family: "Droid Serif", serif;
+  color: #333333; }
+
   body::after {
     clear: both;
     content: "";
     display: table; }
+
+
+body::after {
+  clear: both;
+  content: "";
+  display: table; }
+
 
 a {
   text-decoration: none; }
@@ -178,8 +187,8 @@ section {
     width: 25px; }
 
 .iconhover {
-  width: 200px;
-  height: 115px;
+  width: 300px;
+  height: 100px;
   background-color: #CAE9F1;
   padding: 10px;
   padding-left: 15px;
@@ -187,6 +196,7 @@ section {
   top: 40px;
   left: -20px;
   visibility: hidden; }
+
   .iconhover h6 {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -198,8 +208,34 @@ section {
     margin-top: 0;
     margin-bottom: 10px; }
 
+
+.iconhover h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.3em;
+  font-weight: bold;
+  font-family: "Droid Sans", sans-serif; }
+
+.iconhover span {
+  font-size: 1em;
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-left: 0px; }
+
+
 .allergyhover .iconhover {
   visibility: visible; }
+
+.allergyhover .iconhover::before {
+  content: " ";
+  position: absolute;
+  left: 23px;
+  top: -8px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0px 10px 10px 10px;
+  border-color: transparent transparent #CAE9F1 transparent; }
 
 /* Reservations styles
 ============= */
