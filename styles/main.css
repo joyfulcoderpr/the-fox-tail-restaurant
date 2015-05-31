@@ -20,18 +20,10 @@ body {
   font-size: 62.5%;
   font-family: "Droid Serif", serif;
   color: #333333; }
-
   body::after {
     clear: both;
     content: "";
     display: table; }
-
-
-body::after {
-  clear: both;
-  content: "";
-  display: table; }
-
 
 a {
   text-decoration: none; }
@@ -196,7 +188,6 @@ section {
   top: 40px;
   left: -20px;
   visibility: hidden; }
-
   .iconhover h6 {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -206,36 +197,21 @@ section {
   .iconhover span {
     font-size: 1em;
     margin-top: 0;
-    margin-bottom: 10px; }
-
-
-.iconhover h6 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 1.3em;
-  font-weight: bold;
-  font-family: "Droid Sans", sans-serif; }
-
-.iconhover span {
-  font-size: 1em;
-  margin-top: 0;
-  margin-bottom: 10px;
-  padding-left: 0px; }
-
+    margin-bottom: 10px;
+    padding-left: 0px; }
 
 .allergyhover .iconhover {
   visibility: visible; }
-
-.allergyhover .iconhover::before {
-  content: " ";
-  position: absolute;
-  left: 23px;
-  top: -8px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0px 10px 10px 10px;
-  border-color: transparent transparent #CAE9F1 transparent; }
+  .allergyhover .iconhover::before {
+    content: " ";
+    position: absolute;
+    left: 23px;
+    top: -8px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0px 10px 10px 10px;
+    border-color: transparent transparent #CAE9F1 transparent; }
 
 /* Reservations styles
 ============= */
@@ -389,9 +365,9 @@ footer {
     text-align: center;
     font-size: 3em; }
   .gallery ul {
+    text-align: center;
     margin-left: auto;
-    margin-right: auto;
-    text-align: center; }
+    margin-right: auto; }
     .gallery ul li {
       float: left;
       display: block;

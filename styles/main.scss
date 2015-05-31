@@ -497,9 +497,9 @@ footer {
   }
 
   ul {
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
-    text-align:center;
 
   li {
     @include span-columns(4);
