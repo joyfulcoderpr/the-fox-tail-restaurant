@@ -178,7 +178,7 @@ section {
 
 
   h2 {
-    font-size: 4em;
+    font-size: 3em;
     text-align: center;
     font-family: $navFont;
   }
@@ -497,7 +497,10 @@ footer {
   }
 
   ul {
-    margin-left: 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
   li {
     @include span-columns(4);
     @include omega(3n);
