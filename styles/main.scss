@@ -163,7 +163,7 @@ section {
   transition: 1s all ease;
   width: 100%;
   height: 100%;
-  margin-top: 50px;
+  // margin-top: 50px;
 }
 
 
@@ -176,8 +176,9 @@ section {
 
 
   h2 {
-    font-size: 2em;
+    font-size: 3em;
     text-align: center;
+    font-family: $navFont;
   }
 
   h3 {
@@ -206,10 +207,11 @@ section {
     margin-bottom: 20px;
     margin-top: 50px;
     li {
+      clear: both;
       p {
         @include lineHeight;
         clear: both;
-
+        padding-left: 0;
         }
       }
     }
