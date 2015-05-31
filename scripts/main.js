@@ -79,7 +79,7 @@ getMenu.done(function (data) {
 
   $('.iconspicy')
     .mouseover( function() {
-      $('.iconhoverspicy').addClass('allergyhover');
+      $(this).addClass('allergyhover');
     })
     .mouseout(function() {
       $(this).removeClass('allergyhover');
