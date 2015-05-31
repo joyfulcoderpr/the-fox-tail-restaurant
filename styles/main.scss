@@ -18,6 +18,12 @@ $navFont: 'Droid Sans', sans-serif;
   line-height: 1.5em;
 }
 
+@mixin border-radius($borderadius) {
+  -moz-border-radius: $borderadius;
+  -webkit-border-radius: $borderadius;
+  border-radius: $borderadius;
+} 
+
 /* Global Styles
 ================ */
 
@@ -231,7 +237,7 @@ section {
       padding: 10px;
       border: 0;
       border: 1px solid #ccc;
-      border-radius: 5px;
+      @include border-radius(5px);
       width: 100%;
     }
 
@@ -295,23 +301,38 @@ section {
 ============= */
 
 .bottom {
-
+  background-color: $baby;
+  margin-top:1px;
+  font-size: 1.6em;
+  overflow:hidden;
 
  ul {
     @include span-columns(4);
-    height: 325px;
-    overflow: auto;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
+    background-color: $baby;
     padding: 0px;
+    margin-bottom:0;
+  }
+
+  h3, h4 {
+    margin-left:25px;
   }
 
   .left {
-    font-size: 1.6em;
-    p {
+
+      p {
+      display: block;
+      display: -webkit-box;
+      max-width: 100%;
+      height: 43px;
+      margin: 0 auto;
+      font-size: 14px;
+      line-height: 1;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
       overflow: hidden;
-      word-wrap: break-word;
+      margin:25px;
+      width:90%;
+
     }
   }
 
@@ -319,28 +340,24 @@ section {
     overflow:hidden;
     font-size: 14px;
 
-    h4 {
-      display: inline-block;
-      float: left;
-    }
-
     span {
       float: right;
-      margin-top: 1.3em;
+      // margin-top: 1.3em;
     }
 
     p {
       clear: both;
+      margin:25px;
+      width:90%;
     }
   }
 
   .right {
     overflow:hidden;
-    font-size: 14px;
-    // text-align: center;
-
+    margin:0;
+    margin-bottom:0;
+    font-size:0;
   }
-
 }
 
 
@@ -349,27 +366,29 @@ section {
 
 footer {
   background-color: $baby;
+  border-top:3px solid white;
   clear: both;
   height: 190px;
-  margin-top:25%;
+  margin-top:0;
 
     div {
       margin-top:30px;
       padding:0;
-      @include span-columns(3);
-      @include omega(4n);
+      @include span-columns(4);
+      @include omega(3n);  
     }
 
   ul {
     margin-left:20px;
     padding:0;
     line-height:20px;
+    margin-right:10px;
   }
 }
 
-
 .footleft {
   text-align:center;
+  overflow:hidden;
 
     ul {
       margin:0;
@@ -377,19 +396,22 @@ footer {
     }
 
     img {
-      width: 150px;
-      margin-left:20px;
+      width: 100px;
+      height:auto;
+      margin-botom:0;
     }
-}
-
-.footright {
-  float: right;
 
     span {
       padding:0;
       margin:0;
+        img {
+          height:25px;
+          width:auto;
+          padding:0;
+          margin:0;
+      }
     }
-  }
+}
 
 /* Gallery styles
 ============= */
@@ -408,7 +430,6 @@ footer {
   }
 
 }
-
 
 /* General
 ============= */
