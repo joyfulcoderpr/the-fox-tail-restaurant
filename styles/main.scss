@@ -377,6 +377,11 @@ section {
   font-size: 1.6em;
   overflow:hidden;
 
+  h3 {
+    font-family: $navFont;
+    font-size: 1.8em;
+  }
+
  ul {
     @include span-columns(4);
     background-color: $baby;
@@ -410,6 +415,7 @@ section {
   .center {
     overflow:hidden;
     font-size: 14px;
+
 
     span {
       float: right;
