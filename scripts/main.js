@@ -55,8 +55,8 @@ $('#gallery').on('click', function() {
 // ------------------
 
 var nav = $('.main-nav');
-var navS = 'nav-scrolled';
-var hdr = $('header').height();
+    navS = 'nav-scrolled';
+    hdr = $('header').height();
 
 $(window).scroll(function(){
   if( $(this).scrollTop() > hdr) {

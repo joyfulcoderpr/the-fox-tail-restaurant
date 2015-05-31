@@ -87,9 +87,9 @@ header img {
 /* Nav styles
 ============= */
 nav {
-  height: 3 0px;
+  height: 40px;
   z-index: 150;
-  margin-bottom: -80px;
+  margin-bottom: -40px;
   background-color: white; }
 
 nav ul {
