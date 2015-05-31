@@ -73,12 +73,12 @@ getMenu.done(function (data) {
 //---------------------------------------------------
 
 //Jumbotron:
-var getPhotos = $.getJSON('https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=7aac400281b1bc0bff4bc7a81a09b057&gallery_id=5704-72157653610526022&format=json&nojsoncallback=1&auth_token=72157653650521746-4e55ac60f0f23e94&api_sig=dab45a9ec106d13a772c176c0858dcb6');
+var getPhotos = $.getJSON('https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=3239914f679fa2d80b51c024c204c603&gallery_id=5704-72157653610526022&format=json&nojsoncallback=1&auth_token=72157653361381008-aee496a7304e7beb&api_sig=9363f3b26c3a24e142f86bf2cfb0c755');
 var jumboPhoto = [];
 
 getPhotos.done(function (data){
   var photoArray = data.photos.photo;
-  console.log(photoArray);
+  // console.log(photoArray);
 
   _.each(photoArray, function(x){
     photoUrl = 'https://farm' + x.farm + '.staticflickr.com/' + x.server + '/' + x.id + '_' + x.secret + '_b.jpg';
@@ -87,22 +87,18 @@ getPhotos.done(function (data){
 });
 
 //Gallery:
-var galleryPhotos = $.getJSON('https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=7aac400281b1bc0bff4bc7a81a09b057&gallery_id=5704-72157653252100120&format=json&nojsoncallback=1&auth_token=72157653650521746-4e55ac60f0f23e94&api_sig=300f81251a0e71d06e0ad80c22a4f849');
-var galleryArr = [];
+var galleryPhotos = $.getJSON('https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=3239914f679fa2d80b51c024c204c603&gallery_id=5704-72157653252100120&format=json&nojsoncallback=1&auth_token=72157653361381008-aee496a7304e7beb&api_sig=c682db5d762abb745b9830aaff4d311b');
 
 galleryPhotos.done(function (data){
   var picArray = data.photos.photo;
-  console.log(picArray);
+  // console.log(picArray);
 
   _.each(picArray, function(x){
     flickrUrl = 'https://farm' + x.farm + '.staticflickr.com/' + x.server + '/' + x.id + '_' + x.secret + '_m.jpg';
-    galleryArr.push(flickrUrl);
+    item = '<li><img src="' + flickrUrl + '"></li>';
+    $('.gallerypics').append(item);
   });
 
-galleryArr.forEach(function(item){
-  item = '<li><img src="' + galleryArr[0] + '"></li>'
-
-  $('.gallerypics').append(item)});
 });
 
 

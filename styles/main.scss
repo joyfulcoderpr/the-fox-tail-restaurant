@@ -22,7 +22,7 @@ $navFont: 'Droid Sans', sans-serif;
   -moz-border-radius: $borderadius;
   -webkit-border-radius: $borderadius;
   border-radius: $borderadius;
-} 
+}
 
 /* Global Styles
 ================ */
@@ -375,7 +375,7 @@ footer {
       margin-top:30px;
       padding:0;
       @include span-columns(4);
-      @include omega(3n);  
+      @include omega(3n);
     }
 
   ul {
@@ -418,6 +418,11 @@ footer {
 
 .gallery {
   // @include outer-container;
+
+  h2 {
+    text-align: center;
+    font-size: 3em;
+  }
 
   ul {
     margin-left: 0;
