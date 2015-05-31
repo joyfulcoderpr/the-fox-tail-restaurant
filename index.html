@@ -41,6 +41,7 @@
       <!-- Home content below -->
       <div class="parallax_layer-base">
       <section class="home show">
+      <div class="main">
         <article>
           <p>Bacon ipsum dolor amet ham tongue ground round cupim pastrami t-bone pork belly turducken flank pork loin pork chop sirloin tail swine. Jowl t-bone beef ribs, leberkas turkey ham biltong tenderloin ground round venison ribeye boudin frankfurter ham hock. Bresaola meatloaf pork chop, andouille bacon frankfurter turkey ball tip venison short ribs cow. Pork chop turkey pig pork. Swine sausage flank turkey tenderloin kevin pork belly short ribs beef ribs salami porchetta shoulder. Sausage filet mignon drumstick flank. Pork loin leberkas beef, pork chop landjaeger ham hock sirloin jowl picanha short loin fatback turducken.
           </p>
@@ -48,38 +49,43 @@
           </p>
           <p>Tenderloin venison chicken, pork loin shank meatball sirloin tail kevin ground round pig tongue beef pork belly. T-bone capicola doner, fatback chicken alcatra ribeye. Spare ribs drumstick picanha cupim, turkey brisket ball tip pork loin short loin pig swine meatball bresaola andouille. Pork chop jowl short ribs hamburger. Prosciutto andouille shank sirloin corned beef t-bone pig bacon ball tip.</p>
         </article>
+        </div>
       </section>
       </div> <!-- end parallax_layer-base -->
       <!-- Menu content below -->
       <div class="parallax_layer-base">
-      <section class="menu">
+        <section class="menu">
+          <div class="main">
 
-      <div class="menuList">
-        <h2>Appetizers</h2>
-        <ul class="appetizers">
-        <!-- content from scripts -->
-        </ul>
-      </div>
+            <div class="menuList">
+              <h2>Appetizers</h2>
+              <ul class="appetizers">
+              <!-- content from scripts -->
+              </ul>
+            </div>
 
-      <div class="menuList">
-        <h2>Entrees</h2>
-        <ul class="entrees">
-        <!-- content from scripts -->
-        </ul>
-      </div>
+            <div class="menuList">
+              <h2>Entrees</h2>
+              <ul class="entrees">
+              <!-- content from scripts -->
+              </ul>
+            </div>
 
-      <div class="menuList">
-        <h2>Sides a la carte</h2>
-        <ul class="sides">
-        <!-- content from scripts -->
-        </ul>
-      </div>
-      </section>
+            <div class="menuList">
+              <h2>Sides a la carte</h2>
+              <ul class="sides">
+              <!-- content from scripts -->
+              </ul>
+            </div>
+
+          </div> <!-- end main div for menu -->
+        </section>
       </div> <!-- end parallax_layer-base -->
 
       <!-- Reservation content below -->
       <div class="parallax_layer-base">
       <section class="reservations">
+      <div class="main">
         <form>
         <h2>Request a reservation.</h2>
           <input type="text" placeholder="Full Name" class="reservationform" size="50">
@@ -94,8 +100,10 @@
           <input type="email" placeholder="Email Address for Reservation Confirmation" size="50" class="reservationform">
           <input type="button" value="Request Reservation" id="reserveBtn">
         </form>
+        </div>
       </section>
       </div>
+
       <!-- Gallery content here -->
       <div class="parallax_layer-base">
       <section class="gallery">
@@ -185,27 +193,54 @@
   <script type="text/template" id="appTemplate">
     <li class="appitem">
 
-      <h3><%= item %></h3>
+      <h3><%= item %></h3> <span>$<%= price %></span>
 
-      <span>$<%= price %></span>
-
+      <div class="allicons">
       <% if (allergies) { %>
-      <div class="icon"><img src="images/allergy.png"></div>
+      <div class="icon iconallergy">
+      <img src="images/allergy.png">
+        <div class='iconhover iconhoverallergy' id='iconhover'>
+          <h6>warning: allergies</h6>
+          <span>Cupim tenderloin chuck, pancetta sirloin cow rump. Porchetta brisket boudin, rump sausage pancetta picanha doner.</span>
+        </div>
+      </div>
       <% } %>
 
       <% if (spicy) { %>
-      <div class='icon'><img src="images/spicy.png"></div>
+      <div class='icon iconspicy'>
+      <img src="images/spicy.png">
+        <div class='iconhover'>
+          <h6>warning: spicy</h6>
+          <span>Cupim tenderloin chuck, pancetta sirloin cow rump. Porchetta brisket boudin, rump sausage pancetta picanha doner.</span>
+        </div>
+      </div>
       <% } %>
 
       <% if (vegan) { %>
-      <div class='icon'><img src="images/vegan.png"></div>
+      <div class='icon iconvegan'>
+      <img src="images/vegan.png">
+        <div class='iconhover'>
+          <h6>vegan</h6>
+          <span>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.</span>
+        </div>
+      </div>
       <% } %>
 
       <% if (favorite) { %>
-      <div class='icon'><img src='images/fav.png'></div>
+      <div class='icon iconfav'>
+      <img src='images/fav.png'>
+        <div class='iconhover'>
+          <h6>fox tail favorite</h6>
+          <span>Cupim tenderloin chuck, pancetta sirloin cow rump. Porchetta brisket boudin, rump sausage pancetta picanha doner.</span>
+        </div>
+      </div>
       <% } %>
+      </div>
+
+
 
       <p><%= description %></p>
+
 
     </li>
   </script>
@@ -213,24 +248,51 @@
   <script type="text/template" id="entreeTemplate">
     <li>
 
-      <h3><%= item %></h3><span>$<%= price %></span>
+      <h3><%= item %></h3>
 
-       <% if (allergies) { %>
-      <div class="icon"><img src="images/allergy.png"></div>
+      <div class="allicons">
+      <% if (allergies) { %>
+      <div class="icon iconallergy">
+      <img src="images/allergy.png">
+        <div class='iconhover'>
+          <h6>warning: allergies</h6>
+          <span>Cupim tenderloin chuck, pancetta sirloin cow rump. Porchetta brisket boudin, rump sausage pancetta picanha doner.</span>
+        </div>
+      </div>
       <% } %>
 
       <% if (spicy) { %>
-      <div class='icon'><img src="images/spicy.png"></div>
+      <div class='icon iconpspicy'>
+      <img src="images/spicy.png">
+        <div class='iconhover'>
+          <h6>warning: spicy</h6>
+          <span>Cupim tenderloin chuck, pancetta sirloin cow rump. Porchetta brisket boudin, rump sausage pancetta picanha doner.</span>
+        </div>
+      </div>
       <% } %>
 
       <% if (vegan) { %>
-      <div class='icon'><img src="images/vegan.png"></div>
+      <div class='icon iconvegan'>
+      <img src="images/vegan.png">
+        <div class='iconhover'>
+          <h6>vegan</h6>
+          <span>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.</span>
+        </div>
+      </div>
       <% } %>
 
       <% if (favorite) { %>
-      <div class='icon'><img src='images/fav.png'></div>
+      <div class='icon iconfav'>
+      <img src='images/fav.png'>
+        <div class='iconhover'>
+          <h6>fox tail favorite</h6>
+          <span>Cupim tenderloin chuck, pancetta sirloin cow rump. Porchetta brisket boudin, rump sausage pancetta picanha doner.</span>
+        </div>
+      </div>
       <% } %>
+      </div>
 
+      <span>$<%= price %></span>
       <p><%= description %></p>
     </li>
   </script>
@@ -239,24 +301,27 @@
   <script type="text/template" id="sidesTemplate">
     <li>
 
-      <h3><%= item %></h3><span>$<%= price %></span>
+      <h3><%= item %></h3>
 
+      <div class="allicons">
       <% if (allergies) { %>
-      <div class="icon"><img src="images/allergy.png"></div>
+      <div class="icon iconallergy"><img src="images/allergy.png"></div>
       <% } %>
 
       <% if (spicy) { %>
-      <div class='icon'><img src="images/spicy.png"></div>
+      <div class='icon iconpspicy'><img src="images/spicy.png"></div>
       <% } %>
 
       <% if (vegan) { %>
-      <div class='icon'><img src="images/vegan.png"></div>
+      <div class='icon iconvegan'><img src="images/vegan.png"></div>
       <% } %>
 
       <% if (favorite) { %>
-      <div class='icon'><img src='images/fav.png'></div>
+      <div class='icon iconfav'><img src='images/fav.png'></div>
       <% } %>
+      </div>
 
+      <span>$<%= price %></span>
     </li>
   </script>
 

@@ -66,7 +66,45 @@ getMenu.done(function (data) {
       }
     });
   });
+
+  // Menu hovers
+
+  $('.iconallergy')
+    .mouseover( function() {
+      $(this).addClass('allergyhover');
+    })
+    .mouseout(function() {
+      $(this).removeClass('allergyhover');
+    });
+
+  $('.iconspicy')
+    .mouseover( function() {
+      $(this).addClass('allergyhover');
+    })
+    .mouseout(function() {
+      $(this).removeClass('allergyhover');
+    });
+
+  $('.iconvegan')
+    .mouseover( function() {
+      $(this).addClass('allergyhover');
+    })
+    .mouseout(function() {
+      $(this).removeClass('allergyhover');
+    });
+
+  $('.iconfav')
+    .mouseover( function() {
+      $(this).addClass('allergyhover');
+    })
+    .mouseout(function() {
+      $(this).removeClass('allergyhover');
+    });
+
+
 });
+
+
 
 
 // Get Photos
@@ -85,6 +123,7 @@ getPhotos.done(function (data){
     jumboPhoto.push(photoUrl);
   });
 });
+
 
 //Gallery:
 var galleryPhotos = $.getJSON('https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=3239914f679fa2d80b51c024c204c603&gallery_id=5704-72157653252100120&format=json&nojsoncallback=1&auth_token=72157653361381008-aee496a7304e7beb&api_sig=c682db5d762abb745b9830aaff4d311b');
@@ -136,3 +175,5 @@ $('#reserveBtn').on('click', function () {
 $(function() {
     $( "#datepicker" ).datepicker();
   });
+
+

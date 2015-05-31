@@ -155,68 +155,122 @@ section {
   margin-right: auto;
   font-weight: normal;
   display: none;
+  padding:50px;
 }
 
 .show {
   display: block;
   transition: 1s all ease;
-  width: 70%;
+  width: 100%;
   height: 100%;
-  margin-top: 50px;
+  // margin-top: 50px;
 }
+
+
 
 /* Content section styles
 ============= */
 
 section {
-  background-color: white;
-  border-radius:
+  background-color: rgba(255,255,255,0.85);
 
 
   h2 {
-    font-size: 2em;
+    font-size: 3em;
     text-align: center;
+    font-family: $navFont;
   }
 
   h3 {
     font-size: 1.8em;
     display: inline-block;
+    padding-right: 20px;
+    float: left;
+    border-right: 1px solid #ccc;
   }
 
   span {
-    float: right;
+    display: inline-block;
+    float: left;
     font-size: 1.4em;
     margin-top: 1.5em;
+    padding-left: 1.5em;
   }
 
   p {
       @include fontStyle($contentFont, serif, 1.8em, black, 400);
-
       padding: 20px;
-
-
       @include lineHeight;
-
   }
 
   .menuList {
     margin-bottom: 20px;
     margin-top: 50px;
     li {
+      clear: both;
       p {
         @include lineHeight;
+        clear: both;
+        padding-left: 0;
+        }
       }
     }
-  }
+}
+
+.main {
+  width: 70%;
+  margin: auto;
+}
+
+.allicons {
+  display: inline-block;
+  float: right;
+  margin-top: 1em;
+  margin-right: 8em;
 }
 
 .icon {
-  display:inline-block;
+  display: inline-block;
   vertical-align: middle;
+  position: relative;
     img {
       height:25px;
       width:25px;
     }
+}
+
+.iconhover {
+  width: 200px;
+  height: 115px;
+  background-color: $baby;
+  padding: 10px;
+  padding-left: 15px;
+  position: absolute;
+  top: 40px;
+  left: -20px;
+  visibility: hidden;
+
+  h6 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+    font-family: $navFont;
+  }
+
+  span {
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.allergyhover {
+
+  .iconhover {
+    visibility: visible;
+  }
+
 }
 
 
@@ -418,6 +472,7 @@ footer {
 
 .gallery {
   // @include outer-container;
+  background-color: white;
 
   h2 {
     text-align: center;
