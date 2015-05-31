@@ -50,6 +50,22 @@ $('#gallery').on('click', function() {
   $('.jumbotron').addClass('jumbotronhide');
 });
 
+
+// Sticky Nav script
+// ------------------
+
+var nav = $('.main-nav');
+    navS = 'nav-scrolled';
+    hdr = $('header').height();
+
+$(window).scroll(function(){
+  if( $(this).scrollTop() > hdr) {
+    nav.addClass(navS);
+  } else {
+    nav.removeClass(navS);
+  }
+});
+
 // Get menu API information & Today's Special Information
 // ----------------------------------------------------
 
