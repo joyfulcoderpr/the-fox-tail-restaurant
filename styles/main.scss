@@ -90,6 +90,18 @@ select:focus {
   transform: translateZ(-2px) scale(3);
 }
 
+.container {
+  header {
+    z-index: -5;
+  }
+
+  .background {
+    background-color: white;
+    height: 100vh;
+    width: 100%;
+    z-index: -4;
+  }
+}
 
 /* Header styles will start here
 ================================ */
@@ -99,6 +111,7 @@ header {
   background-image: url('../images/header-back.png');
   position: fixed;
   top: 0;
+  left: 0;
 
   .logo {
     height: 175px;
@@ -149,8 +162,15 @@ nav, .content {
   position: fixed;
   width: 100%;
   top: 0;
+  left: 0;
 }
 
+.background {
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+
+}
 
 /* Tabs and Jumbotron
 ============= */
