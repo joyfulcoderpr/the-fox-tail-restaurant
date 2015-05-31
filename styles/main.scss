@@ -183,22 +183,23 @@ section {
   h3 {
     font-size: 1.8em;
     display: inline-block;
+    padding-right: 20px;
+    float: left;
+    border-right: 1px solid #ccc;
   }
 
   span {
-    float: right;
+    display: inline-block;
+    float: left;
     font-size: 1.4em;
     margin-top: 1.5em;
+    padding-left: 1.5em;
   }
 
   p {
       @include fontStyle($contentFont, serif, 1.8em, black, 400);
-
       padding: 20px;
-
-
       @include lineHeight;
-
   }
 
   .menuList {
@@ -207,9 +208,11 @@ section {
     li {
       p {
         @include lineHeight;
+        clear: both;
+
+        }
       }
     }
-  }
 }
 
 .main {
@@ -217,18 +220,21 @@ section {
   margin: auto;
 }
 
+.allicons {
+  display: inline-block;
+  float: right;
+  margin-top: 1em;
+  margin-right: 8em;
+}
+
 .icon {
-  display:inline-block;
+  display: inline-block;
   vertical-align: middle;
   position: relative;
     img {
       height:25px;
       width:25px;
     }
-}
-
-.iconallergy {
-
 }
 
 .iconhover {
@@ -262,9 +268,7 @@ section {
   .iconhover {
     visibility: visible;
   }
-  .iconhover2 {
-    visibility: visible;
-  }
+
 }
 
 

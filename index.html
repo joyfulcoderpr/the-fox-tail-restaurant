@@ -193,13 +193,14 @@
   <script type="text/template" id="appTemplate">
     <li class="appitem">
 
-      <h3><%= item %></h3><span>$<%= price %></span>
+      <h3><%= item %></h3> <span>$<%= price %></span>
 
+      <div class="allicons">
       <% if (allergies) { %>
       <div class="icon iconallergy">
       <img src="images/allergy.png">
         <div class='iconhover iconhoverallergy' id='iconhover'>
-          <h6>Allergy Information</h6>
+          <h6>warning: allergies</h6>
           <span>Cupim tenderloin chuck, pancetta sirloin cow rump. Porchetta brisket boudin, rump sausage pancetta picanha doner.</span>
         </div>
       </div>
@@ -229,13 +230,17 @@
       <div class='icon iconfav'>
       <img src='images/fav.png'>
         <div class='iconhover'>
-          <h6>a fox tail favorite</h6>
+          <h6>fox tail favorite</h6>
           <span>Cupim tenderloin chuck, pancetta sirloin cow rump. Porchetta brisket boudin, rump sausage pancetta picanha doner.</span>
         </div>
       </div>
       <% } %>
+      </div>
+
+
 
       <p><%= description %></p>
+
 
     </li>
   </script>
@@ -243,9 +248,10 @@
   <script type="text/template" id="entreeTemplate">
     <li>
 
-      <h3><%= item %></h3><span>$<%= price %></span>
+      <h3><%= item %></h3>
 
-       <% if (allergies) { %>
+      <div class="allicons">
+      <% if (allergies) { %>
       <div class="icon iconallergy">
       <img src="images/allergy.png">
         <div class='iconhover'>
@@ -258,7 +264,7 @@
       <% if (spicy) { %>
       <div class='icon iconpspicy'>
       <img src="images/spicy.png">
-        <div class='iconhover allergyhover'>
+        <div class='iconhover'>
           <h6>warning: spicy</h6>
           <span>Cupim tenderloin chuck, pancetta sirloin cow rump. Porchetta brisket boudin, rump sausage pancetta picanha doner.</span>
         </div>
@@ -279,12 +285,14 @@
       <div class='icon iconfav'>
       <img src='images/fav.png'>
         <div class='iconhover'>
-          <h6>a fox tail favorite</h6>
+          <h6>fox tail favorite</h6>
           <span>Cupim tenderloin chuck, pancetta sirloin cow rump. Porchetta brisket boudin, rump sausage pancetta picanha doner.</span>
         </div>
       </div>
       <% } %>
+      </div>
 
+      <span>$<%= price %></span>
       <p><%= description %></p>
     </li>
   </script>
@@ -293,8 +301,9 @@
   <script type="text/template" id="sidesTemplate">
     <li>
 
-      <h3><%= item %></h3><span>$<%= price %></span>
+      <h3><%= item %></h3>
 
+      <div class="allicons">
       <% if (allergies) { %>
       <div class="icon iconallergy"><img src="images/allergy.png"></div>
       <% } %>
@@ -310,7 +319,9 @@
       <% if (favorite) { %>
       <div class='icon iconfav'><img src='images/fav.png'></div>
       <% } %>
+      </div>
 
+      <span>$<%= price %></span>
     </li>
   </script>
 

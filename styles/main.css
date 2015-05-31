@@ -141,12 +141,17 @@ section h2 {
 
 section h3 {
   font-size: 1.8em;
-  display: inline-block; }
+  display: inline-block;
+  padding-right: 20px;
+  float: left;
+  border-right: 1px solid #ccc; }
 
 section span {
-  float: right;
+  display: inline-block;
+  float: left;
   font-size: 1.4em;
-  margin-top: 1.5em; }
+  margin-top: 1.5em;
+  padding-left: 1.5em; }
 
 section p {
   font-family: "Droid Serif", serif, serif;
@@ -161,11 +166,18 @@ section .menuList {
   margin-top: 50px; }
 
 section .menuList li p {
-  line-height: 1.5em; }
+  line-height: 1.5em;
+  clear: both; }
 
 .main {
   width: 70%;
   margin: auto; }
+
+.allicons {
+  display: inline-block;
+  float: right;
+  margin-top: 1em;
+  margin-right: 8em; }
 
 .icon {
   display: inline-block;
@@ -200,9 +212,6 @@ section .menuList li p {
   margin-bottom: 10px; }
 
 .allergyhover .iconhover {
-  visibility: visible; }
-
-.allergyhover .iconhover2 {
   visibility: visible; }
 
 /* Reservations styles
