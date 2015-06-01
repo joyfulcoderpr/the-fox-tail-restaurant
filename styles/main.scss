@@ -9,6 +9,7 @@ $cream: #F2EAE4;
 $mocha: #F2EAE4;
 $baby: #CAE9F1;
 $darkgrey: #333333;
+$trunk: #E4E1E1;
 
 $contentFont:'Droid Serif', serif;
 $navFont: 'Droid Sans', sans-serif;
@@ -436,14 +437,14 @@ section {
 ============= */
 
 .bottom {
-  background-color: $baby;
+  background-color: $trunk;
   margin-top:1px;
+  height:332px;
   font-size: 1.6em;
   overflow:hidden;
 
  ul {
     @include span-columns(4);
-    background-color: $baby;
     padding: 0px;
     margin-bottom:0;
   }
@@ -477,7 +478,7 @@ section {
   }
 
   .center {
-    overflow:hidden;
+    // height:500px;
     font-size: 14px;
 
 
@@ -486,7 +487,11 @@ section {
       // margin-top: 1.3em;
     }
 
-    p {
+    .specialPhoto {
+      text-align:center;
+    }
+
+    li {
       clear: both;
       margin:25px;
       width:90%;
@@ -498,6 +503,10 @@ section {
     margin:0;
     margin-bottom:0;
     font-size:0;
+     iframe {
+      padding:0;
+      margin:0;
+     }
   }
 }
 
@@ -509,7 +518,7 @@ footer {
   background-color: $baby;
   border-top:3px solid white;
   clear: both;
-  height: 190px;
+  height: 160px;
   margin-top:0;
 
   a {

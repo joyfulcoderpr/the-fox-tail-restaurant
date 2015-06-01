@@ -99,7 +99,7 @@ getMenu.done(function (data) {
   getSpecial.done(function (data) {
     entreeArray.forEach (function(n) {
       if (n.id === data.menu_item_id) {
-        $('.center').html('<h3>Today\'s Special</h3>' + '<h4>' + n.item + '</h4>' + '<span>' + '$' + n.price + '</span>' + '<p>' + n.description + '</p>');
+        $('.specialText').html('<h3>Today\'s Special</h3>' + '<h4>' + n.item + '</h4>' + '<span>' + '$' + n.price + '</span>' + '<p>' + n.description + '</p>');
       }
     });
   });
@@ -157,13 +157,22 @@ galleryPhotos.done(function (data){
     $('.gallerypics').append(item);
   });
 
+  // .bottom photos
+  var scallopPhoto = galleryPhotos.responseJSON.photos.photo[12];
+
+  console.log(scallopPhoto);
+
+  var scallopUrl = 'https://farm' + scallopPhoto.farm + '.staticflickr.com/' + scallopPhoto.server + '/' + scallopPhoto.id + '_' + scallopPhoto.secret + '_m.jpg';
+
+  var scallop = '<img src="' + scallopUrl + '">';
+
+  console.log(scallop);
+
+  $('.specialPhoto').append(scallop);
 });
-
-
 
 // Get today's news JSON data
 // --------------------------------------------------
-
 
 var getNews = $.getJSON('http://private-anon-a6cb7aa40-restaurantapi.apiary-mock.com/news/latest');
 
