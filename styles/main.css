@@ -219,6 +219,9 @@ section .menuList li p {
 .main img {
   height: auto; }
 
+article img {
+  width: 100%; }
+
 .allicons {
   display: inline-block;
   float: right;
