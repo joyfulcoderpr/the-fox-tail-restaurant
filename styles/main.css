@@ -115,8 +115,7 @@ nav ul {
 nav ul li {
   display: inline-block;
   margin-right: 20px;
-  padding: 9px;
-  transition: .4s all ease; }
+  padding: 9px; }
 
 nav ul li:hover {
   cursor: pointer;
@@ -358,9 +357,8 @@ section form h2 {
 ============= */
 .bottom {
   background-color: white;
-  height: 332px;
+  height: 355px;
   font-size: 1.6em;
-  overflow: hidden;
   border-top: 1px solid #ccc;
   padding-top: 10px; }
 
@@ -415,6 +413,7 @@ section form h2 {
 
 .center {
   font-size: 14px;
+  height: 332px;
   background-color: #E4E1E1; }
 
 .center span {
@@ -427,7 +426,7 @@ section form h2 {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  margin-top: -20px; }
+  height: 130px; }
 
 .center .specialText h4 {
   display: inline; }

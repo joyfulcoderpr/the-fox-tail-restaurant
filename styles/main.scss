@@ -269,7 +269,7 @@ section {
   margin: auto;
    img {
     width:100%;
-    height:auto;
+    height: auto;
    }
 }
 
@@ -450,10 +450,8 @@ section {
 
 .bottom {
   background-color: white;
-  // margin-top:20px;
-  height:332px;
+  height:355px;
   font-size: 1.6em;
-  overflow:hidden;
   border-top: 1px solid #ccc;
   padding-top: 10px;
 
@@ -511,20 +509,19 @@ section {
   }
 
 .center {
-    // height:500px;
     font-size: 14px;
+    height: 332px;
     background-color: $trunk;
 
   span {
     float: right;
-    // margin-top: 1.3em;
   }
 
   .specialPhoto {
       text-align:center;
        img {
         @include border-radius(5px);
-        margin-top:-20px;
+        height: 130px;
       }
     }
 
