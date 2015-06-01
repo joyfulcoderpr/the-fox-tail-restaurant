@@ -114,12 +114,12 @@ nav ul {
 nav ul li {
   display: inline-block;
   margin-right: 20px;
-  transition: .5s all ease; }
+  transition: .4s all ease; }
 
 nav ul li:hover {
   cursor: pointer;
   background-color: #E4E1E1;
-  padding: 10px; }
+  padding: 9px; }
 
 /* Sticky Nav
 ============== */
@@ -286,12 +286,13 @@ section form input {
   width: 100%; }
 
 section form #reserveBtn {
-  background-color: #E4E1E1;
+  background-color: #CAE9F1;
   border: none;
-  height: 50px; }
+  height: 50px;
+  transition: .3s all ease; }
 
 section form #reserveBtn:hover {
-  background-color: #CAE9F1; }
+  background-color: #b6e1ec; }
 
 section form select {
   border: 0;
