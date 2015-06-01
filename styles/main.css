@@ -213,6 +213,10 @@ section .menuList li p {
   width: 70%;
   margin: auto; }
 
+.main img {
+  width: 100%;
+  height: auto; }
+
 .allicons {
   display: inline-block;
   float: right;
@@ -398,6 +402,19 @@ section form h2 {
 
 .bottom .center .specialPhoto {
   text-align: center; }
+
+.bottom .center .specialPhoto img {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  margin-top: -15px; }
+
+.bottom .center .specialText h4 {
+  display: inline; }
+
+.bottom .center .specialText span {
+  margin-top: -16px;
+  font-weight: bold; }
 
 .bottom .center li {
   clear: both;
