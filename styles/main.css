@@ -379,14 +379,14 @@ section form h2 {
   font-family: "Droid Sans", sans-serif;
   font-size: 1.6em; }
 
-.bottom .left {
+.left {
   background-color: #E4E1E1;
   height: 332px; }
 
-.bottom .left h3, .bottom .left h4 {
+.left h3, .left h4 {
   margin-left: 25px; }
 
-.bottom .left p {
+.left p {
   display: block;
   display: -webkit-box;
   max-width: 100%;
@@ -400,7 +400,7 @@ section form h2 {
   margin: 25px;
   width: 90%; }
 
-.bottom .left .readmore {
+.left .readmore {
   text-align: center;
   margin: auto;
   height: 40px;
@@ -409,47 +409,46 @@ section form h2 {
   background-color: #333333;
   padding-top: 10px; }
 
-.bottom .left a {
+.left a {
   text-align: center;
   color: white; }
 
-.bottom .center {
+.center {
   font-size: 14px;
   background-color: #E4E1E1; }
 
-.bottom .center span {
+.center span {
   float: right; }
 
-.bottom .center .specialPhoto {
+.center .specialPhoto {
   text-align: center; }
 
-.bottom .center .specialPhoto img {
+.center .specialPhoto img {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  margin-top: -15px;
-  height: 130px; }
+  margin-top: -20px; }
 
-.bottom .center .specialText h4 {
+.center .specialText h4 {
   display: inline; }
 
-.bottom .center .specialText span {
+.center .specialText span {
   margin-top: -16px;
   font-weight: bold; }
 
-.bottom .center li {
+.center li {
   clear: both;
   margin: 25px;
   width: 90%; }
 
-.bottom .right {
+.center .right {
   overflow: hidden;
   margin: 0;
   margin-bottom: 0;
   font-size: 0;
   padding-top: 14px; }
 
-.bottom .right iframe {
+.center .right iframe {
   padding: 0;
   margin: 0; }
 
@@ -459,8 +458,7 @@ footer {
   background-color: #CAE9F1;
   border-top: 3px solid white;
   clear: both;
-  height: 160px;
-  margin-top: 20px; }
+  height: 180px; }
 
 footer a {
   color: #333333; }
@@ -540,8 +538,3 @@ footer ul {
 
 .gallery ul li:nth-child(3n+1) {
   clear: left; }
-
-/* General
-============= */
-/* Allergy credit text, will be moved to html
-============= */

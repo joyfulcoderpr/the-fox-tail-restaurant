@@ -245,9 +245,9 @@ section {
   }
 
   p {
-      @include fontStyle($contentFont, serif, 1.8em, black, 400);
-      padding: 20px;
-      @include lineHeight;
+    @include fontStyle($contentFont, serif, 1.8em, black, 400);
+    padding: 20px;
+    @include lineHeight;
   }
 
   .menuList {
@@ -443,7 +443,6 @@ section {
     color: $darkgrey;
   }
 }
-
 }
 
 /* Bottom of page styles
@@ -468,17 +467,18 @@ section {
     font-family: $navFont;
     font-size: 1.6em;
   }
+}
 
-  .left {
+.left {
 
-    background-color: $trunk;
-    height: 332px;
+  background-color: $trunk;
+  height: 332px;
 
-      h3, h4 {
-        margin-left:25px;
-      }
+    h3, h4 {
+      margin-left:25px;
+    }
 
-      p {
+    p {
       display: block;
       display: -webkit-box;
       max-width: 100%;
@@ -510,27 +510,25 @@ section {
     }
   }
 
-  .center {
+.center {
     // height:500px;
     font-size: 14px;
     background-color: $trunk;
 
+  span {
+    float: right;
+    // margin-top: 1.3em;
+  }
 
-    span {
-      float: right;
-      // margin-top: 1.3em;
-    }
-
-    .specialPhoto {
+  .specialPhoto {
       text-align:center;
        img {
         @include border-radius(5px);
-        margin-top:-15px;
-        height: 130px;
-       }
+        margin-top:-20px;
+      }
     }
 
-    .specialText {
+  .specialText {
 
       h4 {
         display: inline
@@ -547,7 +545,6 @@ section {
       margin:25px;
       width:90%;
     }
-  }
 
   .right {
     overflow:hidden;
@@ -571,8 +568,7 @@ footer {
   background-color: $baby;
   border-top:3px solid white;
   clear: both;
-  height: 160px;
-  margin-top: 20px;
+  height: 180px;
 
   a {
     color: $darkgrey;
@@ -646,14 +642,3 @@ footer {
   }
 
 }
-
-/* General
-============= */
-
-/* Allergy credit text, will be moved to html
-============= */
-
-// allergies by Ben Markoch from the Noun Project
-// Love by Martha Ormiston from the Noun Project
-// Vegetarian by Matthew Hawdon from the Noun Project
-// Flame by Alex Tai from the Noun Project
