@@ -357,9 +357,8 @@ section form h2 {
 ============= */
 .bottom {
   background-color: white;
-  height: 332px;
+  height: 355px;
   font-size: 1.6em;
-  overflow: hidden;
   border-top: 1px solid #ccc;
   padding-top: 10px; }
 
@@ -377,9 +376,6 @@ section form h2 {
 .bottom h3 {
   font-family: "Droid Sans", sans-serif;
   font-size: 1.6em; }
-
-.bottom h3, .bottom h4 {
-  margin-left: 25px; }
 
 .bottom .left {
   background-color: #E4E1E1;
@@ -399,6 +395,9 @@ section form h2 {
   margin: 25px;
   width: 90%; }
 
+.bottom .left h3, .bottom .left h4 {
+  margin-left: 25px; }
+
 .bottom .left .readmore {
   text-align: center;
   margin: auto;
@@ -414,7 +413,8 @@ section form h2 {
 
 .bottom .center {
   font-size: 14px;
-  background-color: #E4E1E1; }
+  background-color: #E4E1E1;
+  height: 332px; }
 
 .bottom .center span {
   float: right; }
@@ -426,7 +426,8 @@ section form h2 {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  margin-top: -15px; }
+  margin-top: -15px;
+  height: 140px; }
 
 .bottom .center .specialText h4 {
   display: inline; }

@@ -450,10 +450,8 @@ section {
 
 .bottom {
   background-color: white;
-  // margin-top:20px;
-  height:332px;
+  height:355px;
   font-size: 1.6em;
-  overflow:hidden;
   border-top: 1px solid #ccc;
   padding-top: 10px;
 
@@ -468,9 +466,6 @@ section {
     font-size: 1.6em;
   }
 
-  h3, h4 {
-    margin-left:25px;
-  }
 
   .left {
 
@@ -493,6 +488,10 @@ section {
 
     }
 
+    h3, h4 {
+      margin-left: 25px;
+    }
+
     .readmore {
       text-align: center;
       margin: auto;
@@ -510,26 +509,27 @@ section {
   }
 
   .center {
-    // height:500px;
     font-size: 14px;
     background-color: $trunk;
+    height: 332px;
 
 
     span {
       float: right;
-      // margin-top: 1.3em;
     }
 
     .specialPhoto {
       text-align:center;
+
        img {
         @include border-radius(5px);
         margin-top:-15px;
+        height: 140px;
        }
     }
-    
+
     .specialText {
-      
+
       h4 {
         display: inline
       }
