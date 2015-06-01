@@ -344,8 +344,8 @@ section {
 
     input {
       display: block;
-      margin: 15px;
-      padding: 10px;
+      margin: 10px;
+      padding: 7px;
       border: 0;
       border: 1px solid #ccc;
       @include border-radius(5px);
@@ -355,19 +355,18 @@ section {
     #reserveBtn {
       background-color: $baby;
       border: none;
-      height: 60px;
+      height: 50px;
     }
 
     select {
       border: 0;
       display: block;
-      margin: 15px;
-      padding: 10px;
+      margin: 10px;
+      padding: 7px;
       height: 40px;
       width: 100%;
       background-color: white;
       border: 1px solid #ccc;
-      // color: #A9A9A9;
     }
 
     h2 {
@@ -379,8 +378,6 @@ section {
 }
 
 .reservations {
-  // border-bottom: 1px solid #ccc;
-  // box-shadow: 0px 1px 2px #ccc;
   margin-bottom: 50px;
 
   .thankyou {
@@ -389,15 +386,17 @@ section {
   }
 
   h2 {
-    font-size: 3em;
-    padding-top: 50px;
+    font-size: 2.6em;
+    padding-top: 10px;
   }
 
   h4 {
     font-size: 3em;
+    margin-bottom: 0px;
   }
 
   p {
+    margin-top: 0px;
     font-size: 2em;
   }
 
@@ -405,6 +404,31 @@ section {
     height: 12em;
     margin-top: 1.5em;
   }
+
+  .details {
+    text-align: center;
+
+  h5 {
+    font-size: 1.4em;
+  }
+
+  ul {
+    font-size: 1.2em;
+    padding: 0;
+
+    li {
+      list-style: none;
+    }
+  }
+
+  p {
+    font-size: 1.4em;
+  }
+
+  a {
+    color: $darkgrey;
+  }
+}
 
 }
 
@@ -417,12 +441,16 @@ section {
   font-size: 1.6em;
   overflow:hidden;
 
-
  ul {
     @include span-columns(4);
     background-color: $baby;
     padding: 0px;
     margin-bottom:0;
+  }
+
+  h3 {
+    font-family: $navFont;
+    font-size: 1.6em;
   }
 
   h3, h4 {
@@ -484,12 +512,16 @@ footer {
   height: 190px;
   margin-top:0;
 
-    div {
-      margin-top:30px;
-      padding:0;
-      @include span-columns(4);
-      @include omega(3n);
-    }
+  a {
+    color: $darkgrey;
+  }
+
+  div {
+    margin-top:30px;
+    padding:0;
+    @include span-columns(4);
+    @include omega(3n);
+  }
 
   ul {
     margin-left:20px;

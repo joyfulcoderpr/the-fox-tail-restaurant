@@ -105,6 +105,8 @@ getMenu.done(function (data) {
   });
 
   // Menu hovers
+  // ----------------------------------------------------
+
 
   $('.iconallergy')
     .mouseover( function() {
@@ -177,12 +179,19 @@ getNews.done(function (data) {
 });
 
 
-// Send off reservation request and return thank you
+// Send off reservation request and return thank you with reservation details
 // ----------------------------------------------------
 
 
 $('#reserveBtn').on('click', function () {
-  $('form').replaceWith('<div class="thankyou">' + '<h4>Thank you for your reservation request!</h4>' + '<p>You will receive an email once your reservation is confirmed.</p>' + '<div class=thankyouimg><img src="images/foxtail_sm_notag.png"></div>' + '</div>');
+  var fullName = $('#fullName').val();
+  var guestCount = $('#guestCount').val();
+  var date = $('#datepicker').val();
+  var time = $('#time').val();
+  var seatPreference = $('#seatPreference').val();
+  var email = $('#email').val();
+
+  $('form').replaceWith('<div class="thankyou">' + '<h4>Thank you for your reservation request, ' + fullName + '!</h4>' + '<p>You will receive an email at ' + email + ' once your reservation is confirmed.</p>' + '<div class=thankyouimg><img src="images/foxtail_sm_notag.png"></div>' + '</div>' + '<div class="details"><h5>Your reservation request details</h5><ul><li>Full Name: ' + fullName + '</li><li>Number of Guests: ' + guestCount + '</li><li>Date: ' + date + '</li><li>Time: ' + time + '</li><li>Seating Preference: ' +seatPreference+ '</li><li>Email address: ' + email + '</li><p>Please contact us at <a href="#">contact@thefoxtail.co</a> if you have any changes to your reservation.</p></ul></div>');
 });
 
 // Datepicker

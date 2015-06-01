@@ -90,16 +90,18 @@
       <div class="main">
         <form>
         <h2>Request a reservation.</h2>
-          <input type="text" placeholder="Full Name" class="reservationform" size="50">
-          <input type="text" placeholder="Number of Guests" class="reservationform">
+          <input type="text" placeholder="Full Name" class="reservationform" id="fullName" size="50">
+          <input type="text" placeholder="Number of Guests" class="reservationform" id="guestCount">
           <input type="text" placeholder="Date" class="reservationform" id="datepicker">
-          <input type="text" placeholder="Time" class="reservationform">
-          <select>
+          <input type="text" placeholder="Time" class="reservationform" id="time">
+          <select id="seatPreference">
             <option value="" disabled selected>Seating Preference</option>
-            <option value="I">Inside</span></option>
-            <option value="O">Outside</span></option>
+            <option value="Inside">Inside</option>
+            <option value="Outside">Outside</option>
+            <option value="Either">Either</option>
+
           </select>
-          <input type="email" placeholder="Email Address for Reservation Confirmation" size="50" class="reservationform">
+          <input type="email" id="email" placeholder="Email Address for Reservation Confirmation" size="50" class="reservationform">
           <input type="button" value="Request Reservation" id="reserveBtn">
         </form>
         </div>
@@ -110,16 +112,15 @@
       <div class="parallax_layer-base">
       <section class="gallery">
         <h2>From our kitchen.</h2>
-        <ul class="gallerypics">
 
+        <ul class="gallerypics">
         </ul>
 
         <div class="reviews">
-
         </div>
 
       </section>
-    </div>
+      </div>
     </div> <!-- end content div -->
 
     <!-- Blog, Map and Daily special below -->
@@ -141,12 +142,14 @@
     </div>
 
      <!-- Footer begins here -->
+
   </div> <!-- Div.content ends here -->
+
     <footer>
     <div class="footleft">
       <ul class="foxtail">
 
-        <li><p><a href="#"><img src="images/foxtail_sm.png"></p></a></li>
+        <li><p><a href="#"><img src="images/foxtail_sm.png"></a></p></li>
         <li><p><span class="social"><a href="#"><img src="images/facebook.png"></a> <a href="#"><img src="images/twitter.png"> <a href="#"><img src="images/instagram.png"></a></span></p></li>
 
         <!-- <li>Fox by Anna Wojtowicz from the Noun Project.</li> -->
