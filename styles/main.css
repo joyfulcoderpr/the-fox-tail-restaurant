@@ -321,11 +321,12 @@ section form {
 /* Bottom of page styles
 ============= */
 .bottom {
-  background-color: #E4E1E1;
-  margin-top: 1px;
+  background-color: white;
   height: 332px;
   font-size: 1.6em;
-  overflow: hidden; }
+  overflow: hidden;
+  border-top: 1px solid #ccc;
+  padding-top: 10px; }
   .bottom ul {
     float: left;
     display: block;
@@ -340,21 +341,36 @@ section form {
     font-size: 1.6em; }
   .bottom h3, .bottom h4 {
     margin-left: 25px; }
-  .bottom .left p {
-    display: block;
-    display: -webkit-box;
-    max-width: 100%;
-    height: 43px;
-    margin: 0 auto;
-    font-size: 14px;
-    line-height: 1;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    margin: 25px;
-    width: 90%; }
+  .bottom .left {
+    background-color: #E4E1E1;
+    height: 332px; }
+    .bottom .left p {
+      display: block;
+      display: -webkit-box;
+      max-width: 100%;
+      height: 43px;
+      margin: 0 auto;
+      font-size: 14px;
+      line-height: 1;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin: 25px;
+      width: 90%; }
+    .bottom .left .readmore {
+      text-align: center;
+      margin: auto;
+      height: 40px;
+      width: 150px;
+      border-radius: 4px;
+      background-color: #333333;
+      padding-top: 10px; }
+    .bottom .left a {
+      text-align: center;
+      color: white; }
   .bottom .center {
-    font-size: 14px; }
+    font-size: 14px;
+    background-color: #E4E1E1; }
     .bottom .center span {
       float: right; }
     .bottom .center .specialPhoto {
@@ -377,7 +393,8 @@ section form {
     overflow: hidden;
     margin: 0;
     margin-bottom: 0;
-    font-size: 0; }
+    font-size: 0;
+    padding-top: 14px; }
     .bottom .right iframe {
       padding: 0;
       margin: 0; }
@@ -389,7 +406,7 @@ footer {
   border-top: 3px solid white;
   clear: both;
   height: 160px;
-  margin-top: 0; }
+  margin-top: 20px; }
   footer a {
     color: #333333; }
   footer div {

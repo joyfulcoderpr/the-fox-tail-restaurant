@@ -2,7 +2,7 @@
 //---------------------------------------------------
 
 //Jumbotron:
-var getPhotos = $.getJSON('https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=c90cb7bc5a2f27f459f10d95421fa7bb&gallery_id=5704-72157653610526022&format=json&nojsoncallback=1&auth_token=72157651509393134-b0ca168a3265456d&api_sig=66e63042747839e9f9a31777c4a10fea');
+var getPhotos = $.getJSON('https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=c90cb7bc5a2f27f459f10d95421fa7bb&gallery_id=133510446-72157653610526022&format=json&nojsoncallback=1&auth_token=72157651509393134-b0ca168a3265456d&api_sig=22e55654da1a23e6361942ab1be14238');
 var jumboPhoto = [];
 
 getPhotos.done(function (data){
@@ -145,7 +145,7 @@ getMenu.done(function (data) {
 
 
 //Gallery:
-var galleryPhotos = $.getJSON('https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=c90cb7bc5a2f27f459f10d95421fa7bb&gallery_id=5704-72157653252100120&format=json&nojsoncallback=1&auth_token=72157651509393134-b0ca168a3265456d&api_sig=1c09fe9e39e19d7ef81d27cdc9851fbc');
+var galleryPhotos = $.getJSON('https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=c90cb7bc5a2f27f459f10d95421fa7bb&gallery_id=133510446-72157653252100120&format=json&nojsoncallback=1&auth_token=72157651509393134-b0ca168a3265456d&api_sig=9c1642813037dd0630ae6fd4e04a3e92');
 
 galleryPhotos.done(function (data){
   var picArray = data.photos.photo;
@@ -160,13 +160,9 @@ galleryPhotos.done(function (data){
   // .bottom photos
   var scallopPhoto = galleryPhotos.responseJSON.photos.photo[12];
 
-  console.log(scallopPhoto);
-
   var scallopUrl = 'https://farm' + scallopPhoto.farm + '.staticflickr.com/' + scallopPhoto.server + '/' + scallopPhoto.id + '_' + scallopPhoto.secret + '_m.jpg';
 
   var scallop = '<img src="' + scallopUrl + '">';
-
-  console.log(scallop);
 
   $('.specialPhoto').append(scallop);
 });
@@ -200,7 +196,7 @@ $('#reserveBtn').on('click', function () {
   var seatPreference = $('#seatPreference').val();
   var email = $('#email').val();
 
-  $('form').replaceWith('<div class="thankyou">' + '<h4>Thank you for your reservation request, ' + fullName + '!</h4>' + '<p>You will receive an email at ' + email + ' once your reservation is confirmed.</p>' + '<div class=thankyouimg><img src="images/foxtail_sm_notag.png"></div>' + '</div>' + '<div class="details"><h5>Your reservation request details</h5><ul><li>Full Name: ' + fullName + '</li><li>Number of Guests: ' + guestCount + '</li><li>Date: ' + date + '</li><li>Time: ' + time + '</li><li>Seating Preference: ' +seatPreference+ '</li><li>Email address: ' + email + '</li><p>Please contact us at <a href="#">contact@thefoxtail.co</a> if you have any changes to your reservation.</p></ul></div>');
+  $('form').replaceWith('<div class="thankyou">' + '<h4>Thank you for your reservation request, ' + fullName + '!</h4>' + '<p>You will receive an email at ' + email + ' once your reservation is confirmed.</p>' + '<div class=thankyouimg><img src="images/foxtail_sm_notag.png"></div>' + '</div>' + '<div class="details"><h5>Your reservation request details</h5><ul><li>Full Name: ' + fullName + '</li><li>Number of Guests: ' + guestCount + '</li><li>Date: ' + date + '</li><li>Time: ' + time + '</li><li>Seating Preference: ' + seatPreference + '</li><li>Email address: ' + email + '</li><p>Please contact us at <a href="#">contact@thefoxtail.co</a> if you have any changes to your reservation.</p></ul></div>');
 });
 
 // Datepicker
