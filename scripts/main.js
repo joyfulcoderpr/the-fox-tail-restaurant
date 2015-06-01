@@ -141,6 +141,17 @@ galleryPhotos.done(function (data){
 
 });
 
+// .bottom photos
+
+// var scallopId = galleryPhotos.getJSON.photos.photo[12].id;
+
+// console.log(scallopId);
+
+// var scallopPhoto = $.getJSON('https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=3239914f679fa2d80b51c024c204c603&gallery_id=5704-72157653252100120&format=json&nojsoncallback=1&auth_token=72157653361381008-aee496a7304e7beb&api_sig=c682db5d762abb745b9830aaff4d311b');
+
+// scallopPhoto.done(function (scallop) {
+//   scallopId = scallop.responseJSON.photos.photo[12].id;
+// });
 
 
 // Get today's news JSON data
