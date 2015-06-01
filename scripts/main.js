@@ -2,7 +2,7 @@
 //---------------------------------------------------
 
 //Jumbotron:
-var getPhotos = $.getJSON('https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=c90cb7bc5a2f27f459f10d95421fa7bb&gallery_id=5704-72157653610526022&format=json&nojsoncallback=1&auth_token=72157651509393134-b0ca168a3265456d&api_sig=66e63042747839e9f9a31777c4a10fea');
+var getPhotos = $.getJSON('https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=c90cb7bc5a2f27f459f10d95421fa7bb&gallery_id=133510446-72157653610526022&format=json&nojsoncallback=1&auth_token=72157651509393134-b0ca168a3265456d&api_sig=22e55654da1a23e6361942ab1be14238');
 var jumboPhoto = [];
 
 getPhotos.done(function (data){
@@ -145,7 +145,7 @@ getMenu.done(function (data) {
 
 
 //Gallery:
-var galleryPhotos = $.getJSON('https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=c90cb7bc5a2f27f459f10d95421fa7bb&gallery_id=5704-72157653252100120&format=json&nojsoncallback=1&auth_token=72157651509393134-b0ca168a3265456d&api_sig=1c09fe9e39e19d7ef81d27cdc9851fbc');
+var galleryPhotos = $.getJSON('https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=c90cb7bc5a2f27f459f10d95421fa7bb&gallery_id=133510446-72157653252100120&format=json&nojsoncallback=1&auth_token=72157651509393134-b0ca168a3265456d&api_sig=9c1642813037dd0630ae6fd4e04a3e92');
 
 galleryPhotos.done(function (data){
   var picArray = data.photos.photo;
