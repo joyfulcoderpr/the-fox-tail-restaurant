@@ -2,10 +2,10 @@
 
 The following students participated in this project.
 
-* Harold - http://link_to_github_profile
-* Princess - http://link_to_github_profile
-* Michael - http://link_to_github_profile
-* Kelley - http://link_to_github_profile
+* Harold - https://github.com/oatneal17
+* Princess - https://github.com/psamp
+* Michael - https://github.com/mmarcinek
+* Kelley - https://github.com/krose422
 
 ## We used three API's to create this site
 
@@ -22,4 +22,5 @@ This project is fictional. There is no real client. Any similarity is purely a c
 
 ## Other Resources
 
-_List any other resources you may use in this project._
+We were happy to use icons from the Noun Project on our menu and home page. We appreciate the hard work
+that the Project designers put into making these icons and have named them with credits in the footer.
