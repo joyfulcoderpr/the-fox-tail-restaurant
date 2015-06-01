@@ -139,19 +139,21 @@ nav {
   ul {
     @include fontStyle($navFont, sans-serif, 1.8em, black, 400);
     margin: 10px 0;
+    margin-top: 0px;
     text-align: center;
     padding-left: 0;
 
     li {
       display: inline-block;
       margin-right: 20px;
+      padding: 9px;
       transition: .4s all ease;
     }
 
     li:hover {
       cursor: pointer;
       background-color: $trunk;
-      padding: 9px;
+      // padding: 9px;
     }
   }
 }
@@ -244,9 +246,9 @@ section {
   }
 
   p {
-      @include fontStyle($contentFont, serif, 1.8em, black, 400);
-      padding: 20px;
-      @include lineHeight;
+    @include fontStyle($contentFont, serif, 1.8em, black, 400);
+    padding: 20px;
+    @include lineHeight;
   }
 
   .menuList {
@@ -442,7 +444,6 @@ section {
     color: $darkgrey;
   }
 }
-
 }
 
 /* Bottom of page styles
@@ -467,17 +468,18 @@ section {
     font-family: $navFont;
     font-size: 1.6em;
   }
+}
 
-  h3, h4 {
-    margin-left:25px;
-  }
+.left {
 
-  .left {
+  background-color: $trunk;
+  height: 332px;
 
-    background-color: $trunk;
-    height: 332px;
+    h3, h4 {
+      margin-left:25px;
+    }
 
-      p {
+    p {
       display: block;
       display: -webkit-box;
       max-width: 100%;
@@ -509,26 +511,26 @@ section {
     }
   }
 
-  .center {
+.center {
     // height:500px;
     font-size: 14px;
     background-color: $trunk;
 
-    span {
-      float: right;
-      // margin-top: 1.3em;
-    }
+  span {
+    float: right;
+    // margin-top: 1.3em;
+  }
 
-    .specialPhoto {
+  .specialPhoto {
       text-align:center;
        img {
         @include border-radius(5px);
         margin-top:-20px;
-       }
+      }
     }
-    
-    .specialText {
-      
+
+  .specialText {
+
       h4 {
         display: inline
       }
@@ -544,7 +546,6 @@ section {
       margin:25px;
       width:90%;
     }
-  }
 
   .right {
     overflow:hidden;
