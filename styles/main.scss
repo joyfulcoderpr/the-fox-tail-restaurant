@@ -145,10 +145,13 @@ nav {
     li {
       display: inline-block;
       margin-right: 20px;
+      transition: .5s all ease;
     }
 
     li:hover {
       cursor: pointer;
+      background-color: $trunk;
+      padding: 10px;
     }
   }
 }
@@ -354,9 +357,13 @@ section {
     }
 
     #reserveBtn {
-      background-color: $baby;
+      background-color: $trunk;
       border: none;
       height: 50px;
+    }
+
+    #reserveBtn:hover {
+      background-color: $baby;
     }
 
     select {
