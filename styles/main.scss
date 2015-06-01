@@ -2,11 +2,7 @@
 @import "vendor/neat/neat";
 
 // Color Variables
-$slate: #566573;
-$latte: #D9C5A0;
-$java: #BFAD8A;
-$cream: #F2EAE4;
-$mocha: #F2EAE4;
+
 $baby: #CAE9F1;
 $darkgrey: #333333;
 $trunk: #E4E1E1;
@@ -65,6 +61,10 @@ input:focus {
 }
 
 select:focus {
+  outline: 0;
+}
+
+textarea:focus {
   outline: 0;
 }
 
@@ -268,7 +268,7 @@ section {
   width: 70%;
   margin: auto;
    img {
-    width:100%;
+    width: 100%;
     height: auto;
    }
 }
@@ -444,6 +444,42 @@ section {
   }
 }
 }
+
+
+.reviews {
+  clear: both;
+
+  h2 {
+    padding-top: 20px;
+  }
+
+  .review {
+    width: 500px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+
+    textarea {
+      width: 100%;
+      height: 100%;
+      font-size: 1em;
+    }
+
+    .reviewBtn {
+      background-color: $baby;
+      border: none;
+      height: 50px;
+      width: 80px;
+      font-size: 1.4em;
+      border-radius: 4px;
+      margin-top: 10px;
+      margin-left: 200px;
+      margin-bottom: 30px;
+    }
+  }
+
+}
+
 
 /* Bottom of page styles
 ============= */
