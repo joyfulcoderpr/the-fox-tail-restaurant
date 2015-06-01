@@ -445,7 +445,8 @@ section form h2 {
 .center {
   font-size: 14px;
   height: 332px;
-  background-color: #E4E1E1; }
+  background-color: #E4E1E1;
+  margin-top: 16px; }
 
 .center span {
   float: right; }
