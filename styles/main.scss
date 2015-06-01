@@ -139,19 +139,21 @@ nav {
   ul {
     @include fontStyle($navFont, sans-serif, 1.8em, black, 400);
     margin: 10px 0;
+    margin-top: 0px;
     text-align: center;
     padding-left: 0;
 
     li {
       display: inline-block;
       margin-right: 20px;
+      padding: 9px;
       transition: .4s all ease;
     }
 
     li:hover {
       cursor: pointer;
       background-color: $trunk;
-      padding: 9px;
+      // padding: 9px;
     }
   }
 }
@@ -450,8 +452,10 @@ section {
 
 .bottom {
   background-color: white;
-  height:355px;
+  // margin-top:20px;
+  height:332px;
   font-size: 1.6em;
+  overflow:hidden;
   border-top: 1px solid #ccc;
   padding-top: 10px;
 
@@ -466,11 +470,14 @@ section {
     font-size: 1.6em;
   }
 
-
   .left {
 
     background-color: $trunk;
     height: 332px;
+
+      h3, h4 {
+        margin-left:25px;
+      }
 
       p {
       display: block;
@@ -486,10 +493,6 @@ section {
       margin:25px;
       width:90%;
 
-    }
-
-    h3, h4 {
-      margin-left: 25px;
     }
 
     .readmore {
@@ -509,22 +512,22 @@ section {
   }
 
   .center {
+    // height:500px;
     font-size: 14px;
     background-color: $trunk;
-    height: 332px;
 
 
     span {
       float: right;
+      // margin-top: 1.3em;
     }
 
     .specialPhoto {
       text-align:center;
-
        img {
         @include border-radius(5px);
         margin-top:-15px;
-        height: 140px;
+        height: 130px;
        }
     }
 

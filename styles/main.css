@@ -108,18 +108,19 @@ nav ul {
   font-color: black;
   font-weight: 400;
   margin: 10px 0;
+  margin-top: 0px;
   text-align: center;
   padding-left: 0; }
 
 nav ul li {
   display: inline-block;
   margin-right: 20px;
+  padding: 9px;
   transition: .4s all ease; }
 
 nav ul li:hover {
   cursor: pointer;
-  background-color: #E4E1E1;
-  padding: 9px; }
+  background-color: #E4E1E1; }
 
 /* Sticky Nav
 ============== */
@@ -357,8 +358,9 @@ section form h2 {
 ============= */
 .bottom {
   background-color: white;
-  height: 355px;
+  height: 332px;
   font-size: 1.6em;
+  overflow: hidden;
   border-top: 1px solid #ccc;
   padding-top: 10px; }
 
@@ -381,6 +383,9 @@ section form h2 {
   background-color: #E4E1E1;
   height: 332px; }
 
+.bottom .left h3, .bottom .left h4 {
+  margin-left: 25px; }
+
 .bottom .left p {
   display: block;
   display: -webkit-box;
@@ -394,9 +399,6 @@ section form h2 {
   overflow: hidden;
   margin: 25px;
   width: 90%; }
-
-.bottom .left h3, .bottom .left h4 {
-  margin-left: 25px; }
 
 .bottom .left .readmore {
   text-align: center;
@@ -413,8 +415,7 @@ section form h2 {
 
 .bottom .center {
   font-size: 14px;
-  background-color: #E4E1E1;
-  height: 332px; }
+  background-color: #E4E1E1; }
 
 .bottom .center span {
   float: right; }
@@ -427,7 +428,7 @@ section form h2 {
   -webkit-border-radius: 5px;
   border-radius: 5px;
   margin-top: -15px;
-  height: 140px; }
+  height: 130px; }
 
 .bottom .center .specialText h4 {
   display: inline; }
