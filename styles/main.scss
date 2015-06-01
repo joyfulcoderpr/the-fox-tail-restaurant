@@ -39,6 +39,7 @@ body {
   font-size: 62.5%;
   font-family: $contentFont;
   color: $darkgrey;
+  padding-top: 200px;
 }
 
 a {
@@ -89,6 +90,18 @@ select:focus {
   transform: translateZ(-2px) scale(3);
 }
 
+.container {
+  header {
+    z-index: -5;
+  }
+
+  .background {
+    background-color: white;
+    height: 100vh;
+    width: 100%;
+    z-index: -4;
+  }
+}
 
 /* Header styles will start here
 ================================ */
@@ -96,6 +109,9 @@ header {
   height: 200px;
   width: 100%;
   background-image: url('../images/header-back.png');
+  position: fixed;
+  top: 0;
+  left: 0;
 
   .logo {
     height: 175px;
@@ -112,7 +128,11 @@ header {
 /* Nav styles
 ============= */
 nav {
-  width: 100%;
+  // width: 100%;
+  height: 40px;
+  z-index: 150;
+  margin-bottom: -40px;
+  background-color: white;
 
 
   ul {
@@ -130,6 +150,26 @@ nav {
       cursor: pointer;
     }
   }
+}
+
+/* Sticky Nav
+============== */
+nav, .content {
+  position: relative;
+}
+
+.nav-scrolled {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.background {
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+
 }
 
 /* Tabs and Jumbotron
@@ -469,7 +509,7 @@ footer {
     img {
       width: 100px;
       height:auto;
-      margin-botom:0;
+      margin-bottom:0;
     }
 
     span {
