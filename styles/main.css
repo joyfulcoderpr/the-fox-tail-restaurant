@@ -352,11 +352,12 @@ section form h2 {
 /* Bottom of page styles
 ============= */
 .bottom {
-  background-color: #E4E1E1;
-  margin-top: 1px;
+  background-color: white;
   height: 332px;
   font-size: 1.6em;
-  overflow: hidden; }
+  overflow: hidden;
+  border-top: 1px solid #ccc;
+  padding-top: 10px; }
 
 .bottom ul {
   float: left;
@@ -376,6 +377,10 @@ section form h2 {
 .bottom h3, .bottom h4 {
   margin-left: 25px; }
 
+.bottom .left {
+  background-color: #E4E1E1;
+  height: 332px; }
+
 .bottom .left p {
   display: block;
   display: -webkit-box;
@@ -390,8 +395,22 @@ section form h2 {
   margin: 25px;
   width: 90%; }
 
+.bottom .left .readmore {
+  text-align: center;
+  margin: auto;
+  height: 40px;
+  width: 150px;
+  border-radius: 4px;
+  background-color: #333333;
+  padding-top: 10px; }
+
+.bottom .left a {
+  text-align: center;
+  color: white; }
+
 .bottom .center {
-  font-size: 14px; }
+  font-size: 14px;
+  background-color: #E4E1E1; }
 
 .bottom .center span {
   float: right; }
@@ -408,7 +427,8 @@ section form h2 {
   overflow: hidden;
   margin: 0;
   margin-bottom: 0;
-  font-size: 0; }
+  font-size: 0;
+  padding-top: 14px; }
 
 .bottom .right iframe {
   padding: 0;
@@ -421,7 +441,7 @@ footer {
   border-top: 3px solid white;
   clear: both;
   height: 160px;
-  margin-top: 0; }
+  margin-top: 20px; }
 
 footer a {
   color: #333333; }

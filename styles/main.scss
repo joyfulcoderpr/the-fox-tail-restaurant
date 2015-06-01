@@ -445,11 +445,13 @@ section {
 ============= */
 
 .bottom {
-  background-color: $trunk;
-  margin-top:1px;
+  background-color: white;
+  // margin-top:20px;
   height:332px;
   font-size: 1.6em;
   overflow:hidden;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
 
  ul {
     @include span-columns(4);
@@ -468,6 +470,9 @@ section {
 
   .left {
 
+    background-color: $trunk;
+    height: 332px;
+
       p {
       display: block;
       display: -webkit-box;
@@ -483,11 +488,27 @@ section {
       width:90%;
 
     }
+
+    .readmore {
+      text-align: center;
+      margin: auto;
+      height: 40px;
+      width: 150px;
+      border-radius: 4px;
+      background-color: $darkgrey;
+      padding-top: 10px;
+    }
+
+    a {
+      text-align: center;
+      color: white;
+    }
   }
 
   .center {
     // height:500px;
     font-size: 14px;
+    background-color: $trunk;
 
 
     span {
@@ -511,6 +532,8 @@ section {
     margin:0;
     margin-bottom:0;
     font-size:0;
+    padding-top: 14px;
+
      iframe {
       padding:0;
       margin:0;
@@ -527,7 +550,7 @@ footer {
   border-top:3px solid white;
   clear: both;
   height: 160px;
-  margin-top:0;
+  margin-top: 20px;
 
   a {
     color: $darkgrey;

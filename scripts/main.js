@@ -160,13 +160,9 @@ galleryPhotos.done(function (data){
   // .bottom photos
   var scallopPhoto = galleryPhotos.responseJSON.photos.photo[12];
 
-  console.log(scallopPhoto);
-
   var scallopUrl = 'https://farm' + scallopPhoto.farm + '.staticflickr.com/' + scallopPhoto.server + '/' + scallopPhoto.id + '_' + scallopPhoto.secret + '_m.jpg';
 
   var scallop = '<img src="' + scallopUrl + '">';
-
-  console.log(scallop);
 
   $('.specialPhoto').append(scallop);
 });
@@ -200,7 +196,7 @@ $('#reserveBtn').on('click', function () {
   var seatPreference = $('#seatPreference').val();
   var email = $('#email').val();
 
-  $('form').replaceWith('<div class="thankyou">' + '<h4>Thank you for your reservation request, ' + fullName + '!</h4>' + '<p>You will receive an email at ' + email + ' once your reservation is confirmed.</p>' + '<div class=thankyouimg><img src="images/foxtail_sm_notag.png"></div>' + '</div>' + '<div class="details"><h5>Your reservation request details</h5><ul><li>Full Name: ' + fullName + '</li><li>Number of Guests: ' + guestCount + '</li><li>Date: ' + date + '</li><li>Time: ' + time + '</li><li>Seating Preference: ' +seatPreference+ '</li><li>Email address: ' + email + '</li><p>Please contact us at <a href="#">contact@thefoxtail.co</a> if you have any changes to your reservation.</p></ul></div>');
+  $('form').replaceWith('<div class="thankyou">' + '<h4>Thank you for your reservation request, ' + fullName + '!</h4>' + '<p>You will receive an email at ' + email + ' once your reservation is confirmed.</p>' + '<div class=thankyouimg><img src="images/foxtail_sm_notag.png"></div>' + '</div>' + '<div class="details"><h5>Your reservation request details</h5><ul><li>Full Name: ' + fullName + '</li><li>Number of Guests: ' + guestCount + '</li><li>Date: ' + date + '</li><li>Time: ' + time + '</li><li>Seating Preference: ' + seatPreference + '</li><li>Email address: ' + email + '</li><p>Please contact us at <a href="#">contact@thefoxtail.co</a> if you have any changes to your reservation.</p></ul></div>');
 });
 
 // Datepicker
