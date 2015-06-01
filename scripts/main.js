@@ -1,41 +1,83 @@
+// Get Photos
+//---------------------------------------------------
+
+//Jumbotron:
+var getPhotos = $.getJSON('https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=ce4c4ab1f01efa66fe9fa6bc41aadf31&gallery_id=5704-72157653610526022&format=json&nojsoncallback=1&auth_token=72157653385845390-dcac529a9c9805e9&api_sig=ffce53b912142536032f4359b9b45535');
+var jumboPhoto = [];
+
+getPhotos.done(function (data){
+  var photoArray = data.photos.photo;
+  // console.log(photoArray);
+
+  _.each(photoArray, function(x){
+    photoUrl = 'https://farm' + x.farm + '.staticflickr.com/' + x.server + '/' + x.id + '_' + x.secret + '_b.jpg';
+    jumboPhoto.push(photoUrl);
+
+  });
+
+  $('.jumbotron').html('<img src="' + jumboPhoto[0] + '" alt="interior">');
+
+});
+
 // Tabs working to change visibility of content divs
 // --------------------------------------------------
 
 $('#home').on('click', function() {
   $('section').removeClass('show');
   $('.home').addClass('show');
-  $('.jumbotron').html('<img src="http://placekitten.com/1438/500">');
+  $('.jumbotron').html('<img src="' + jumboPhoto[0] + '" alt="interior">');
+  $('.jumbotron').removeClass('jumbotronhide');
+
 });
 
 $('#menu').on('click', function() {
   $('section').removeClass('show');
   $('.menu').addClass('show');
-  $('.jumbotron').html('<img src="https://placeimg.com/1438/500/any">');
+  $('.jumbotron').html('<img src="' + jumboPhoto[2] + '" alt="interior">');
+  $('.jumbotron').removeClass('jumbotronhide');
 });
 
 $('#reservation').on('click', function() {
   $('section').removeClass('show');
   $('.reservations').addClass('show');
-  $('.jumbotron').html('<img src="http://dummyimage.com/1438x500">');
+  $('.jumbotron').html('<img src="' + jumboPhoto[1] + '" alt="interior">');
+  $('.jumbotron').removeClass('jumbotronhide');
 });
 
 $('#gallery').on('click', function() {
   $('section').removeClass('show');
   $('.gallery').addClass('show');
-  $('.jumbotron').html('<img src="http://placehold.it/1438x500">');
+  $('.jumbotron').addClass('jumbotronhide');
 });
 
-// Get menu API information
+
+// Sticky Nav script
+// ------------------
+
+var nav = $('.main-nav');
+    navS = 'nav-scrolled';
+    hdr = $('header').height();
+
+$(window).scroll(function(){
+  if( $(this).scrollTop() > hdr) {
+    nav.addClass(navS);
+  } else {
+    nav.removeClass(navS);
+  }
+});
+
+// Get menu API information & Today's Special Information
 // ----------------------------------------------------
 
 var getMenu = $.getJSON('http://private-anon-a6cb7aa40-restaurantapi.apiary-mock.com/menu-1');
 
-var appTemplate = $('#appTemplate').html();
-var appFunction = _.template(appTemplate);
-var entreeTemplate = $('#entreeTemplate').html();
-var entreeFunction = _.template(entreeTemplate);
-var sidesTemplate = $('#sidesTemplate').html();
-var sidesFunction = _.template(sidesTemplate);
+var getSpecial = $.getJSON('http://private-anon-a6cb7aa40-restaurantapi.apiary-mock.com/menu/special');
+
+
+var appFunction = _.template($('#appTemplate').html());
+var entreeFunction = _.template($('#entreeTemplate').html());
+var sidesFunction = _.template($('#sidesTemplate').html());
+
 
 getMenu.done(function (data) {
 
@@ -54,16 +96,89 @@ getMenu.done(function (data) {
     $('.sides').append(sidesFunction(d));
   });
 
+  getSpecial.done(function (data) {
+    entreeArray.forEach (function(n) {
+      if (n.id === data.menu_item_id) {
+        $('.specialText').html('<h3>Today\'s Special</h3>' + '<h4>' + n.item + '</h4>' + '<span>' + '$' + n.price + '</span>' + '<p>' + n.description + '</p>');
+      }
+    });
+  });
+
+  // Menu hovers
+  // ----------------------------------------------------
+
+
+  $('.iconallergy')
+    .mouseover( function() {
+      $(this).addClass('allergyhover');
+    })
+    .mouseout(function() {
+      $(this).removeClass('allergyhover');
+    });
+
+  $('.iconspicy')
+    .mouseover( function() {
+      $(this).addClass('allergyhover');
+    })
+    .mouseout(function() {
+      $(this).removeClass('allergyhover');
+    });
+
+  $('.iconvegan')
+    .mouseover( function() {
+      $(this).addClass('allergyhover');
+    })
+    .mouseout(function() {
+      $(this).removeClass('allergyhover');
+    });
+
+  $('.iconfav')
+    .mouseover( function() {
+      $(this).addClass('allergyhover');
+    })
+    .mouseout(function() {
+      $(this).removeClass('allergyhover');
+    });
+
+
 });
 
+
+//Gallery:
+var galleryPhotos = $.getJSON('https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=ce4c4ab1f01efa66fe9fa6bc41aadf31&gallery_id=5704-72157653252100120&format=json&nojsoncallback=1&auth_token=72157653385845390-dcac529a9c9805e9&api_sig=bf2695962c68c070d401531327f31e64');
+
+galleryPhotos.done(function (data){
+  var picArray = data.photos.photo;
+  // console.log(picArray);
+
+  _.each(picArray, function(x){
+    flickrUrl = 'https://farm' + x.farm + '.staticflickr.com/' + x.server + '/' + x.id + '_' + x.secret + '_m.jpg';
+    item = '<li><img src="' + flickrUrl + '"></li>';
+    $('.gallerypics').append(item);
+  });
+
+  // .bottom photos
+  var scallopPhoto = galleryPhotos.responseJSON.photos.photo[12];
+
+  console.log(scallopPhoto);
+
+  var scallopUrl = 'https://farm' + scallopPhoto.farm + '.staticflickr.com/' + scallopPhoto.server + '/' + scallopPhoto.id + '_' + scallopPhoto.secret + '_m.jpg';
+
+  var scallop = '<img src="' + scallopUrl + '">';
+
+  console.log(scallop);
+
+  $('.specialPhoto').append(scallop);
+});
 
 // Get today's news JSON data
 // --------------------------------------------------
 
-
 var getNews = $.getJSON('http://private-anon-a6cb7aa40-restaurantapi.apiary-mock.com/news/latest');
 
 // Drop today's news into DOM
+// ----------------------------------------------------
+
 
 var newsTemplate = $('#latestNews').html();
 var newsFunction = _.template(newsTemplate);
@@ -73,18 +188,27 @@ getNews.done(function (data) {
 });
 
 
-// Get daily special JSON data
-// --------------------------------------------------
+// Send off reservation request and return thank you with reservation details
+// ----------------------------------------------------
 
 
-var getSpecial = $.getJSON('http://private-anon-a6cb7aa40-restaurantapi.apiary-mock.com/menu/special');
+$('#reserveBtn').on('click', function () {
+  var fullName = $('#fullName').val();
+  var guestCount = $('#guestCount').val();
+  var date = $('#datepicker').val();
+  var time = $('#time').val();
+  var seatPreference = $('#seatPreference').val();
+  var email = $('#email').val();
 
-// Drop daily special into DOM
+  $('form').replaceWith('<div class="thankyou">' + '<h4>Thank you for your reservation request, ' + fullName + '!</h4>' + '<p>You will receive an email at ' + email + ' once your reservation is confirmed.</p>' + '<div class=thankyouimg><img src="images/foxtail_sm_notag.png"></div>' + '</div>' + '<div class="details"><h5>Your reservation request details</h5><ul><li>Full Name: ' + fullName + '</li><li>Number of Guests: ' + guestCount + '</li><li>Date: ' + date + '</li><li>Time: ' + time + '</li><li>Seating Preference: ' +seatPreference+ '</li><li>Email address: ' + email + '</li><p>Please contact us at <a href="#">contact@thefoxtail.co</a> if you have any changes to your reservation.</p></ul></div>');
+});
 
-// var specialTemplate = $('#todaySpecial').html();
-// var specialFunction = _.template(specialTemplate);
+// Datepicker
+// ----------------------------------------------------
 
-// getSpecial.done(function (data) {
-//   $('.center').append(specialFunction(data));
-// });
+
+$(function() {
+    $( "#datepicker" ).datepicker();
+  });
+
 

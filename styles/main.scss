@@ -7,24 +7,40 @@ $latte: #D9C5A0;
 $java: #BFAD8A;
 $cream: #F2EAE4;
 $mocha: #F2EAE4;
+$baby: #CAE9F1;
+$darkgrey: #333333;
+$trunk: #E4E1E1;
 
 $contentFont:'Droid Serif', serif;
 $navFont: 'Droid Sans', sans-serif;
 
 @mixin fontStyle($family, $serif, $size, $color, $weight) {font-family: $family, $serif; font-size: $size; font-color: $color; font-weight: $weight;};
 
+@mixin lineHeight() {
+  line-height: 1.5em;
+}
+
+@mixin border-radius($borderadius) {
+  -moz-border-radius: $borderadius;
+  -webkit-border-radius: $borderadius;
+  border-radius: $borderadius;
+}
 
 /* Global Styles
 ================ */
+
 * {
   border-sizing: border-box;
   list-style: none;
 }
 
 body {
-  @include outer-container(1438px);
-  width: 1438px;
+  @include outer-container(100%);
+  max-width: 1438px;
   font-size: 62.5%;
+  font-family: $contentFont;
+  color: $darkgrey;
+  padding-top: 200px;
 }
 
 a {
@@ -40,16 +56,67 @@ a:hover {
   margin: auto;
 }
 
+button:focus {
+  outline: 0;
+}
+
+input:focus {
+  outline: 0;
+}
+
+select:focus {
+  outline: 0;
+}
+
+/* Parallax styles here
+======================= */
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.parallax_layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.parallax_layer-base {
+  transform: translateZ(0);
+}
+
+.parallax_layer-back {
+  transform: translateZ(-2px) scale(3);
+}
+
+.container {
+  header {
+    z-index: -5;
+  }
+
+  .background {
+    background-color: white;
+    height: 100vh;
+    width: 100%;
+    z-index: -4;
+  }
+}
+
 /* Header styles will start here
 ================================ */
 header {
-  height: 300px;
+  height: 200px;
   width: 100%;
   background-image: url('../images/header-back.png');
+  position: fixed;
+  top: 0;
+  left: 0;
 
   .logo {
-    height: 200px;
-    padding-top: 60px;
+    height: 175px;
+    padding-top: 40px;
     text-align: center;
   }
 
@@ -62,7 +129,12 @@ header {
 /* Nav styles
 ============= */
 nav {
-  width: 100%;
+  // width: 100%;
+  height: 40px;
+  z-index: 150;
+  margin-bottom: -40px;
+  background-color: white;
+
 
   ul {
     @include fontStyle($navFont, sans-serif, 1.8em, black, 400);
@@ -73,172 +145,462 @@ nav {
     li {
       display: inline-block;
       margin-right: 20px;
-
     }
+
     li:hover {
       cursor: pointer;
     }
   }
 }
 
+/* Sticky Nav
+============== */
+nav, .content {
+  position: relative;
+}
+
+.nav-scrolled {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.background {
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+
+}
+
 /* Tabs and Jumbotron
 ============= */
 
 .jumbotron {
-  height: 500px;
   width:100%;
-  overflow:hidden;
-  background-image: url('http://placehold.it/1438x500');
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
 }
+
+.jumbotronhide {
+  height: 0;
+}
+
+/* Content section show and hide styles
+============= */
+
+section {
+  height: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: normal;
+  display: none;
+  padding:50px;
+}
+
+.show {
+  display: block;
+  transition: 1s all ease;
+  width: 100%;
+  height: 100%;
+  // margin-top: 50px;
+}
+
+
 
 /* Content section styles
 ============= */
 
 section {
-  width: 0%;
-  height: 0;
-  margin-left: auto;
-  margin-right: auto;
-  visibility: hidden;
-}
+  background-color: rgba(255,255,255,0.85);
 
-/* Content Styles
-================= */
 
-.show {
-  visibility: visible;
-  transition: 1s all ease;
-  width: 80%;
-  height: 100%;
-}
+  h2 {
+    font-size: 3em;
+    text-align: center;
+    font-family: $navFont;
+  }
 
-section {
+  h3 {
+    font-size: 1.8em;
+    display: inline-block;
+    padding-right: 20px;
+    float: left;
+    border-right: 1px solid #ccc;
+  }
+
+  span {
+    display: inline-block;
+    float: left;
+    font-size: 1.4em;
+    margin-top: 1.5em;
+    padding-left: 1.5em;
+  }
 
   p {
       @include fontStyle($contentFont, serif, 1.8em, black, 400);
+      padding: 20px;
+      @include lineHeight;
+  }
+
+  .menuList {
+    margin-bottom: 20px;
+    margin-top: 50px;
+    li {
+      clear: both;
+      p {
+        @include lineHeight;
+        clear: both;
+        padding-left: 0;
+        }
+      }
+    }
+}
+
+.main {
+  width: 70%;
+  margin: auto;
+}
+
+.allicons {
+  display: inline-block;
+  float: right;
+  margin-top: 1em;
+  margin-right: 8em;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+    img {
+      height:25px;
+      width:25px;
+    }
+}
+
+.iconhover {
+  width: 300px;
+  height: 100px;
+  background-color: $baby;
+  padding: 10px;
+  padding-left: 15px;
+  position: absolute;
+  top: 40px;
+  left: -20px;
+  visibility: hidden;
+
+
+  h6 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+    font-family: $navFont;
+  }
+
+  span {
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-left: 0px;
+  }
+}
+
+.allergyhover {
+
+  .iconhover {
+    visibility: visible;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      left: 23px;
+      top: -8px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0px 10px 10px 10px;
+      border-color: transparent transparent $baby transparent;
+    }
+
   }
 
 }
 
-/* Bottom
-=======
-.show {
-  height: 100%;
-  visibility: visible;
-  width: 80%;
+
+/* Reservations styles
+============= */
+
+section {
+
+  form {
+    font-size: 1.8em;
+    display: block;
+    padding: 50px;
+    padding-top: 0px;
+
+    input {
+      display: block;
+      margin: 10px;
+      padding: 7px;
+      border: 0;
+      border: 1px solid #ccc;
+      @include border-radius(5px);
+      width: 100%;
+    }
+
+    #reserveBtn {
+      background-color: $baby;
+      border: none;
+      height: 50px;
+    }
+
+    select {
+      border: 0;
+      display: block;
+      margin: 10px;
+      padding: 7px;
+      height: 40px;
+      width: 100%;
+      background-color: white;
+      border: 1px solid #ccc;
+    }
+
+    h2 {
+      font-size: 1.8em;
+    }
+
+  }
+
+}
+
+.reservations {
+  margin-bottom: 50px;
+
+  .thankyou {
+    padding: 20px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2.6em;
+    padding-top: 10px;
+  }
+
+  h4 {
+    font-size: 3em;
+    margin-bottom: 0px;
+  }
+
+  p {
+    margin-top: 0px;
+    font-size: 2em;
+  }
+
+  img {
+    height: 12em;
+    margin-top: 1.5em;
+  }
+
+  .details {
+    text-align: center;
+
+  h5 {
+    font-size: 1.4em;
+  }
+
+  ul {
+    font-size: 1.2em;
+    padding: 0;
+
+    li {
+      list-style: none;
+    }
+  }
+
+  p {
+    font-size: 1.4em;
+  }
+
+  a {
+    color: $darkgrey;
+  }
+}
+
 }
 
 /* Bottom of page styles
 ============= */
 
 .bottom {
+  background-color: $trunk;
+  margin-top:1px;
+  height:332px;
+  font-size: 1.6em;
+  overflow:hidden;
 
  ul {
-    @include span-columns(3);
-    border: 1px solid black;
-    height: 325px;
-    width: 425px;
-    overflow: auto;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
+    @include span-columns(4);
+    padding: 0px;
+    margin-bottom:0;
+  }
+
+  h3 {
+    font-family: $navFont;
+    font-size: 1.6em;
+  }
+
+  h3, h4 {
+    margin-left:25px;
   }
 
   .left {
-    width:425px;
-    font-family: Apple Chancery;
-    font-size: 16px;
-    text-align: center;
 
-    .button {
-    padding: 2px 0 0 0;
-  }
+      p {
+      display: block;
+      display: -webkit-box;
+      max-width: 100%;
+      height: 43px;
+      margin: 0 auto;
+      font-size: 14px;
+      line-height: 1;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin:25px;
+      width:90%;
+
+    }
   }
 
   .center {
-   width:425px;
-    overflow:hidden;
-    font-family: Apple Chancery;
+    // height:500px;
     font-size: 14px;
-    border:1px black solid;
-    text-align: center;
 
+
+    span {
+      float: right;
+      // margin-top: 1.3em;
+    }
+
+    .specialPhoto {
+      text-align:center;
+    }
+
+    li {
+      clear: both;
+      margin:25px;
+      width:90%;
+    }
   }
-
-
-
 
   .right {
-    width:425px;
     overflow:hidden;
-    font-family: Apple Chancery;
-    font-size: 14px;
-    text-align: center;
-
+    margin:0;
+    margin-bottom:0;
+    font-size:0;
+     iframe {
+      padding:0;
+      margin:0;
+     }
   }
-
 }
-
-
-/* Footer
-============= */
-
-
 
 
 /* Footer styles
 ============= */
 
 footer {
-  // background-color: $latte;
+  background-color: $baby;
+  border-top:3px solid white;
   clear: both;
-  height: 190px;
-  border: 1px solid black;
-  margin-top:25%;
+  height: 160px;
+  margin-top:0;
 
-    div {
-      margin-top:30px;
-      padding:0;
-      @include span-columns(3);
-      @include omega(4n);
-    }
+  a {
+    color: $darkgrey;
+  }
+
+  div {
+    margin-top:30px;
+    padding:0;
+    @include span-columns(4);
+    @include omega(3n);
+  }
 
   ul {
     margin-left:20px;
     padding:0;
     line-height:20px;
-  } 
+    margin-right:10px;
+  }
 }
-
 
 .footleft {
   text-align:center;
+  overflow:hidden;
 
     ul {
       margin:0;
        padding:0;
-    } 
-      
-    img {
-      width: 150px;
-      margin-left:20px;
     }
 
-.footright {
-
-    li img {
-      height:5px;
-      width:auto;
+    img {
+      width: 100px;
+      height:auto;
+      margin-bottom:0;
     }
 
     span {
       padding:0;
       margin:0;
+        img {
+          height:25px;
+          width:auto;
+          padding:0;
+          margin:0;
+      }
     }
+}
+
+/* Gallery styles
+============= */
+
+.gallery {
+  // @include outer-container;
+  background-color: white;
+
+  h2 {
+    text-align: center;
+    font-size: 3em;
   }
+
+  ul {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+  li {
+    @include span-columns(4);
+    @include omega(3n);
+    margin: 15px 0;
+  }
+
+  }
+
 }
 
 /* General
 ============= */
 
+/* Allergy credit text, will be moved to html
+============= */
 
+// allergies by Ben Markoch from the Noun Project
+// Love by Martha Ormiston from the Noun Project
+// Vegetarian by Matthew Hawdon from the Noun Project
+// Flame by Alex Tai from the Noun Project
