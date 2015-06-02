@@ -23,7 +23,7 @@ body {
   max-width: 1438px;
   font-size: 62.5%;
   font-family: "Droid Serif", serif;
-  color: #333333;
+  color: #434242;
   padding-top: 200px; }
 
 body::after {
@@ -88,7 +88,7 @@ textarea:focus {
 header {
   height: 200px;
   width: 100%;
-  background-image: url("../images/header-back.png");
+  background-color: #C8E1D2;
   position: fixed;
   top: 0;
   left: 0; }
@@ -126,7 +126,7 @@ nav ul li {
 
 nav ul li:hover {
   cursor: pointer;
-  background-color: #E4E1E1; }
+  background-color: #C7C5C3; }
 
 /* Sticky Nav
 ============== */
@@ -244,7 +244,7 @@ article img {
 .iconhover {
   width: 300px;
   height: 100px;
-  background-color: #CAE9F1;
+  background-color: #C8E1D2;
   padding: 10px;
   padding-left: 15px;
   position: absolute;
@@ -277,7 +277,7 @@ article img {
   height: 0;
   border-style: solid;
   border-width: 0px 10px 10px 10px;
-  border-color: transparent transparent #CAE9F1 transparent; }
+  border-color: transparent transparent #C8E1D2 transparent; }
 
 /* Reservations page styles
 ============= */
@@ -299,13 +299,13 @@ section form input {
   width: 100%; }
 
 section form #reserveBtn {
-  background-color: #CAE9F1;
+  background-color: #C8E1D2;
   border: none;
   height: 50px;
   transition: .3s all ease; }
 
 section form #reserveBtn:hover {
-  background-color: #b6e1ec; }
+  background-color: #BAE3D2; }
 
 section form select {
   border: 0;
@@ -360,7 +360,7 @@ section form h2 {
   font-size: 1.4em; }
 
 .reservations .details a {
-  color: #333333; }
+  color: #434242; }
 
 .reviews {
   clear: both; }
@@ -380,7 +380,7 @@ section form h2 {
   font-size: 1em; }
 
 .reviews .review .reviewBtn {
-  background-color: #CAE9F1;
+  background-color: #C8E1D2;
   border: none;
   height: 27px;
   width: 80px;
@@ -418,7 +418,7 @@ section form h2 {
   font-size: 1.6em; }
 
 .left {
-  background-color: #E4E1E1;
+  background-color: #C7C5C3;
   height: 332px; }
 
 .left h3, .left h4 {
@@ -444,8 +444,11 @@ section form h2 {
   height: 40px;
   width: 150px;
   border-radius: 4px;
-  background-color: #333333;
+  background-color: #434242;
   padding-top: 10px; }
+
+.left .readmore:hover {
+  background-color: #605F5E; }
 
 .left a {
   text-align: center;
@@ -454,7 +457,7 @@ section form h2 {
 .center {
   font-size: 14px;
   height: 332px;
-  background-color: #E4E1E1;
+  background-color: #C7C5C3;
   margin-top: 16px; }
 
 .center span {
@@ -495,13 +498,13 @@ section form h2 {
 /* Footer styles
 ============= */
 footer {
-  background-color: #CAE9F1;
+  background-color: #C8E1D2;
   border-top: 3px solid white;
   clear: both;
   height: 180px; }
 
 footer a {
-  color: #333333; }
+  color: #434242; }
 
 footer div {
   margin-top: 30px;

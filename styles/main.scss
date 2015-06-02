@@ -4,9 +4,9 @@
 /* Color Variables
 ================ */
 
-$baby: #CAE9F1;
-$darkgrey: #333333;
-$trunk: #E4E1E1;
+$baby: #C8E1D2;
+$darkgrey: #434242;
+$trunk: #C7C5C3;
 
 $contentFont:'Droid Serif', serif;
 $navFont: 'Droid Sans', sans-serif;
@@ -120,7 +120,8 @@ textarea:focus {
 header {
   height: 200px;
   width: 100%;
-  background-image: url('../images/header-back.png');
+  // background-image: url('../images/header-back.png');
+  background-color: #C8E1D2;
   position: fixed;
   top: 0;
   left: 0;
@@ -379,7 +380,7 @@ section {
     }
 
     #reserveBtn:hover {
-      background-color: #b6e1ec;
+      background-color: #BAE3D2;
     }
 
     select {
@@ -548,6 +549,10 @@ section {
       border-radius: 4px;
       background-color: $darkgrey;
       padding-top: 10px;
+    }
+
+    .readmore:hover {
+      background-color: #605F5E;
     }
 
     a {
