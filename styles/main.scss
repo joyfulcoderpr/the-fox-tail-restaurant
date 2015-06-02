@@ -1,7 +1,8 @@
 @import "vendor/bourbon/bourbon";
 @import "vendor/neat/neat";
 
-// Color Variables
+/* Color Variables
+================ */
 
 $baby: #CAE9F1;
 $darkgrey: #333333;
@@ -10,7 +11,15 @@ $trunk: #E4E1E1;
 $contentFont:'Droid Serif', serif;
 $navFont: 'Droid Sans', sans-serif;
 
-@mixin fontStyle($family, $serif, $size, $color, $weight) {font-family: $family, $serif; font-size: $size; font-color: $color; font-weight: $weight;};
+/* Mixins
+================ */
+
+@mixin fontStyle($family, $serif, $size, $color, $weight) {
+  font-family: $family, $serif;
+  font-size: $size;
+  font-color: $color;
+  font-weight: $weight;
+};
 
 @mixin lineHeight() {
   line-height: 1.5em;
@@ -76,6 +85,7 @@ textarea:focus {
   overflow-x: hidden;
   overflow-y: auto;
 }
+
 .parallax_layer {
   position: absolute;
   top: 0;
@@ -83,6 +93,7 @@ textarea:focus {
   bottom: 0;
   left: 0;
 }
+
 .parallax_layer-base {
   transform: translateZ(0);
 }
@@ -129,7 +140,6 @@ header {
 /* Nav styles
 ============= */
 nav {
-  // width: 100%;
   height: 40px;
   z-index: 150;
   margin-bottom: -40px;
@@ -152,7 +162,6 @@ nav {
     li:hover {
       cursor: pointer;
       background-color: $trunk;
-      // padding: 9px;
     }
   }
 }
@@ -179,7 +188,6 @@ nav, .content {
 
 /* Tabs and Jumbotron
 ============= */
-
 .jumbotron {
   width:100%;
   overflow: hidden;
@@ -187,6 +195,7 @@ nav, .content {
   img {
     width: 100%;
   }
+
 }
 
 .jumbotronhide {
@@ -195,14 +204,13 @@ nav, .content {
 
 /* Content section show and hide styles
 ============= */
-
 section {
   height: 0;
   margin-left: auto;
   margin-right: auto;
   font-weight: normal;
   display: none;
-  padding:50px;
+  padding: 50px;
 }
 
 .show {
@@ -210,14 +218,11 @@ section {
   transition: 1s all ease;
   width: 100%;
   height: 100%;
-  // margin-top: 50px;
 }
-
 
 
 /* Content section styles
 ============= */
-
 section {
   background-color: rgba(255,255,255,0.85);
 
@@ -273,7 +278,6 @@ section {
 }
 
 article {
-
   img {
     width: 100%;
     }
@@ -290,10 +294,12 @@ article {
   display: inline-block;
   vertical-align: middle;
   position: relative;
-    img {
-      height:25px;
-      width:25px;
-    }
+
+  img {
+    height:25px;
+    width:25px;
+  }
+
 }
 
 .iconhover {
@@ -306,7 +312,6 @@ article {
   top: 40px;
   left: -20px;
   visibility: hidden;
-
 
   h6 {
     margin-top: 10px;
@@ -346,9 +351,8 @@ article {
 }
 
 
-/* Reservations styles
+/* Reservations page styles
 ============= */
-
 section {
 
   form {
@@ -482,6 +486,11 @@ section {
       margin-left: 200px;
       margin-bottom: 30px;
     }
+
+    .reviewBtn:hover {
+      background-color: #b6e1ec;
+    }
+
   }
 
 }
@@ -489,7 +498,6 @@ section {
 
 /* Bottom of page styles
 ============= */
-
 .bottom {
   background-color: white;
   height:355px;
@@ -510,7 +518,6 @@ section {
 }
 
 .left {
-
   background-color: $trunk;
   height: 332px;
 
@@ -531,7 +538,6 @@ section {
       overflow: hidden;
       margin:25px;
       width:90%;
-
     }
 
     .readmore {
@@ -561,11 +567,13 @@ section {
   }
 
   .specialPhoto {
-      text-align:center;
-       img {
+    text-align:center;
+
+      img {
         @include border-radius(5px);
         height: 130px;
       }
+
     }
 
   .specialText {
@@ -580,11 +588,11 @@ section {
       }
     }
 
-    li {
-      clear: both;
-      margin:25px;
-      width:90%;
-    }
+  li {
+    clear: both;
+    margin:25px;
+    width:90%;
+  }
 
   .right {
     overflow:hidden;
@@ -603,7 +611,6 @@ section {
 
 /* Footer styles
 ============= */
-
 footer {
   background-color: $baby;
   border-top:3px solid white;
@@ -640,27 +647,26 @@ footer {
 
     img {
       width: 100px;
-      height:auto;
-      margin-bottom:0;
+      height: auto;
+      margin-bottom: 0;
     }
 
     span {
-      padding:0;
-      margin:0;
+      padding: 0;
+      margin: 0;
+
         img {
-          height:25px;
-          width:auto;
-          padding:0;
-          margin:0;
-      }
+          height: 25px;
+          width: auto;
+          padding: 0;
+          margin: 0;
+        }
     }
 }
 
 /* Gallery styles
 ============= */
-
 .gallery {
-  // @include outer-container;
   background-color: white;
 
   h2 {
@@ -673,11 +679,11 @@ footer {
     margin-left: auto;
     margin-right: auto;
 
-  li {
-    @include span-columns(4);
-    @include omega(3n);
-    margin: 15px 0;
-  }
+    li {
+      @include span-columns(4);
+      @include omega(3n);
+      margin: 15px 0;
+    }
 
   }
 

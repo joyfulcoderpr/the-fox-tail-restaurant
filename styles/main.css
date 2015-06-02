@@ -6,6 +6,10 @@ html {
 *::before {
   box-sizing: inherit; }
 
+/* Color Variables
+================ */
+/* Mixins
+================ */
 /* Global Styles
 ================ */
 * {
@@ -275,7 +279,7 @@ article img {
   border-width: 0px 10px 10px 10px;
   border-color: transparent transparent #CAE9F1 transparent; }
 
-/* Reservations styles
+/* Reservations page styles
 ============= */
 section form {
   font-size: 1.8em;
@@ -385,6 +389,9 @@ section form h2 {
   margin-top: 10px;
   margin-left: 200px;
   margin-bottom: 30px; }
+
+.reviews .review .reviewBtn:hover {
+  background-color: #b6e1ec; }
 
 /* Bottom of page styles
 ============= */

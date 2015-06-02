@@ -19,8 +19,8 @@ getPhotos.done(function (data){
 
 });
 
-// Tabs working to change visibility of content divs
-// --------------------------------------------------
+// Tabs to change visibility of content divs on click
+// ---------------------------------------------------
 
 $('#home').on('click', function() {
   $('section').removeClass('show');
@@ -52,7 +52,7 @@ $('#gallery').on('click', function() {
 
 
 // Sticky Nav script
-// ------------------
+// --------------------------------------------
 
 var nav = $('.main-nav');
     navS = 'nav-scrolled';
@@ -66,13 +66,13 @@ $(window).scroll(function(){
   }
 });
 
-// Get menu API information & Today's Special Information
-// ----------------------------------------------------
+
+// Get menu API & Today's Special and drop into DOM
+// ---------------------------------------------------------
 
 var getMenu = $.getJSON('http://private-anon-a6cb7aa40-restaurantapi.apiary-mock.com/menu-1');
 
 var getSpecial = $.getJSON('http://private-anon-a6cb7aa40-restaurantapi.apiary-mock.com/menu/special');
-
 
 var appFunction = _.template($('#appTemplate').html());
 var entreeFunction = _.template($('#entreeTemplate').html());
@@ -104,9 +104,9 @@ getMenu.done(function (data) {
     });
   });
 
-  // Menu hovers
-  // ----------------------------------------------------
 
+  // Menu icon hovers
+  // ----------------------------------------------------
 
   $('.iconallergy')
     .mouseover( function() {
@@ -140,16 +140,16 @@ getMenu.done(function (data) {
       $(this).removeClass('allergyhover');
     });
 
-
 });
 
 
-//Gallery:
+// Gallery photos from API and drop into DOM
+// ----------------------------------------------------
+
 var galleryPhotos = $.getJSON('https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=c90cb7bc5a2f27f459f10d95421fa7bb&gallery_id=133510446-72157653252100120&format=json&nojsoncallback=1&auth_token=72157651509393134-b0ca168a3265456d&api_sig=9c1642813037dd0630ae6fd4e04a3e92');
 
 galleryPhotos.done(function (data){
   var picArray = data.photos.photo;
-  // console.log(picArray);
 
   _.each(picArray, function(x){
     flickrUrl = 'https://farm' + x.farm + '.staticflickr.com/' + x.server + '/' + x.id + '_' + x.secret + '_m.jpg';
@@ -157,7 +157,7 @@ galleryPhotos.done(function (data){
     $('.gallerypics').append(item);
   });
 
-  // .bottom photos
+  // .bottom photos into DOM
   var scallopPhoto = galleryPhotos.responseJSON.photos.photo[12];
 
   var scallopUrl = 'https://farm' + scallopPhoto.farm + '.staticflickr.com/' + scallopPhoto.server + '/' + scallopPhoto.id + '_' + scallopPhoto.secret + '_m.jpg';
@@ -167,14 +167,13 @@ galleryPhotos.done(function (data){
   $('.specialPhoto').append(scallop);
 });
 
+
 // Get today's news JSON data
 // --------------------------------------------------
 
 var getNews = $.getJSON('http://private-anon-a6cb7aa40-restaurantapi.apiary-mock.com/news/latest');
 
 // Drop today's news into DOM
-// ----------------------------------------------------
-
 
 var newsTemplate = $('#latestNews').html();
 var newsFunction = _.template(newsTemplate);
@@ -185,8 +184,7 @@ getNews.done(function (data) {
 
 
 // Send off reservation request and return thank you with reservation details
-// ----------------------------------------------------
-
+// ----------------------------------------------------------------------------
 
 $('#reserveBtn').on('click', function () {
   var fullName = $('#fullName').val();
@@ -199,12 +197,13 @@ $('#reserveBtn').on('click', function () {
   $('form').replaceWith('<div class="thankyou">' + '<h4>Thank you for your reservation request, ' + fullName + '!</h4>' + '<p>You will receive an email at ' + email + ' once your reservation is confirmed.</p>' + '<div class=thankyouimg><img src="images/foxtail_sm_notag.png"></div>' + '</div>' + '<div class="details"><h5>Your reservation request details</h5><ul><li>Full Name: ' + fullName + '</li><li>Number of Guests: ' + guestCount + '</li><li>Date: ' + date + '</li><li>Time: ' + time + '</li><li>Seating Preference: ' + seatPreference + '</li><li>Email address: ' + email + '</li><p>Please contact us at <a href="#">contact@thefoxtail.co</a> if you have any changes to your reservation.</p></ul></div>');
 });
 
-// Datepicker
-// ----------------------------------------------------
 
+// Datepicker script for reservations page
+// ----------------------------------------------------
 
 $(function() {
     $( "#datepicker" ).datepicker();
   });
+
 
 
